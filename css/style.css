@@ -1,0 +1,627 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500&display=swap');
+
+
+
+/* GERAL */
+
+html{
+	scroll-behavior: smooth;
+
+}
+
+*{
+	font-family: "Asap", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+#primeira-section{
+	background-color: #2B2E51;
+}
+
+/**SIDE SCROLL BAR**/
+
+::-webkit-scrollbar{
+	width: 10px;
+
+}
+
+::-webkit-scrollbar-track{
+	border-radius: 5px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 5px;
+	background-color: rgba(255, 10, 84,0.8);
+}
+
+/*  PERSONALIZAÇÃO GERAL  */
+li, button{
+	font-family: "Asap", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+header{
+	background-color: #2B2E51;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+.logo{
+	cursor: pointer;
+	display: flex;
+	justify-content: flex-start;
+}
+
+/*  PERSONALIZAÇÃO NAV  */
+
+}
+.nav_links{
+	list-style: none;
+
+}
+
+.nav_links li{
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.nav_links li a{
+	transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+	color: rgba(255, 10, 84,0.8);
+}
+.nav_links a{
+	font-family: "Asap", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+#login{
+	display: flex;
+	align-items: center;
+}
+
+#reg{
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+}
+#reg:hover{
+	color: rgba(212, 212, 212,0.8);
+}
+
+
+/*  BOTÕES  */
+
+#sign {
+	padding: 9px 25px;
+	background-color: rgba(255, 10, 84,1);
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+#saiba-mais{
+	width: 100%;
+}
+
+#button-saiba{
+	width: 170px;
+	background-color: rgba(255, 10, 84,1);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-top: 60px;
+}
+
+.button-conhecer{
+	width: 70%;
+	background-color: rgba(255, 10, 84,1);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-top: 20px;
+}
+
+
+.button-conhecer-container{
+	width: auto;
+	display: flex;
+	justify-content: center;
+	margin-top: 15%;
+
+}
+
+.button-conhecer:hover{
+	background-color: rgba(255, 10, 84,0.8);
+}
+
+#button-saiba:hover{
+	background-color: rgba(255, 10, 84,0.8);
+}
+
+#sign:hover{
+	background-color: rgba(255, 10, 84,0.8);
+}
+
+
+
+/*  LANDING PAGE */
+
+main{
+
+	height: 34.5vh;
+	width: 100%;
+
+}
+
+#textos-e-imgs{
+	display: flex;
+	flex-direction: row;
+	margin-right: 5%;
+	
+
+}
+
+
+
+/** TEXTOS PRINCIPAIS**/
+
+#textos-principais{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 90%;
+	height: 50vh;
+	
+
+}
+
+#somente-bolas{
+	display: flex;
+	justify-content: flex-end;
+
+
+}
+
+/**  IMAGENS  **/
+
+#elipse{
+	height: 50vh;
+
+}
+
+
+
+/**SEGUNDO CONTAINER **/
+
+#segundo-container{
+	height: 120vh;
+	background-color: white;
+
+	
+}
+
+#dois-textos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	
+}
+
+#container-imagens{
+	display: flex;
+	gap: 6%;
+	margin-top: 50px;
+	justify-content: center;
+	height: 55%;
+	
+}
+
+.p-container{
+	height: 15%;
+}
+
+
+/** TEXTOS **/
+
+#p-encontre{
+	color: #B8B8B8;
+	font-size: 30px;
+}
+
+#h2-venha{
+	color: #FF0A54;
+	font-size: 50px;
+
+}
+
+.h3-texto{
+	padding: 20px;
+	color: #FF0A54;
+}
+
+.endereço-sala{
+	padding: 0px 20px 20px;
+	color: #B8B8B8;
+	font-size: 15px;
+
+}
+
+.descrição-imagens{
+	width: 100%;
+	color: #787878;
+	padding: 0px 20px 20px;
+	text-align: left;
+
+}
+
+
+/** BORDAS IMAGENS**/
+
+.foto-um{
+	border-radius: 33px 33px 0px 0px;
+	width: 100%;
+	height: 20%;
+
+}
+
+.imagem{
+	width: 18%;
+	height: 100%;
+	border: 1px solid white;
+	border-radius: 33px;
+	box-shadow: 3px 3px 40px #B8B8B8;
+}
+
+/** ULTIMO CONTAINER **/
+
+#h2-ultimo-titulo{
+	padding: 50px 50px 0px 50px;
+	margin-left: 8%;
+}
+
+.foto-predio{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0px 0px 0px 0px;
+	gap: 6.5%;
+
+}
+
+.textos-predios{
+	width: 25%;
+	margin-top: 1%;
+
+
+	
+}
+
+.texto-um{
+	margin-left: 10.3%;
+}
+
+.work-icon{
+	padding-bottom: 20px;
+}
+
+.p-predio{
+	padding-top: 20px;
+	color: #787878;
+}
+
+
+/* TERCEIRA SECTION */
+
+#terceiro-container{
+	background-color: #2B2E51;
+	height: 65vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-gap: 8%;
+	padding: 5%;
+}
+
+#container-big-img{
+	height: 100%;
+	width: 40%;
+	background-color: grey;
+	border-radius: 32px;
+}
+
+#container-icons-textos{
+	width: 45%;
+}
+
+.h3-oque{
+	color: #B8B8B8;
+}
+
+.h1-produtos{
+	color: #FFFFFF;
+}
+
+.titulo-sub{
+	text-align: center;
+}
+
+.p-sub{
+	color: #FFFFFF;
+	padding-top: 5%;
+	text-align: left;
+	font-size: 16px;
+}
+
+#container-icon-dif{
+	padding: 10%;
+	height: 100%;
+}
+
+
+@media screen and (max-width: 1223px) {
+	.button-conhecer {
+		display: none;
+	}
+	.descrição-imagens{
+		font-size: 15px;
+	}
+	.imagem{
+		height: 80%;
+	}
+}
+
+
+/* QUARTA SECTION */
+
+.container-geral{
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+}
+
+.container-geral-2{
+	width: 95%;
+	height: 95%;
+	margin: auto;
+	margin-top: 5%;
+	border-top: 10px solid #D4D4D4; 
+	border-bottom: 10px solid #D4D4D4; 
+	border-radius: 4px;
+}
+.container-svg{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
+.titulo-sub{
+	padding: 10px;
+}
+
+.container-svg-2{
+	width: 95%;
+	height: 95%;
+	margin: auto;
+	border-bottom: 10px solid #D4D4D4; 
+	border-radius: 4px;
+	
+	
+
+}
+
+#container-diferencial{
+	margin: auto;
+	width: 65%;
+
+
+}
+
+.svg-diferencial{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 2%;
+
+}
+
+
+/** QUINTA SECTION **/
+
+.container-quinta-sec{
+	background-color: #2B2E51;
+	display: flex;
+	flex-direction: row;
+	height: 60vh;
+	margin-top: 3%;
+}
+
+.container-texto-loc{
+	padding: 10%;
+	text-align: center;
+}
+
+.container-img-loc{
+	padding: 1% 0 0 5%;
+	width: 100%;
+	height: 100%;
+
+
+}
+.div-mapa{
+	margin-top: 10px;
+	width: 100%;
+}
+.p-desc-loc{
+	padding-top: 15px;
+}
+
+/** SEXTA SECTION**/
+
+.container-sexta-sec{
+	height: 50vh;
+	background-color: white;
+}
+
+/** FOOTER **/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #2B2E51;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 40%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 1px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.social-links{
+	display: flex;
+	flex-direction: row;
+
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/** SEXTA SECTION**/
+
+#dois-textos-2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+
+	
+}
+
+.h3-texto-2{
+	padding: 20px;
+	color: black;
+}
+
+#container-imagens-2{
+	display: flex;
+	gap: 6%;
+	margin-top: 50px;
+	justify-content: center;
+	height: 100%;
+	
+}
+
+
+.descrição-imagens-2{
+	
+	width: 100%;
+	color: #787878;
+	padding: 0px 20px 20px;
+	text-align: left;
+	
+}
+
+.imagem-tres{
+	height: 100%;
+}

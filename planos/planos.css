@@ -1,0 +1,105 @@
+
+#cont-text-plan{
+	height: 135vh;
+	width: auto;
+	background-color: white;
+
+}
+
+.cont-plan-texts{
+	display: flex;
+}
+#container-planos{
+	padding-left: 15%;
+	/*background-color: #F1F1F1;*/
+}
+
+.desc-plans{
+	width: 35%;
+	text-align: justify;
+}
+
+.type-plan{
+	color: #787878;
+	padding-bottom: 5px;
+}
+h1{
+	padding-top: 1%;
+	font-size: 2.3vw;
+}
+
+h2{
+	color: #FF0A54;
+	padding: 1% 0% 1% 0%;
+
+}
+
+
+h3, .desc-adicionais{
+	color: #787878;
+}
+
+.card-plan{
+	text-align: center;
+	height: 100%;
+	width: 24%;
+	border: none;
+	border-radius: 33px;
+	box-shadow: 3px 3px 40px #B8B8B8;
+}
+
+.cont-inf{
+	padding: 15%;
+}
+
+.ctn-btn-contratar{
+	margin-top: 13%;
+}
+
+.button-contratar{
+	width: 100%;
+	background-color: rgba(255, 10, 84,1);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	
+}
+
+.button-contratar:hover{
+	background-color: rgba(255, 10, 84,0.8);
+}
+
+.cont-plan-texts{
+	gap: 17%;
+}
+
+.second, .third{
+	margin-top: 5%;
+}
+
+.descrição-planos{
+	padding-bottom: 2%;
+}
+
+@media screen and (max-width: 1223px) {
+
+	.desc-plans{
+		width: 30%;
+	}
+	.descrição-planos, .desc-adicionais{
+		width: 50%;
+
+	}
+	.cont-plan-texts{
+		gap: 2%;
+	}
+	.button-contratar{
+		width: 50%;
+
+	}
+	#cont-text-plan{
+	height: 195vh;
+	}
+}

@@ -1,2 +1,2 @@
-# workstation-frontend
-Front-end of Workstation Project
+# workstation
+Front-End da WorkStation

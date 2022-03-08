@@ -1,0 +1,14 @@
+#container-geral-about{
+	height: 200vh;
+	background-color: white;
+}
+
+#container-oq-temos{
+	display: flex;
+	order: 5;
+
+}
+.ctn-txt-somos{
+	text-align: center;
+	padding-top: 5%;
+}
