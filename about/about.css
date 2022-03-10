@@ -1,14 +1,60 @@
 #container-geral-about{
-	height: 200vh;
+	height: 120vh;
 	background-color: white;
 }
 
-#container-oq-temos{
+.container-oq-temos-1{
 	display: flex;
-	order: 5;
 
 }
 .ctn-txt-somos{
 	text-align: center;
 	padding-top: 5%;
 }
+
+.container-oq-temos-1{
+	padding-left: 15%;
+	padding-right: 15%;
+	grid-gap: 10em;
+}
+
+.titulo-temos{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.ctn-oq-temos{
+	padding-top: 4%;
+	
+}
+
+.segundo-ctn-temos, .primeiro-ctn-temos{
+	padding-top: 4%;
+}
+
+.descrição-oq-temos, .icone-oq-temos{
+	padding-top: 3%;
+}
+
+.icone-oq-temos{
+	color: #2B2E51;
+}
+
+@media screen and (max-width: 1223px){
+	.container-oq-temos-1{
+		padding-left: 5%;
+		padding-right: 5%;
+	
+	}
+	.container-oq-temos-1{
+		flex-direction: column;
+	}
+
+	#container-geral-about{
+	height: 270vh;
+}
+
+
+
+/** SEGUNDA SECTION - MISSÃO VISÃO E VALORES **/
+
