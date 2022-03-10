@@ -52,9 +52,63 @@
 
 	#container-geral-about{
 	height: 270vh;
+	}
 }
 
 
-
 /** SEGUNDA SECTION - MISSÃO VISÃO E VALORES **/
+
+#container-valores-etc{
+	height: 300vh;
+}
+
+#ctn-txt-missão-valores{
+	text-align: center;
+	padding-bottom: 3%;
+}
+
+.descrição-valores{
+	display: flex;
+	width: auto;
+	height: 25%;
+	padding-right: 15%;
+	padding-left: 15%;
+	grid-gap: 4%;
+}
+
+.missão-ofc, .cultura-ofc{
+	flex-direction: row-reverse;
+}
+
+.missão-ofc,.visão-ofc, .cultura-ofc, .cultura-ofc{
+	padding-top: 2%;
+}
+.p-descrição-missão-valores{
+	color: #787878;
+	font-family: "Asap", italic;
+	font-weight: 400;
+	text-align: justify;
+}
+
+.texto-valores{
+	margin-top: 10%;
+}
+.h2-missão-valores{
+	color: #303030;
+	text-align: center;
+	padding-bottom: 1%;
+	font-size: 2.5em;
+
+}
+
+.h2-cultura{
+	text-align: center;
+	padding-bottom: 1%;
+	color: #FF0A54;
+}
+
+.cultura-ofc{
+	grid-gap: 4%;
+}
+
 
