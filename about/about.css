@@ -88,10 +88,14 @@
 	font-family: "Asap", italic;
 	font-weight: 400;
 	text-align: justify;
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
 }
 
 .texto-valores{
 	margin-top: 10%;
+	width: 100%;
 }
 .h2-missão-valores{
 	color: #303030;
@@ -107,8 +111,26 @@
 	color: #FF0A54;
 }
 
+.txt-cultura{
+	margin-top: 0;
+}
+
 .cultura-ofc{
 	grid-gap: 4%;
+	
+
+}
+
+.teste{
+	word-wrap: break-word;
+	height: 100em;
+	width: auto;
+
+}
+
+.descrição-cultura{
+	padding-top: 2%;
+	color: #787878;
 }
 
 
