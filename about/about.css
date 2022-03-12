@@ -43,6 +43,8 @@
 }
 
 @media screen and (max-width: 1223px){
+
+
 	.container-oq-temos-1{
 		padding-left: 5%;
 		padding-right: 5%;
@@ -50,10 +52,23 @@
 	}
 	.container-oq-temos-1{
 		flex-direction: column;
+		grid-gap: 5%;
+	}
+	.ctn-icon{
+		padding-top: 3.5%;
+	}
+	.icone-oq-temos {
+		padding: 0;
+	}
+	.descricao-oq-temos{
+		padding-top: 2%;
 	}
 
 	#container-geral-about{
-	height: 270vh;
+	height: 215vh;
+	}
+	.segundo-ctn-temos{
+	padding-top: 3.5%;
 	}
 }
 
@@ -203,4 +218,14 @@ hr{
 
 .nome-card{
 	font-weight: bold;
+}
+
+
+/* TESTE DE RESPONSIVIDADE */
+
+@media only screen and (max-width: 1123px){
+
+	.img-valores{
+		display: none;
+	}
 }
