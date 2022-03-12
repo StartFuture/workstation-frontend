@@ -67,6 +67,7 @@
 #ctn-txt-missão-valores{
 	text-align: center;
 	padding-bottom: 3%;
+	padding-top: 3%;
 }
 
 .descrição-valores{
@@ -140,7 +141,17 @@
 	#container-valores-etc{
 	height: 330vh;
 	
+	}
+
 }
+
+hr{
+	background-color: #2B2E51;
+    height: 15px;
+    /* padding: 0% 5% 0% 5%; */
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 30px;
 }
 
 
