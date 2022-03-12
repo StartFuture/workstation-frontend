@@ -79,7 +79,7 @@ h3, .desc-adicionais{
 	margin-top: 5%;
 }
 
-.descrição-planos{
+.descricao-planos{
 	padding-bottom: 2%;
 }
 
@@ -88,7 +88,7 @@ h3, .desc-adicionais{
 	.desc-plans{
 		width: 30%;
 	}
-	.descrição-planos, .desc-adicionais{
+	.descricao-planos, .desc-adicionais{
 		width: 50%;
 
 	}
