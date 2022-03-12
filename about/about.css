@@ -35,7 +35,9 @@
 .descrição-oq-temos, .icone-oq-temos{
 	padding-top: 3%;
 }
-
+.descrição-oq-temos{
+	font-weight: 600;
+}
 .icone-oq-temos{
 	color: #2B2E51;
 }
@@ -131,6 +133,14 @@
 .descrição-cultura{
 	padding-top: 2%;
 	color: #787878;
+}
+
+/* TESTE */
+@media screen and (min-width: 1430px){
+	#container-valores-etc{
+	height: 330vh;
+	
+}
 }
 
 
