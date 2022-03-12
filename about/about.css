@@ -152,11 +152,55 @@ hr{
     margin-right: 5%;
     border-radius: 30px;
 }
-.container-avaliação-txt{
+.container-avaliacao-txt{
 	height: 50vh;
 }
 
-.container-avaliação-txt{
+.container-avaliacao-txt{
 	text-align: center;
 }
 
+.container-card-avaliacao{
+	width: 25%;
+    height: 40%;
+    background-color: #F2F2F2;
+    border-radius: 33px;
+    margin: auto;
+    box-shadow: 3px 3px 33px #B8B8B8;
+    margin-top: 3%;
+}
+
+.ctn-card-textos{
+	display: flex;
+	padding: 15px 0px 0px 15px;
+	justify-content: space-between;
+}
+.ctn-card-avaliacao{
+	padding: 15px 0px 0px 15px;
+
+}
+.nome_estrelas{
+	padding-right: 15px;
+}
+
+.descricao-avaliacao{
+	text-align: left;
+	font-weight: bold;
+}
+
+.cliente-card, .desc-2{
+	color: #787878;
+
+}
+.cliente-card{
+	padding-top: 1%;
+}
+
+.desc-2{
+	font-size: 13px;
+	padding-top: 4%;
+}
+
+.nome-card{
+	font-weight: bold;
+}
