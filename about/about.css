@@ -32,10 +32,12 @@
 	padding-top: 4%;
 }
 
-.descrição-oq-temos, .icone-oq-temos{
+.descricao-oq-temos, .icone-oq-temos{
 	padding-top: 3%;
 }
-
+.descricao-oq-temos{
+	font-weight: 600;
+}
 .icone-oq-temos{
 	color: #2B2E51;
 }
@@ -52,9 +54,109 @@
 
 	#container-geral-about{
 	height: 270vh;
+	}
 }
 
 
+/** SEGUNDA SECTION - missao VISÃO E VALORES **/
 
-/** SEGUNDA SECTION - MISSÃO VISÃO E VALORES **/
+#container-valores-etc{
+	height: 300vh;
+}
+
+#ctn-txt-missao-valores{
+	text-align: center;
+	padding-bottom: 3%;
+	padding-top: 3%;
+}
+
+.descricao-valores{
+	display: flex;
+	width: auto;
+	height: 25%;
+	padding-right: 15%;
+	padding-left: 15%;
+	grid-gap: 4%;
+}
+
+.missao-ofc, .cultura-ofc{
+	flex-direction: row-reverse;
+}
+
+.missao-ofc,.visão-ofc, .cultura-ofc, .cultura-ofc{
+	padding-top: 2%;
+}
+.p-descricao-missao-valores{
+	color: #787878;
+	font-family: "Asap", italic;
+	font-weight: 400;
+	text-align: justify;
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
+}
+
+.texto-valores{
+	margin-top: 10%;
+	width: 100%;
+}
+.h2-missao-valores{
+	color: #303030;
+	text-align: center;
+	padding-bottom: 1%;
+	font-size: 2.5em;
+
+}
+
+.h2-cultura{
+	text-align: center;
+	padding-bottom: 1%;
+	color: #FF0A54;
+}
+
+.txt-cultura{
+	margin-top: 0;
+}
+
+.cultura-ofc{
+	grid-gap: 4%;
+	
+
+}
+
+.teste{
+	word-wrap: break-word;
+	height: 100em;
+	width: auto;
+
+}
+
+.descricao-cultura{
+	padding-top: 2%;
+	color: #787878;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1430px){
+	#container-valores-etc{
+	height: 330vh;
+	}
+}
+
+hr{
+	margin-top: 5%;
+	background-color: #2B2E51;
+    height: 15px;
+    /* padding: 0% 5% 0% 5%; */
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 30px;
+}
+.container-avaliação-txt{
+	height: 50vh;
+}
+
+.container-avaliação-txt{
+	text-align: center;
+}
 
