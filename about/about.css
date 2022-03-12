@@ -32,10 +32,10 @@
 	padding-top: 4%;
 }
 
-.descrição-oq-temos, .icone-oq-temos{
+.descricao-oq-temos, .icone-oq-temos{
 	padding-top: 3%;
 }
-.descrição-oq-temos{
+.descricao-oq-temos{
 	font-weight: 600;
 }
 .icone-oq-temos{
@@ -58,19 +58,19 @@
 }
 
 
-/** SEGUNDA SECTION - MISSÃO VISÃO E VALORES **/
+/** SEGUNDA SECTION - missao VISÃO E VALORES **/
 
 #container-valores-etc{
 	height: 300vh;
 }
 
-#ctn-txt-missão-valores{
+#ctn-txt-missao-valores{
 	text-align: center;
 	padding-bottom: 3%;
 	padding-top: 3%;
 }
 
-.descrição-valores{
+.descricao-valores{
 	display: flex;
 	width: auto;
 	height: 25%;
@@ -79,14 +79,14 @@
 	grid-gap: 4%;
 }
 
-.missão-ofc, .cultura-ofc{
+.missao-ofc, .cultura-ofc{
 	flex-direction: row-reverse;
 }
 
-.missão-ofc,.visão-ofc, .cultura-ofc, .cultura-ofc{
+.missao-ofc,.visão-ofc, .cultura-ofc, .cultura-ofc{
 	padding-top: 2%;
 }
-.p-descrição-missão-valores{
+.p-descricao-missao-valores{
 	color: #787878;
 	font-family: "Asap", italic;
 	font-weight: 400;
@@ -100,7 +100,7 @@
 	margin-top: 10%;
 	width: 100%;
 }
-.h2-missão-valores{
+.h2-missao-valores{
 	color: #303030;
 	text-align: center;
 	padding-bottom: 1%;
@@ -131,21 +131,20 @@
 
 }
 
-.descrição-cultura{
+.descricao-cultura{
 	padding-top: 2%;
 	color: #787878;
 }
 
-/* TESTE */
+/* RESPONSIVIDADE */
 @media screen and (min-width: 1430px){
 	#container-valores-etc{
 	height: 330vh;
-	
 	}
-
 }
 
 hr{
+	margin-top: 5%;
 	background-color: #2B2E51;
     height: 15px;
     /* padding: 0% 5% 0% 5%; */
@@ -153,5 +152,11 @@ hr{
     margin-right: 5%;
     border-radius: 30px;
 }
+.container-avaliação-txt{
+	height: 50vh;
+}
 
+.container-avaliação-txt{
+	text-align: center;
+}
 
