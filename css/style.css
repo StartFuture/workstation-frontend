@@ -626,3 +626,18 @@ ul{
 .imagem-tres{
 	height: 100%;
 }
+
+/* RESPONSIVIDADE */
+
+
+@media screen and (min-width: 1430px){
+	#segundo-container{
+		height: 170vh;
+	}
+	.imagem{
+		height: 80%;
+	}
+	.button-conhecer-container{
+		margin-top: 25%;
+	}
+}
