@@ -409,16 +409,20 @@ main{
 .container-cards-planos{
 	display: flex;
 	height: 100%;
+	justify-content: space-between;
+	margin: 5% 5% 0% 5%;
+
 
 }
 .card-plano{
-	position: relative;
 	width: 25%;
 	height: 70%;
 	border-radius: 33px;
 	box-shadow: 3px 3px 40px #B8B8B8;
 
 }
+
+
 
 .titulo-card-plano{
 	top: 50%;
@@ -457,15 +461,20 @@ main{
 	padding: 10% 0% 0% 15%;
 }
 
+
+
+
+/** BUTTONS QUARTA SECTION **/
+
 .button-ver-mais{
 	width: 40%;
-	background-color: rgba(41, 144, 253,1);
 	padding: 12px 30px;
 	border: none;
 	border-radius: 54px;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
 	margin-top: 20px;
+	color: #FFFFFF;
 }
 
 .container-button-ver-mais{
@@ -474,6 +483,19 @@ main{
 	justify-content: center;
 	margin-top: 15%;
 }
+
+.primeiro-button-ver-mais {
+	background-color: rgba(41, 144, 253,1);
+}
+
+.segundo-button-ver-mais{
+	background-color: rgba(254, 16, 88,1);
+	
+}
+
+ .terceiro-button-ver-mais{
+	background-color: rgba(250, 134, 21,1);
+ }
 
 /** QUINTA SECTION **/
 
