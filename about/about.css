@@ -154,8 +154,20 @@
 /* RESPONSIVIDADE */
 @media screen and (min-width: 1430px){
 	#container-valores-etc{
+	height: 320vh;
+	}
+	.container-avaliacao-txt{
+	height: 100vh;
+}
+}
+
+@media screen and (min-width: 1920px){
+	#container-valores-etc{
 	height: 270vh;
 	}
+	.container-avaliacao-txt{
+	height: 100vh;
+}
 }
 
 hr{
