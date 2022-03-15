@@ -432,10 +432,10 @@ main{
 
 }
 .titulo-card-plano{
-	padding-top: 5%;
+	padding-top: 19%;
 
 }
-.titulo-card-plano h1, h3{
+.titulo-card-plano h1, h2{
 	color: white;
 
 }
@@ -452,7 +452,7 @@ main{
 	padding-top: 3.5%;
 	display: flex;
 	gap: 5%;
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
 	
 }
