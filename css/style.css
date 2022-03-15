@@ -20,7 +20,7 @@ html{
 }
 
 ::selection {
-	color: black;
+	color: white;
 	background-color: rgba(255, 10, 84,1);
 
 }
@@ -230,7 +230,7 @@ main{
 	
 }
 
-#dois-textos{
+.dois-textos{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -254,12 +254,12 @@ main{
 
 /** TEXTOS **/
 
-#p-encontre{
+.p-encontre{
 	color: #B8B8B8;
 	font-size: 30px;
 }
 
-#h2-venha{
+.h2-venha{
 	color: #FF0A54;
 	font-size: 50px;
 
@@ -400,59 +400,80 @@ main{
 
 
 /* QUARTA SECTION */
-
-.container-geral{
-	width: 100%;
-	height: 100vh;
+#container-geral-planos-ld{
+	height: 120vh;
 	background-color: white;
+
 }
 
-.container-geral-2{
-	width: 95%;
-	height: 95%;
-	margin: auto;
-	margin-top: 5%;
-	border-top: 10px solid #D4D4D4; 
-	border-bottom: 10px solid #D4D4D4; 
-	border-radius: 4px;
-}
-.container-svg{
+.container-cards-planos{
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-
-}
-
-.titulo-sub{
-	padding: 10px;
-}
-
-.container-svg-2{
-	width: 95%;
-	height: 95%;
-	margin: auto;
-	border-bottom: 10px solid #D4D4D4; 
-	border-radius: 4px;
-	
-	
-
-}
-
-#container-diferencial{
-	margin: auto;
-	width: 65%;
-
-
-}
-
-.svg-diferencial{
-	width: 100%;
 	height: 100%;
-	margin-bottom: 2%;
+
+}
+.card-plano{
+	position: relative;
+	width: 25%;
+	height: 70%;
+	border-radius: 33px;
+	box-shadow: 3px 3px 40px #B8B8B8;
 
 }
 
+.titulo-card-plano{
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+
+}
+.titulo-card-plano{
+	padding-top: 5%;
+
+}
+.titulo-card-plano h1, h3{
+	color: white;
+
+}
+.imagem-card-plano{
+	width: 100%;
+	height: 40%;
+	background-position: left;
+	background-image: url("../images/svg/card-plano/Azul.svg");
+
+}
+
+.descrição-planos-card li{
+	color: black;
+	padding-top: 3.5%;
+	display: flex;
+	gap: 5%;
+	text-align: center;
+	font-weight: bold;
+	
+}
+
+.lista-descrição-planos{
+	padding: 10% 0% 0% 15%;
+}
+
+.button-ver-mais{
+	width: 40%;
+	background-color: rgba(41, 144, 253,1);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-top: 20px;
+}
+
+.container-button-ver-mais{
+	width: auto;
+	display: flex;
+	justify-content: center;
+	margin-top: 15%;
+}
 
 /** QUINTA SECTION **/
 
@@ -462,18 +483,19 @@ main{
 	flex-direction: row;
 	height: 60vh;
 	margin-top: 3%;
+
 }
 
 .container-texto-loc{
 	padding: 10%;
 	text-align: center;
+
 }
 
 .container-img-loc{
 	padding: 1% 0 0 5%;
 	width: 100%;
 	height: 100%;
-
 
 }
 .div-mapa{
