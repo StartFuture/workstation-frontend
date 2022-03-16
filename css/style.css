@@ -576,16 +576,25 @@ hr{
 .container-quinta-sec{
 	background-color: #2B2E51;
 	display: flex;
-	flex-direction: row;
 	height: 60vh;
-	margin-top: 3%;
+	margin-top: 5%;
 
 }
 
 .container-texto-loc{
 	padding: 10%;
 	text-align: center;
+	width: 50%;
+}
+.container-imagens-localizacao{
+	width: 100%;
+	height: 100%;
+}
 
+.icon-loc{
+	object-fit:	contain;
+	height: 100%;
+	width: 100%;
 }
 
 .container-img-loc{
