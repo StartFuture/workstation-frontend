@@ -19,7 +19,7 @@ html{
 	color: black;
 }
 
-::selection {
+::selection{
 	color: white;
 	background-color: rgba(255, 10, 84,1);
 
@@ -401,25 +401,29 @@ main{
 
 /* QUARTA SECTION */
 #container-geral-planos-ld{
-	height: 120vh;
+	height: 225vh;
 	background-color: white;
 
 }
 
 .container-cards-planos{
 	display: flex;
-	height: 100%;
+	height: 100vh;
 	justify-content: space-between;
 	margin: 5% 5% 0% 5%;
 
 
 }
 .card-plano{
-	width: 25%;
+	width: 22%;
 	height: 70%;
 	border-radius: 33px;
 	box-shadow: 3px 3px 40px #B8B8B8;
 
+}
+
+.segundo-card-plano{
+	height: 75%;
 }
 
 
@@ -447,6 +451,7 @@ main{
 
 }
 
+
 .descrição-planos-card li{
 	color: black;
 	padding-top: 3.5%;
@@ -459,9 +464,18 @@ main{
 
 .lista-descrição-planos{
 	padding: 10% 0% 0% 15%;
+	height: 35%;
 }
 
-
+hr{
+	
+	background-color: #C4C4C4;
+   height: 15px;
+    /* padding: 0% 5% 0% 5%; */
+   margin-left: 5%;
+   margin-right: 5%;
+   border-radius: 30px;
+}
 
 
 /** BUTTONS QUARTA SECTION **/
@@ -481,7 +495,7 @@ main{
 	width: auto;
 	display: flex;
 	justify-content: center;
-	margin-top: 15%;
+	margin-top: 13%;
 }
 
 .primeiro-button-ver-mais {
@@ -496,6 +510,54 @@ main{
  .terceiro-button-ver-mais{
 	background-color: rgba(250, 134, 21,1);
  }
+
+
+/* 2° PARTE DA QUARTA SECTION */
+
+.container-card-diferencial{
+	display: flex;
+ 	justify-content: space-around;
+	margin: 5% 5% 0% 5%;
+}
+
+.container-descricao-diferencial{
+	height: 100%;
+  width: 30%;
+
+ 
+}
+
+.container-comeco-diferencial{
+	text-align: center;
+}
+
+.container-lista-diferencial{
+	padding: 10% 0% 0% 15%;
+}
+.container-lista-diferencial ul{
+	width: 100%;
+}
+.container-lista-diferencial li{
+	display: flex;
+	color: black;
+	padding-top: 3.5%;
+	display: flex;
+	gap: 5%;
+	text-align: left;
+
+}
+
+.h1-diferencial{
+	font-size: 2em;
+	font-weight: bold;
+}
+.p-qual-diferenca{
+	color: grey;
+}
+.p-oferecemos{
+	padding-top: 1%;
+}
+
 
 /** QUINTA SECTION **/
 
