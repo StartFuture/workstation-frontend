@@ -558,6 +558,18 @@ hr{
 	padding-top: 1%;
 }
 
+/** RESPONSIVIDADE **/
+
+@media screen and (min-width: 1223px){
+	.card-plano{
+		height: 85%;
+		width: 25%;
+	}
+	.segundo-card-plano{
+		height: 90%;
+	}
+}
+
 
 /** QUINTA SECTION **/
 
