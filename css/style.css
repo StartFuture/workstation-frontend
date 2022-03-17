@@ -223,7 +223,7 @@ main{
 
 /**SEGUNDO CONTAINER **/
 
-#segundo-container{
+.segundo-container{
 	height: 120vh;
 	background-color: white;
 
@@ -795,13 +795,18 @@ ul{
 	height: 100%;
 }
 
+.container-blog{
+	height: 100vh;
+}
+
 /* RESPONSIVIDADE */
 
 
 @media screen and (min-width: 1430px){
-	#segundo-container{
+	.segundo-container{
 		height: 170vh;
 	}
+	
 	.imagem{
 		height: 80%;
 	}
