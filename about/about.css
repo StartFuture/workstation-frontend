@@ -3,19 +3,20 @@
 	background-color: white;
 }
 
-.container-oq-temos-1{
-	display: flex;
 
-}
 .ctn-txt-somos{
 	text-align: center;
 	padding-top: 5%;
 }
 
 .container-oq-temos-1{
-	padding-left: 15%;
-	padding-right: 15%;
-	grid-gap: 10em;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.temos-descricao{
+	width: 15%;
 }
 
 .titulo-temos{
@@ -37,6 +38,7 @@
 }
 .descricao-oq-temos{
 	font-weight: 600;
+	text-align: justify;
 }
 .icone-oq-temos{
 	color: #2B2E51;
@@ -48,12 +50,10 @@
 	.container-oq-temos-1{
 		padding-left: 5%;
 		padding-right: 5%;
-	
-	}
-	.container-oq-temos-1{
-		flex-direction: column;
+		
 		grid-gap: 5%;
 	}
+	
 	.ctn-icon{
 		padding-top: 3.5%;
 	}
@@ -65,7 +65,7 @@
 	}
 
 	#container-geral-about{
-	height: 215vh;
+	height: 150vh;
 	}
 	.segundo-ctn-temos{
 	padding-top: 3.5%;
@@ -163,7 +163,7 @@
 
 @media screen and (min-width: 1920px){
 	#container-valores-etc{
-	height: 270vh;
+	height: 200vh;
 	}
 	.container-avaliacao-txt{
 	height: 100vh;
