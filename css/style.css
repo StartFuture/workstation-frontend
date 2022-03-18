@@ -201,6 +201,7 @@ main{
 	text-align: center;
 	width: 90%;
 	height: 50vh;
+	margin-top: 7%;
 	
 
 }
@@ -277,7 +278,7 @@ main{
 
 }
 
-.descrição-imagens{
+.descricao-imagens{
 	width: 100%;
 	color: #787878;
 	padding: 0px 20px 20px;
@@ -390,7 +391,7 @@ main{
 	.button-conhecer {
 		display: none;
 	}
-	.descrição-imagens{
+	.descricao-imagens{
 		font-size: 15px;
 	}
 	.imagem{
@@ -465,7 +466,7 @@ main{
 	background-image: url("../images/svg/card-plano/Amarelo.svg");
 }
 
-.descrição-planos-card li{
+.descricao-planos-card li{
 	color: black;
 	padding-top: 3.5%;
 	display: flex;
@@ -475,7 +476,7 @@ main{
 	
 }
 
-.lista-descrição-planos{
+.lista-descricao-planos{
 	padding: 0% 0% 0% 15%;
 	height: 35%;
 }
@@ -782,7 +783,7 @@ ul{
 }
 
 
-.descrição-imagens-2{
+.descricao-imagens-2{
 	
 	width: 100%;
 	color: #787878;

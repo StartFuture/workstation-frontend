@@ -46,11 +46,9 @@
 
 @media screen and (max-width: 1223px){
 
-
 	.container-oq-temos-1{
 		padding-left: 5%;
 		padding-right: 5%;
-		
 		grid-gap: 5%;
 	}
 	
@@ -163,7 +161,7 @@
 
 @media screen and (min-width: 1920px){
 	#container-valores-etc{
-	height: 200vh;
+	height: 280vh;
 	}
 	.container-avaliacao-txt{
 	height: 100vh;
