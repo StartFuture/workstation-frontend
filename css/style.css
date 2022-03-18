@@ -29,6 +29,8 @@ html{
 	background-color: #2B2E51;
 }
 
+
+
 /**SIDE SCROLL BAR**/
 
 ::-webkit-scrollbar{
@@ -505,6 +507,11 @@ hr{
 	color: #FFFFFF;
 }
 
+.button-ver-mais a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
 
 .container-button-ver-mais{
 	width: auto;
@@ -609,7 +616,7 @@ hr{
 	height: 40%;
 	}
 	.titulo-card-plano{
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 }
 
