@@ -19,6 +19,12 @@ html{
 	color: black;
 }
 
+::selection {
+	color: black;
+	background-color: rgba(255, 10, 84,1);
+
+}
+
 #primeira-section{
 	background-color: #2B2E51;
 }
@@ -316,9 +322,6 @@ main{
 .textos-predios{
 	width: 25%;
 	margin-top: 1%;
-
-
-	
 }
 
 .texto-um{
@@ -625,4 +628,19 @@ ul{
 
 .imagem-tres{
 	height: 100%;
+}
+
+/* RESPONSIVIDADE */
+
+
+@media screen and (min-width: 1430px){
+	#segundo-container{
+		height: 170vh;
+	}
+	.imagem{
+		height: 80%;
+	}
+	.button-conhecer-container{
+		margin-top: 25%;
+	}
 }
