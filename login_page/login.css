@@ -1,0 +1,88 @@
+main{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+}
+/** CONTAINER ESQUERDA**/
+.container-esquerda{
+	height: 100%;
+	width: 50%;
+	background-color: #2B2E51;
+}
+.container-imagem-login{
+	height: 60%;
+	width: 60%;
+	margin: auto;
+	margin-top: 20%;
+}
+
+.img-login-principal{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+/** CONTAINER DIREITA**/
+.container-direita{
+	height: 100%;
+	width: 50%;
+}
+
+/** IMAGEM CONTAINER**/
+.container-logo-rosa{
+	height: 100%;
+	width: 100%;
+
+}
+.img-logo-rosa{
+	height: 100%;
+	width: 90%;
+	object-fit: contain;
+	
+}
+
+/** LOGIN FORM**/
+
+.container-form-geral{
+	padding: 10%;
+}
+.campo_txt{
+	display: flex;
+	flex-direction: column;
+}
+
+.esqueceu-senha{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.campo-requerido{
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+
+.esqueceu-senha{
+	color: #FF0A54;
+}
+.container-button-login{
+	display: flex;
+	justify-content: center;
+}
+input[type="submit"]{
+	width: 70%;
+	background-color: rgba(255, 10, 84,1);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-top: 20px;
+	color: white;
+}
+
+.inputs-login{
+	height: 3em;
+	border-radius: 6px;
+	border-style: rounded;
+}
+
