@@ -121,3 +121,17 @@ input[type="submit"]{
 	padding: 0 3% 0 3%;
 	color: #787878;
 }
+
+@media screen and (max-width: 1223px){
+	.container-esquerda{
+		width: 0;
+	}
+	.container-direita{
+		width: 100%;
+	}
+	.container-form-geral{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
