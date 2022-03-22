@@ -32,13 +32,15 @@ main{
 .container-logo-rosa{
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
 
 }
 .img-logo-rosa{
 	height: 100%;
 	width: 90%;
 	object-fit: contain;
-	
+
 }
 
 /** LOGIN FORM**/
@@ -63,13 +65,15 @@ main{
 
 .esqueceu-senha{
 	color: #FF0A54;
+	padding-top: 1%;
 }
 .container-button-login{
 	display: flex;
 	justify-content: center;
+	margin-bottom: 5%;
 }
 input[type="submit"]{
-	width: 70%;
+	width: 60%;
 	background-color: rgba(255, 10, 84,1);
 	padding: 12px 30px;
 	border: none;
@@ -78,11 +82,42 @@ input[type="submit"]{
 	transition: all 0.3s ease 0s;
 	margin-top: 20px;
 	color: white;
+	font-size: 18px;
 }
 
 .inputs-login{
 	height: 3em;
 	border-radius: 6px;
-	border-style: rounded;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	padding-left: 2%;
 }
 
+.criar-conta a{
+	text-decoration: none;
+	color: #FF0A54;
+}
+.criar-conta{
+	display: flex;
+	justify-content: center;
+}
+.nao-tem-conta{
+	margin-right: 2%;
+	color: #787878;
+}
+
+.hr-ou{
+	display: flex;
+	justify-content: center;
+	margin: 5%;
+	align-items: center;
+}
+.hr-login{
+	width: 30%;
+	height: 1%;
+}
+
+.p-ou{
+	padding: 0 3% 0 3%;
+	color: #787878;
+}
