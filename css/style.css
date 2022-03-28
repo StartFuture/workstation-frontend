@@ -8,7 +8,7 @@
 
 html{
 	scroll-behavior: smooth;
-
+	
 }
 
 *{
@@ -188,9 +188,12 @@ main{
 	flex-direction: row;
 	margin-right: 5%;
 	
-
 }
-
+.h1-work{
+	font-size: 67px; 
+	color: white; 
+	margin-bottom: 30px;
+}
 
 /** TEXTOS PRINCIPAIS**/
 
@@ -382,8 +385,15 @@ main{
 }
 
 #container-icon-dif{
-	padding: 10%;
 	height: 100%;
+	width: 63%;
+	margin: auto;
+	margin-top: 5%;
+}
+.icon-dif{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
 
 
@@ -399,6 +409,8 @@ main{
 	}
 
 }
+
+
 
 
 /* QUARTA SECTION */
@@ -820,3 +832,71 @@ ul{
 		margin-top: 25%;
 	}
 }
+
+@media  (max-width: 600px){
+	#elipse, #bolas{
+		display: none;
+	}
+	.h1-work{
+		font-size: 3.5em;
+
+	}
+
+	#textos-e-imgs{
+		margin: none;
+	}
+	#textos-principais{
+		margin-top: 30%;
+	}
+	main{
+		height: 85vh;
+	}
+	.encontre-invisivel{
+		display: none;
+	}
+
+	.h2-venha, .p-encontre{
+		text-align: center;
+
+	}
+	.textos-predios{
+		display: none;
+	}
+	/**TERCEIRA SECTION*/
+	#terceiro-container{
+		flex-direction: column;
+	}
+	#container-big-img{
+		width: 100%;
+	}
+	#container-icons-textos{
+		width: 100%;
+	}
+
+	.p-sub{
+		text-align: center;
+	}
+	/* 2° PARTE DA QUARTA SECTION */
+	#container-geral-planos-ld{
+		height: 215vh;
+	}
+	.container-card-diferencial{
+		flex-direction: column;
+	}
+	.container-imagem-diferecial{
+		width: 100%;
+	}
+	.container-descricao-diferencial{
+		width: 100%;
+	}
+	.container-texto-loc{
+		width: 100%;
+	}
+	.container-quinta-sec{
+		height: 100vh;
+	}
+	.container-imagens-localizacao{
+		height: 22%;
+
+}
+
