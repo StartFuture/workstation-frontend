@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-a{
+.voltar{
 	color: blue;
 	text-decoration: none;
 	margin-top: 40px;
