@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Glider.js demos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+              background-color: #F2F2F2;
+              transition: 0.3s;
+              width: 60%;
+              height: 100%;
+              border-radius: 33px;
+            }
+            
+            .card:hover {
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            
+            .container {
+              padding: 2px 16px;
+            }
+
+            .c-carousel--responsive {
+                max-width: 100%;
+            }
+
+            .c-carousel__slide {
+                align-items: center;
+                color: var(--color-webfatorial-gray-2);
+                display: flex;
+                font-size: 200%;
+                justify-content: center;
+                padding: rem(50) 0;
+            }
+
+            .c-carousel__slides {
+                border: rem(2) solid #a89cc8;
+            }
+
+            .c-carousel__slides:not(:first-child) {
+                border-left: rem(1) solid #a89cc8;
+            }
+            .container-name_cliente_estrelas{
+                display: flex;
+                justify-content: space-between;
+                margin: 16px;
+
+            }
+            .estrelas-avaliacao{
+                display: flex;
+            }
+            .container-nome{
+                display: flex;
+                flex-direction: column;
+            }
+            .estrelas-avaliacao{
+                width: 40%;
+                height: 10%;
+            }
+            .estrela-svg{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+
+            }
+            .nome-cliente{
+                font-size: 27px;
+                color: black;
+            }
+            .p-tipo-cliente{
+                color: #787878;
+                font-size: 22px;
+                margin-top: 1%;
+            }
+            p{
+                margin: 0;
+            }
+
+            .avaliacao-atendimento{
+                font-size: 26px;
+            }
+            .lugar-avaliacao{
+                font-size: 18px;
+                color: #787878;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+
+        </style>
+    </head>
+
+<body>
+    <article class="c-carousel c-carousel--responsive">
+        <div class="c-carousel__slides js-carousel--responsive">
+        <article class="c-carousel__slide">
+            <div class="card">
+               <div class="container-name_cliente_estrelas">
+                    <div class="container-nome">
+                        <p class="nome-cliente">Thiago</p>
+                        <p class="p-tipo-cliente">Cliente</p>
+                    </div>
+                    <div class="estrelas-avaliacao">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                   </div>
+               </div>
+                <div class="container">
+                  <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                  <p class="lugar-avaliacao">Avaliação feaita no WorkStation </p> 
+                </div>
+              </div>
+        </article>
+         <article class="c-carousel__slide">
+            <div class="card">
+               <div class="container-name_cliente_estrelas">
+                    <div class="container-nome">
+                        <p class="nome-cliente">Thiago</p>
+                        <p class="p-tipo-cliente">Cliente</p>
+                    </div>
+                    <div class="estrelas-avaliacao">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                   </div>
+               </div>
+                <div class="container">
+                  <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                  <p class="lugar-avaliacao">Avaliação feaita no WorkStation </p> 
+                </div>
+              </div>
+        </article>
+         <article class="c-carousel__slide">
+            <div class="card">
+               <div class="container-name_cliente_estrelas">
+                    <div class="container-nome">
+                        <p class="nome-cliente">Thiago</p>
+                        <p class="p-tipo-cliente">Cliente</p>
+                    </div>
+                    <div class="estrelas-avaliacao">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                   </div>
+               </div>
+                <div class="container">
+                  <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                  <p class="lugar-avaliacao">Avaliação feaita no WorkStation </p> 
+                </div>
+              </div>
+        </article>
+         <article class="c-carousel__slide">
+            <div class="card">
+               <div class="container-name_cliente_estrelas">
+                    <div class="container-nome">
+                        <p class="nome-cliente">Thiago</p>
+                        <p class="p-tipo-cliente">Cliente</p>
+                    </div>
+                    <div class="estrelas-avaliacao">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                      <img class="estrela-svg" src="images/svg/star.svg">
+                   </div>
+               </div>
+                <div class="container">
+                  <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                  <p class="lugar-avaliacao">Avaliação feaita no WorkStation </p> 
+                </div>
+              </div>
+        </article>
+      </div>
+
+      <!-- <button class="js-carousel--responsive-prev" aria-label="Anterior">«</button>
+      <button class="js-carousel--responsive-next" aria-label="Próximo">»</button> -->
+      <div class="js-carousel--responsive-dots" role="tablist"></div>
+    </article>
+</body>
+</html>
+
+<script>
+// Responsive carousel
+// =============================================================================
+
+const $responsiveCarousel = document.querySelector(".js-carousel--responsive");
+
+new Glider($responsiveCarousel, {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  draggable: true,
+  duration: 0.25,
+  dots: ".js-carousel--responsive-dots",
+//   arrows: {
+//     prev: ".js-carousel--responsive-prev",
+//     next: ".js-carousel--responsive-next",
+//   },
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+  ],
+});
+</script>
