@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WorkStation</title>
+	<title>Cadastro</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="login.css">
 	<link rel="stylesheet" href="cadastro.css">
@@ -19,6 +19,7 @@
 		<li><a href="../planos/planos.html">Planos</a></li>
 		<li><a href="../about/about.html">Sobre</a></li>
 		<li><a href="#">Blog</a></li>
+	</ul>
 </nav>
 <div id="login">
 	<a id ="reg" class="cta" href="#">Register&nbsp</a>
@@ -56,7 +57,6 @@
 						<div class="container-select">
 							<select name="dias">
 								<option  value="dia">Dia</option>
-
 							</select>
 							<select name="mes">
 								<option value="dia">Mês</option>
@@ -64,7 +64,6 @@
 							</select>
 							<select name="dias">
 								<option id="years" value="dia">Ano</option>
-								
 							</select>
 						</div>
 					</div>
@@ -104,7 +103,7 @@
 						<p class="p-check-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante ante rhoncus mauris varius vitae urna elementum. Scelerisque sem nunc lorem fusce tortor mauris.</p>
 					</div>
 					<div class="container-button-login">
-						<input type="submit" value="Finalizar cadastro">
+						<input id="myBtn" type="submit" value="Finalizar cadastro">
 					</div>
 					
 					<div class="criar-conta">
@@ -112,11 +111,35 @@
 					</div>
 				</form>
 			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div class="container-sucess">
+						<img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+					</div>
+					<p class="p-sucesso">Sucesso!</p>
+					<div class="container-btn-continue">
+						<button class="btn-continue-cadastro">Continuar</button>
+					</div>
+				</div>
+			</div>
+			<div id="myModal-2" class="modal-2">
+				<div class="modal-content-2">
+					<span class="close">&times;</span>
+					<div class="container-sucess">
+						<img class="sucess-img" src="../images/svg/login-page/error.svg">
+					</div>
+					<p class="p-sucesso">Erro!</p>
+					<div class="container-btn-continue-2">
+						<button class="btn-continue-cadastro-2">Tente Novamente</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	/** MODAL*/
+	<!--MODAL -->
+	<script type="text/javascript" src="../api/modal.js"></script>
 	<script type="text/javascript" src="../api/numeros.js"></script>
 	<script type="text/javascript" src="../api/years.js"></script>
 </main>
 </html>
-
