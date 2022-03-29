@@ -3,6 +3,13 @@
 	background-color: white;
 }
 
+.h1-quem-somos{
+	font-size: 49px;
+}
+.desc-quem-somos{
+	color: #787878; 
+	font-size: 24px;
+}
 
 .ctn-txt-somos{
 	text-align: center;
@@ -37,7 +44,7 @@
 	padding-top: 3%;
 }
 .descricao-oq-temos{
-	font-weight: 600;
+	font-weight: 500;
 	text-align: justify;
 }
 .icone-oq-temos{
@@ -74,12 +81,12 @@
 /** SEGUNDA SECTION - missao VISÃO E VALORES **/
 
 #container-valores-etc{
-	height: 300vh;
+	height: 285vh;
 }
 
 #ctn-txt-missao-valores{
 	text-align: center;
-	padding-bottom: 3%;
+	padding-bottom: 7%;
 	padding-top: 3%;
 }
 
@@ -119,6 +126,10 @@
 	padding-bottom: 1%;
 	font-size: 2.5em;
 
+}
+
+.oq-temos-box{
+	color: black;
 }
 
 .h2-cultura{
@@ -161,12 +172,16 @@ hr{
     border-radius: 30px;
 }
 .container-avaliacao-txt{
-	height: 30vh;
-
+	height: 65vh;
+	
 }
 
 .container-avaliacao-txt{
 	text-align: center;
+}
+.container-titulo-avaliação{
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 .container-card-avaliacao{
@@ -230,23 +245,8 @@ hr{
 }
 
 /* RESPONSIVIDADE */
-@media screen and (min-width: 1430px){
-	#container-valores-etc{
-	height: 320vh;
-	}
-	.container-avaliacao-txt{
-	height: 100vh;
-	}
-}
 
-@media screen and (min-width: 1920px){
-	#container-valores-etc{
-	height: 280vh;
-	}
-	.container-avaliacao-txt{
-	height: 100vh;
-	}	
-}
+
 
 /**tTESTE CARD**/
 
