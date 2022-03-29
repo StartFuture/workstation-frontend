@@ -1,0 +1,49 @@
+.campo_nascimento{
+	display: flex;
+	flex-direction: column;
+}
+
+.container-select{
+	display: flex;
+}
+
+main{
+	height: 165vh;
+}
+.campo_check{
+	display: flex;
+	padding-top: 4%;
+	align-items: baseline;
+}
+
+.p-check-box{
+	padding-left: 2%;
+	text-align: left;
+}
+
+select{
+	height: 3em;
+	border-radius: 6px;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	padding-left: 2%;
+	margin: 0 2% 0 0;
+}
+.img-login-principal{
+	padding-bottom: 80%;
+}
+
+/** IMAGEM CONTAINER**/
+.container-logo-rosa{
+	height: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+.img-logo-rosa{
+	height: 100%;
+	width: 78%;
+	object-fit: contain;
+
+}

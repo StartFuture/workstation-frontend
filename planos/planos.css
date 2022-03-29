@@ -23,20 +23,24 @@
 	color: #787878;
 	padding-bottom: 5px;
 }
-h1{
+.h1-plans{
 	padding-top: 1%;
-	font-size: 2.3vw;
-
+	font-size: 1.4vw;
+	color: #787878;
 }
 
-h2{
+.h2-plans{
+	color: black;
+	font-size: 2.9vw;
+}
+
+.tittle-plan{
 	color: #FF0A54;
 	padding: 1% 0% 1% 0%;
 
 }
 
-
-h3, .desc-adicionais{
+.desc-adicionais{
 	color: #787878;
 }
 
@@ -89,10 +93,7 @@ h3, .desc-adicionais{
 	.desc-plans{
 		width: 30%;
 	}
-	.descricao-planos, .desc-adicionais{
-		width: 50%;
 
-	}
 	.cont-plan-texts{
 		gap: 2%;
 	}
@@ -103,4 +104,36 @@ h3, .desc-adicionais{
 	#cont-text-plan{
 	height: 195vh;
 	}
+}
+
+@media  (max-width: 600px){
+	#cont-text-plan{
+		height: 240vh;
+	}
+	#container-planos{
+		padding: 0 1% 0 5%;
+	}
+	.cont-plan-texts{
+		flex-direction: column;
+	}
+	.desc-plans{
+		width: 100%;
+		padding-bottom: 10%;
+	}
+	.card-plan{
+		width: 90%;
+
+	}
+	.button-contratar{
+		width: 100%;
+	}
+	.h1-plans{
+		font-size: 8vw;
+	}
+	.h2-plans{
+		font-size: 12vw;
+	}
+	.second, .third{
+	margin-top: 10%;
+}
 }

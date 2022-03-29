@@ -1,0 +1,12 @@
+.container-button-login{
+	display: flex;
+	justify-content: space-between;
+}
+.voltar{
+	color: blue;
+	text-decoration: none;
+	margin-top: 40px;
+}
+input[type="submit"]{
+	width: 40%;
+}
