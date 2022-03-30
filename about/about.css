@@ -53,8 +53,8 @@
 }
 
 .ctn-icon{
-		width: 25%;
-		height: 25%;
+	width: 25%;
+	height: 25%;
 	}
 
 .icon-nossas-box{
@@ -135,12 +135,7 @@
 
 }
 
-.teste{
-	word-wrap: break-word;
-	height: 100em;
-	width: auto;
 
-}
 
 .descricao-cultura{
 	padding-top: 2%;
@@ -217,7 +212,7 @@ hr{
 }
 
 
-/* TESTE DE RESPONSIVIDADE */
+/* RESPONSIVIDADE */
 
 @media only screen and (max-width: 1123px){
 	.img-valores{
@@ -279,11 +274,7 @@ hr{
 }
 
 
-/* RESPONSIVIDADE */
-
-
-
-/**tTESTE CARD**/
+/** CARD **/
 
 
 .card {
