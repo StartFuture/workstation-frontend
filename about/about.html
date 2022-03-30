@@ -14,21 +14,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 </head>
 <body>
-	<header>
-		<a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
-	<nav>
-		<ul class="nav_links">
-			<li><a href="../index.html">Box</a></li>
-			<li><a href="../planos/planos.html">Planos</a></li>
-			<li><a href="../about/about.html">Sobre</a></li>
-			<li><a href="#">Blog</a></li>
-	</nav>
-	<div id="login">
-		<a id ="reg" class="cta" href="#">Register&nbsp</a>
-		<a target="none" style="color: white;">|&nbsp</a>
-		<a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
-	</div>
-	</header>
+	<header id="header">
+    <a class="ld-page-return" href="index.html"><img class="logo" src="../images/png/logo.png"></a>
+    <nav id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu" >
+            <li><a href="#">Box</a></li>
+            <li><a href="../planos/planos.html">Planos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+            <div id="login">
+                <a href="../login_page/cadastro.html" id ="reg" class="cta" href="#">Register&nbsp</a>
+                <a target="none" style="color: white;">|&nbsp</a>
+                <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
+            </div>
+    </nav>
+
+  </header>
 	<section>
 		<div id="container-geral-about">
 			<div class="ctn-txt-somos">
@@ -276,35 +280,7 @@
   	 	</div>
   	 </div>
 </footer>
-<script>
-	
-	// Responsive carousel
-	// =============================================================================
+<script type="text/javascript" src="../api/navbar.js"></script>
+<script type="text/javascript" src="../api/carrosel-card.js"></script>
 
-const $responsiveCarousel = document.querySelector(".js-carousel--responsive");
-
-new Glider($responsiveCarousel, {
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  draggable: true,
-  duration: 0.25,
-  dots: ".js-carousel--responsive-dots",
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      },
-    },
-  ],
-});
-</script>
   
