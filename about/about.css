@@ -3,6 +3,13 @@
 	background-color: white;
 }
 
+.h1-quem-somos{
+	font-size: 49px;
+}
+.desc-quem-somos{
+	color: #787878; 
+	font-size: 24px;
+}
 
 .ctn-txt-somos{
 	text-align: center;
@@ -26,6 +33,7 @@
 
 .ctn-oq-temos{
 	padding-top: 4%;
+	height: 100%;
 	
 }
 
@@ -37,49 +45,35 @@
 	padding-top: 3%;
 }
 .descricao-oq-temos{
-	font-weight: 600;
+	font-weight: 500;
 	text-align: justify;
 }
 .icone-oq-temos{
 	color: #2B2E51;
 }
 
-@media screen and (max-width: 1223px){
-
-	.container-oq-temos-1{
-		padding-left: 5%;
-		padding-right: 5%;
-		grid-gap: 5%;
-	}
-	
-	.ctn-icon{
-		padding-top: 3.5%;
-	}
-	.icone-oq-temos {
-		padding: 0;
-	}
-	.descricao-oq-temos{
-		padding-top: 2%;
+.ctn-icon{
+	width: 25%;
+	height: 25%;
 	}
 
-	#container-geral-about{
-	height: 150vh;
-	}
-	.segundo-ctn-temos{
-	padding-top: 3.5%;
-	}
+.icon-nossas-box{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
+
 
 
 /** SEGUNDA SECTION - missao VISÃO E VALORES **/
 
 #container-valores-etc{
-	height: 300vh;
+	height: 285vh;
 }
 
 #ctn-txt-missao-valores{
 	text-align: center;
-	padding-bottom: 3%;
+	padding-bottom: 7%;
 	padding-top: 3%;
 }
 
@@ -121,6 +115,10 @@
 
 }
 
+.oq-temos-box{
+	color: black;
+}
+
 .h2-cultura{
 	text-align: center;
 	padding-bottom: 1%;
@@ -137,36 +135,14 @@
 
 }
 
-.teste{
-	word-wrap: break-word;
-	height: 100em;
-	width: auto;
 
-}
 
 .descricao-cultura{
 	padding-top: 2%;
 	color: #787878;
 }
 
-/* RESPONSIVIDADE */
-@media screen and (min-width: 1430px){
-	#container-valores-etc{
-	height: 320vh;
-	}
-	.container-avaliacao-txt{
-	height: 100vh;
-}
-}
 
-@media screen and (min-width: 1920px){
-	#container-valores-etc{
-	height: 280vh;
-	}
-	.container-avaliacao-txt{
-	height: 100vh;
-}
-}
 
 hr{
 	margin-top: 5%;
@@ -178,11 +154,16 @@ hr{
     border-radius: 30px;
 }
 .container-avaliacao-txt{
-	height: 50vh;
+	height: 65vh;
+	
 }
 
 .container-avaliacao-txt{
 	text-align: center;
+}
+.container-titulo-avaliação{
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 .container-card-avaliacao{
@@ -231,11 +212,156 @@ hr{
 }
 
 
-/* TESTE DE RESPONSIVIDADE */
+/* RESPONSIVIDADE */
 
 @media only screen and (max-width: 1123px){
-
 	.img-valores{
 		display: none;
 	}
+}
+
+@media (min-width: 1223px){
+	#container-valores-etc{
+		margin-bottom: 20%;
+	}
+	.container-avaliacao-txt{
+		height: 70vh;
+	}
+	.card{
+		width: 100%;
+	}
+}	
+@media (max-width: 600px){
+	.container-oq-temos-1{
+		margin: auto;
+		font-size: 16px;
+		padding-left: 5%;
+		padding-right: 5%;
+		grid-gap: 1%;
+		margin-bottom: 18%;
+		flex-direction: column;
+	}
+	.descricao-oq-temos{
+		width: 89px;
+	}
+	.ctn-oq-temos{
+		height: 1000px;
+	}
+		
+	.ctn-icon{
+		height: 30%;
+		width: 90%;
+	}
+	.icone-oq-temos {
+		padding: 0;
+	}
+	.descricao-oq-temos{
+		padding-top: 2%;
+	}
+	.segundo-ctn-temos{
+		padding-top: 3.5%;
+	}
+	#container-geral-about{
+		height: 250vh;
+	}
+	#container-valores-etc{
+		height: 260vh;
+	}
+	.container-avaliacao-txt{
+		height: 90vh;
+	}
+
+}
+
+
+/** CARD **/
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #F2F2F2;
+  transition: 0.3s;
+  width: 75%;
+  height: 80%;
+  border-radius: 33px;
+  margin-bottom: 10%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+	padding: 2px 16px;
+	margin-top: 10%;
+}
+
+.c-carousel--responsive {
+    max-width: 100%;
+}
+
+.c-carousel__slide {
+    align-items: center;
+    color: var(--color-webfatorial-gray-2);
+    display: flex;
+    font-size: 200%;
+    justify-content: center;
+    padding: rem(50) 0;
+    margin-top: 2%;
+}
+
+.c-carousel__slides {
+    border: rem(2) solid #a89cc8;
+}
+
+.c-carousel__slides:not(:first-child) {
+    border-left: rem(1) solid #a89cc8;
+}
+.container-name_cliente_estrelas{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px
+
+}
+.estrelas-avaliacao{
+    display: flex;
+}
+.container-nome{
+    display: flex;
+    flex-direction: column;
+}
+.estrelas-avaliacao{
+    width: 40%;
+    height: 10%;
+}
+.estrela-svg{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}
+.nome-cliente{
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+}
+.p-tipo-cliente{
+    color: #787878;
+    font-size: 20px;
+    margin-top: 1%;
+    text-align: left;
+}
+
+
+.avaliacao-atendimento{
+    font-size: 23px;
+    text-align: left;
+    font-weight: bold;
+}
+.lugar-avaliacao{
+    font-size: 18px;
+    color: #787878;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: left;
 }
