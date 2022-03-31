@@ -72,32 +72,6 @@ header{
 
 /*  PERSONALIZAÇÃO NAV  */
 
-}
-.nav_links{
-	list-style: none;
-
-}
-
-.nav_links li{
-	display: inline-block;
-	padding: 0 20px;
-}
-
-.nav_links li a{
-	transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover{
-	color: rgba(255, 10, 84,0.8);
-}
-.nav_links a{
-	font-family: "Asap", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	color: #edf0f1;
-	text-decoration: none;
-}
-
 #login{
 	display: flex;
 	align-items: center;
@@ -113,6 +87,9 @@ header{
 	color: rgba(212, 212, 212,0.8);
 }
 
+.barra-espaco{
+	padding: 0 !important;
+}
 
 /*  BOTÕES  */
 
@@ -157,7 +134,6 @@ header{
 	display: flex;
 	justify-content: center;
 	margin-top: 15%;
-
 }
 
 .button-conhecer:hover{
@@ -952,7 +928,19 @@ ul{
         #btn-mobile {
             display: none;
         }
-
+        #menu a{
+					font-family: "Asap", sans-serif;
+					font-weight: 500;
+					font-size: 16px;
+					color: #edf0f1;
+					text-decoration: none;
+				}
+				#menu li a:hover{
+					color: rgba(255, 10, 84,0.8);
+}
+				#menu li a{
+					transition: all 0.3s ease 0s;
+}
 
         @media (max-width: 600px) {
             #menu {
