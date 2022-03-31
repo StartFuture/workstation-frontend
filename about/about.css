@@ -18,7 +18,7 @@
 
 .container-oq-temos-1{
 	display: flex;
-	flex-wrap: wrap;
+	
 	justify-content: space-around;
 	
 }
@@ -214,6 +214,17 @@ hr{
 
 
 /* RESPONSIVIDADE */
+@media only screen (max-width: 800px){
+	#container-valores-etc{
+		height: 130vh;
+	}
+	#container-geral-about{
+		height: 150vh;
+	}
+	.descricao-valores{
+		grid-gap: 0;
+	}
+}
 
 @media only screen and (max-width: 1123px){
 	.img-valores{
@@ -239,11 +250,13 @@ hr{
 		padding-left: 5%;
 		padding-right: 5%;
 		grid-gap: 1%;
-		margin-bottom: 18%;
 		flex-direction: column;
+		width: 100%;
+		
 	}
 	.descricao-oq-temos{
-		width: 89px;
+		width: 250px;
+		height: 150px;
 	}
 	.ctn-oq-temos{
 		height: 1000px;
@@ -262,16 +275,24 @@ hr{
 	.segundo-ctn-temos{
 		padding-top: 3.5%;
 	}
+
 	#container-geral-about{
-		height: 250vh;
+		height: 210vh;
 	}
 	#container-valores-etc{
-		height: 260vh;
+		height: 180vh;
 	}
 	.container-avaliacao-txt{
-		height: 90vh;
+		height: 60vh;
+		margin-bottom: 20%;
 	}
-
+	hr{
+		margin-top: 10%;
+	}
+	.h2-venha{
+		font-size: 2.5em;
+	}
+	
 }
 
 
