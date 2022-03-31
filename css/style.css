@@ -153,7 +153,7 @@ header{
 /*  LANDING PAGE */
 
 main{
-	height: 34.5vh;
+	height: 36.5vh;
 	width: 100%;
 
 }
@@ -779,22 +779,22 @@ ul{
 }
 
 
-.descricao-imagens-2{
+
+.descricao-card-blog{
 	width: 100%;
-	color: #787878;
-	padding: 0px 20px 20px;
-	text-align: left;
 	
 }
-
-.imagem-tres{
-	height: 100%;
+.container-button-blog{
+	margin-top: 10% !important;
 }
-
 .container-blog{
-	height: 100vh;
+	height: 110vh !important;
 }
 
+.card-box{
+	height: 100% !important;
+
+}
 /* RESPONSIVIDADE */
 
 
