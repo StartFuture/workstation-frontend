@@ -11,135 +11,139 @@
 	<link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
 </head>
 <body>
-<header>
-	<a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
-<nav>
-	<ul class="nav_links">
-		<li><a href="../index.html">Box</a></li>
-		<li><a href="../planos/planos.html">Planos</a></li>
-		<li><a href="../about/about.html">Sobre</a></li>
-		<li><a href="#">Blog</a></li>
-	</ul>
-</nav>
-<div id="login">
-	<a id ="reg" class="cta" href="#">Register&nbsp</a>
-	<a target="none" style="color: white;">|&nbsp</a>
-	<a class="cta" href="#"><button id ="sign">Sign in</button></a>
-</div>
-</header>
-<main>
-	<div class="container-esquerda">
-		<div class="container-imagem-login">
-			<img class="img-login-principal" src="../images/svg/login-page/Login-principal.svg">
+	<header id="header">
+		<a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+		<nav id="nav">
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+				<span id="hamburger"></span>
+	      	</button>
+			<ul id="menu" role="menu" >
+				<li><a href="#">Box</a></li>
+				<li><a href="../planos/planos.html">Planos</a></li>
+				<li><a href="../about/about.html">Sobre</a></li>
+				<li><a href="#">Blog</a></li>
+				<div id="login">
+			        <a href="../login_page/cadastro.html" id ="reg" class="cta" href="#">Register&nbsp</a>
+			        <a class="barra-espaco" target="none" style="color: white;">|&nbsp</a>
+			        <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container-esquerda">
+			<div class="container-imagem-login">
+				<img class="img-login-principal" src="../images/svg/login-page/Login-principal.svg">
+			</div>
 		</div>
-	</div>
-	<div class="container-direita">
-		<div class="container-form-geral">
-			<div class="container-logo-rosa">
-				<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
-			</div>
-			<div class="container-form">
-				<form method="post">
-					<div class="campo_txt">
-						<label class="campo-requerido">Nome completo</label>
-						<input class="inputs-login" type="text" required placeholder="Nome completo">
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Senha</label>
-						<input class="inputs-login" type="password" required placeholder="Senha">
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Confirme a senha</label>
-						<input class="inputs-login" type="password" required placeholder="Confirme senha">
-					</div>
-					<div class="campo_nascimento">
-						<label class="campo-requerido">Data de nascimento</label>
-						<div class="container-select">
-							<select name="dias">
-								<option  value="dia">Dia</option>
-							</select>
-							<select name="mes">
-								<option value="dia">Mês</option>
-								
-							</select>
-							<select name="dias">
-								<option id="years" value="dia">Ano</option>
-							</select>
+		<div class="container-direita">
+			<div class="container-form-geral">
+				<div class="container-logo-rosa">
+					<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
+				</div>
+				<div class="container-form">
+					<form method="post">
+						<div class="campo_txt">
+							<label class="campo-requerido">Nome completo</label>
+							<input class="inputs-login" type="text" required placeholder="Nome completo">
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Senha</label>
+							<input class="inputs-login" type="password" required placeholder="Senha">
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Confirme a senha</label>
+							<input class="inputs-login" type="password" required placeholder="Confirme senha">
+						</div>
+						<div class="campo_nascimento">
+							<label class="campo-requerido">Data de nascimento</label>
+							<div class="container-select">
+								<select name="dias">
+									<option  value="dia">Dia</option>
+								</select>
+								<select name="mes">
+									<option value="dia">Mês</option>
+									
+								</select>
+								<select name="dias">
+									<option id="years" value="dia">Ano</option>
+								</select>
+							</div>
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">E-mail</label>
+							<input class="inputs-login" type="e-mail" required placeholder="E-mail">
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Confirme o e-mail</label>
+							<input class="inputs-login" type="text" required placeholder=" Confirme o e-mail" >
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Pessoa Física ou Pessoa Jurídica</label>
+							<input class="inputs-login" type="password" required placeholder="CPF ou CNPJ">
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Número de telefone</label>
+							<div class="container-select">
+								<select name="ddd">
+									<option value="">DDD</option>
+								</select>
+								<input class="inputs-login" type="text" required placeholder="(xx) xxxxx-xxxx">
+							</div>
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">Sexo</label>
+							<div class="container-select">
+								<select name="sexo">
+									<option value="dia">Masculino</option>
+									<option value="dia">Feminino</option>
+									<option value="dia">Outros</option>
+								</select>
+							</div>
+						</div>
+						<div class="campo_check">
+							<input type="checkbox" name="termos" required>
+							<p class="p-check-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante ante rhoncus mauris varius vitae urna elementum. Scelerisque sem nunc lorem fusce tortor mauris.</p>
+						</div>
+						<div class="container-button-login">
+							<input id="myBtn" type="submit" value="Finalizar cadastro">
+						</div>
+						
+						<div class="criar-conta">
+							<p class="nao-tem-conta">Tem uma conta?</p> <a href="login.html">Conecte-se</a>
+						</div>
+					</form>
+				</div>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<div class="container-sucess">
+							<img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+						</div>
+						<p class="p-sucesso">Sucesso!</p>
+						<div class="container-btn-continue">
+							<button class="btn-continue-cadastro">Continuar</button>
 						</div>
 					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">E-mail</label>
-						<input class="inputs-login" type="e-mail" required placeholder="E-mail">
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Confirme o e-mail</label>
-						<input class="inputs-login" type="text" required placeholder=" Confirme o e-mail" >
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Pessoa Física ou Pessoa Jurídica</label>
-						<input class="inputs-login" type="password" required placeholder="CPF ou CNPJ">
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Número de telefone</label>
-						<div class="container-select">
-							<select name="ddd">
-								<option value="">DDD</option>
-							</select>
-							<input class="inputs-login" type="text" required placeholder="(xx) xxxxx-xxxx">
+				</div>
+				<div id="myModal-2" class="modal-2">
+					<div class="modal-content-2">
+						<span class="close">&times;</span>
+						<div class="container-sucess">
+							<img class="sucess-img" src="../images/svg/login-page/error.svg">
 						</div>
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Sexo</label>
-						<div class="container-select">
-							<select name="sexo">
-								<option value="dia">Masculino</option>
-								<option value="dia">Feminino</option>
-								<option value="dia">Outros</option>
-							</select>
+						<p class="p-sucesso">Erro!</p>
+						<div class="container-btn-continue-2">
+							<button class="btn-continue-cadastro-2">Tente Novamente</button>
 						</div>
-					</div>
-					<div class="campo_check">
-						<input type="checkbox" name="termos" required>
-						<p class="p-check-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante ante rhoncus mauris varius vitae urna elementum. Scelerisque sem nunc lorem fusce tortor mauris.</p>
-					</div>
-					<div class="container-button-login">
-						<input id="myBtn" type="submit" value="Finalizar cadastro">
-					</div>
-					
-					<div class="criar-conta">
-						<p class="nao-tem-conta">Tem uma conta?</p> <a href="login.html">Conecte-se</a>
-					</div>
-				</form>
-			</div>
-			<div id="myModal" class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<div class="container-sucess">
-						<img class="sucess-img" src="../images/svg/login-page/sucess.svg">
-					</div>
-					<p class="p-sucesso">Sucesso!</p>
-					<div class="container-btn-continue">
-						<button class="btn-continue-cadastro">Continuar</button>
 					</div>
 				</div>
 			</div>
-			<div id="myModal-2" class="modal-2">
-				<div class="modal-content-2">
-					<span class="close">&times;</span>
-					<div class="container-sucess">
-						<img class="sucess-img" src="../images/svg/login-page/error.svg">
-					</div>
-					<p class="p-sucesso">Erro!</p>
-					<div class="container-btn-continue-2">
-						<button class="btn-continue-cadastro-2">Tente Novamente</button>
-					</div>
-				</div>
-			</div>
 		</div>
-	</div>
-	<!--MODAL -->
-	<script type="text/javascript" src="../api/modal.js"></script>
-	<script type="text/javascript" src="../api/numeros.js"></script>
-	<script type="text/javascript" src="../api/years.js"></script>
-</main>
+	</main>
+</body>
+<script type="text/javascript" src="../api/modal.js"></script>
+<script type="text/javascript" src="../api/numeros.js"></script>
+<script type="text/javascript" src="../api/years.js"></script>
+<script type="text/javascript" src="../api/navbar.js"></script>
 </html>

@@ -824,7 +824,8 @@ ul{
 	}
 
 	#textos-e-imgs{
-		margin: none;
+		margin: 0;
+		width: 100%;
 	}
 	#textos-principais{
 		margin-top: 30%;
@@ -878,20 +879,11 @@ ul{
 	}
 	.container-imagens-localizacao{
 		height: 22%;
-
 	}
+	
 }
 
 /**NAVBAR HAMBURGUER**/
-	a {
-		color: white;
-		text-decoration: none;
-		font-family: sans-serif;
-	}
-
-	a:hover {
-		background: rgba(0, 0, 0, 0.05);
-	}
 
 	#logo {
 		font-size: 1.5rem;
@@ -900,7 +892,7 @@ ul{
 
 	#header {
 		box-sizing: border-box;
-		height: 80px;
+		height: 88px;
 		padding: 1rem 2rem 1rem 2rem;
 		display: flex;
 		justify-content: space-between;
@@ -957,7 +949,7 @@ ul{
     }
    
     #nav.active #menu {
-		height: calc(100vh - 80px);
+		height: calc(100vh - 88px);
 		visibility: visible;
 		overflow-y: auto;
     }
@@ -1009,6 +1001,9 @@ ul{
 	}
 	.social-links{
 		flex-direction: column;
+	}
+	.textos-principais{
+		margin: 0;
 	}
 }
 @media (min-width: 1223px){
