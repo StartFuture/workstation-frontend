@@ -1007,6 +1007,9 @@ ul{
     #login{
     	margin-left: 0;
 	}
+	.social-links{
+		flex-direction: column;
+	}
 }
 @media (min-width: 1223px){
     #menu{
@@ -1031,7 +1034,7 @@ ul{
 }
 @media (min-width: 1903px){
     #menu{
-		width: 1080px;    
+		width: 1050px;    
     }
     #login{
 		margin-left: 55%;
