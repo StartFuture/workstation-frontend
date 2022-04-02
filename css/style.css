@@ -207,6 +207,7 @@ main{
 }
 .container-card-box{
 	height: 120vh;
+
 }
 
 .dois-textos{
@@ -825,7 +826,7 @@ ul{
 
 	#textos-e-imgs{
 		margin: 0;
-		width: 100%;
+		
 	}
 	#textos-principais{
 		margin-top: 30%;
@@ -879,6 +880,26 @@ ul{
 	}
 	.container-imagens-localizacao{
 		height: 22%;
+	}
+	/** SECTION DOS CARDS DAS BOX'S**/
+	.segundo-container{
+		height: 250vh;
+	}
+	#container-imagens{
+		flex-direction: column;
+		
+	}
+	.h2-venha{
+		margin-bottom: 50%;
+	}
+	.imagem{
+		width: 90%;
+		margin-right: 5% !important;
+		margin-left: 5%;
+		height: 500px;
+	}
+	#container-ultimos-textos{
+		margin-top: 50%;
 	}
 	
 }
