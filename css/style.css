@@ -200,7 +200,7 @@ main {
 }
 
 .container-card-box {
-    height: 170vh;
+    height: 135vh;
 }
 
 .dois-textos {
@@ -577,6 +577,12 @@ h2 {
 
 /** RESPONSIVIDADE **/
 
+@media screen and (max-width: 990px) {
+    .h3-predio {
+        height: 70px;
+    }
+}
+
 @media screen and (min-width: 1223px) {
     .card-plano {
         height: 75%;
@@ -859,7 +865,7 @@ ul {
     }
     /** SECTION DOS CARDS DAS BOX'S**/
     .segundo-container {
-        height: 250vh;
+        height: 80vh;
     }
     #container-imagens {
         flex-direction: column;
