@@ -793,18 +793,6 @@ ul {
         text-align: center;
     }
     /* 2° PARTE DA QUARTA SECTION */
-    #container-geral-planos-ld {
-        height: 220vh;
-    }
-    .container-card-diferencial {
-        flex-direction: column;
-    }
-    .container-imagem-diferecial {
-        width: 100%;
-    }
-    .container-descricao-diferencial {
-        width: 100%;
-    }
     .container-texto-loc {
         width: 100%;
     }
@@ -1008,7 +996,7 @@ a {
         margin-top: 5%;
     }
     #container-geral-planos-ld {
-        height: 295vh;
+        height: 365vh;
     }
     .lista-descricao-planos {
         margin-top: -48px;
@@ -1034,9 +1022,27 @@ a {
     .terceiro-card-plano {
         margin-bottom: 5%;
     }
+    .container-blog {
+        height: 276vh !important;
+    }
 }
 
 @media (max-width: 650px) {
+    .container-card-diferencial {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-imagem-diferecial {
+        height: 232px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 650px) {
+    #container-geral-planos-ld {
+        height: 310vh;
+    }
     .container-cards-planos {
         height: 150vh;
         margin-bottom: 15%;
@@ -1057,6 +1063,9 @@ a {
     }
     .hr-index {
         display: none;
+    }
+    .container-quinta-sec {
+        margin-top: 0;
     }
 }
 
