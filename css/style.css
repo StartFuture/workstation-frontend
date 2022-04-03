@@ -210,6 +210,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    height: 20vh;
 }
 
 #container-imagens {
@@ -374,15 +375,6 @@ main {
     object-fit: contain;
 }
 
-@media screen and (max-width: 1223px) {
-    .button-conhecer {
-        display: none;
-    }
-    .descricao-imagens {
-        font-size: 15px;
-    }
-}
-
 
 /* QUARTA SECTION */
 
@@ -393,20 +385,16 @@ main {
 
 .container-cards-planos {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     justify-content: space-between;
     margin: 5% 5% 0% 5%;
 }
 
 .card-plano {
     width: 22%;
-    height: 70%;
+    height: auto;
     border-radius: 33px;
     box-shadow: 3px 3px 40px #B8B8B8;
-}
-
-.segundo-card-plano {
-    height: 75%;
 }
 
 .titulo-card-plano {
@@ -580,38 +568,6 @@ h2 {
 }
 
 
-/** RESPONSIVIDADE **/
-
-@media screen and (max-width: 750px) {
-    #container-ultimos-textos {
-        height: 100vh;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .h3-predio {
-        height: 70px;
-    }
-}
-
-@media screen and (min-width: 1223px) {
-    .card-plano {
-        height: 75%;
-        width: 21%;
-    }
-    .segundo-card-plano {
-        height: 80%;
-    }
-    .imagem-card-plano {
-        width: 100%;
-        height: 40%;
-    }
-    .titulo-card-plano {
-        font-size: 1em;
-    }
-}
-
-
 /** QUINTA SECTION **/
 
 .container-quinta-sec {
@@ -756,22 +712,6 @@ ul {
 }
 
 
-/*responsive*/
-
-@media(max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 574px) {
-    .footer-col {
-        width: 100%;
-    }
-}
-
-
 /** SEXTA SECTION**/
 
 #dois-textos-2 {
@@ -892,18 +832,6 @@ ul {
     }
     .social-links {
         flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 320px) and (min-width: 820px) {
-    .foto-predio {
-        height: 135vh;
-    }
-    .textos-predios {
-        height: 50vh;
-    }
-    .h3-predio {
-        height: 70px;
     }
 }
 
@@ -1058,9 +986,6 @@ a {
     .h3-predio {
         height: 40px;
     }
-    .container-geral-planos-ld {
-        flex-direction: column;
-    }
 }
 
 @media (min-width: 601px) and (max-width: 1221px) {
@@ -1070,5 +995,98 @@ a {
     .logo {
         width: 90%;
         height: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-cards-planos {
+        height: 240vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    #container-geral-planos-ld {
+        height: 295vh;
+    }
+    .lista-descricao-planos {
+        margin-top: -48px;
+    }
+    .container-button-ver-mais {
+        margin-top: 31%;
+    }
+    .card-plano {
+        padding-bottom: 6%;
+        width: 29%;
+    }
+    .button-ver-mais {
+        padding: 0;
+        height: 33px;
+    }
+    .primeiro-card-plano {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .segundo-card-plano {
+        margin-bottom: 5%;
+    }
+    .terceiro-card-plano {
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 650px) {
+    .container-cards-planos {
+        height: 150vh;
+        margin-bottom: 15%;
+    }
+    .card-plano {
+        width: 70%;
+        height: 100%;
+    }
+    .p-descricao-card-planos {
+        font-size: 15px;
+    }
+    .lista-descricao-planos {
+        height: none;
+        margin-top: -54px;
+    }
+    .container-button-ver-mais {
+        margin-top: 22%;
+    }
+    .hr-index {
+        display: none;
+    }
+}
+
+
+/** RESPONSIVIDADE **/
+
+@media screen and (max-width: 320px) and (min-width: 820px) {
+    .foto-predio {
+        height: 135vh;
+    }
+    .textos-predios {
+        height: 50vh;
+    }
+    .h3-predio {
+        height: 70px;
+    }
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
     }
 }
