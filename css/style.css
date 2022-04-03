@@ -200,7 +200,7 @@ main {
 }
 
 .container-card-box {
-    height: 120vh;
+    height: 170vh;
 }
 
 .dois-textos {
@@ -220,6 +220,10 @@ main {
 
 .p-container {
     height: 120px;
+}
+
+.h2-utm {
+    margin-top: 10rem;
 }
 
 
@@ -260,6 +264,7 @@ main {
 }
 
 .h3-predio {
+    height: 45px;
     font-size: 1.1em;
 }
 
@@ -305,7 +310,6 @@ main {
 }
 
 .p-predio {
-    padding-top: 20px;
     color: #787878;
 }
 
@@ -790,15 +794,6 @@ ul {
 
 
 /* RESPONSIVIDADE */
-
-@media screen and (min-width: 1430px) {
-    .container-blog {
-        height: 100vh;
-    }
-    .container-card-box {
-        height: 170vh;
-    }
-}
 
 @media (max-width: 600px) {
     #elipse,
