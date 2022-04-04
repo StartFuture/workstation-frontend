@@ -1001,18 +1001,16 @@ header {
     height: 40px;
 }
 
-
-}
 @media (min-width: 601px) and (max-width: 1221px) {
     #menu {
         gap: 0;
     }
-    
     .logo {
         width: 90%;
         height: 100%;
     }
 }
+
 @media (max-width: 1200px) {
     .container-cards-planos {
         height: 240vh;
@@ -1022,117 +1020,105 @@ header {
         flex-direction: column;
         margin-top: 5%;
     }
-    
     #container-geral-planos-ld {
         height: 365vh;
     }
-    
     .lista-descricao-planos {
         margin-top: -48px;
     }
-    
     .container-button-ver-mais {
         margin-top: 31%;
     }
-    
     .card-plano {
         padding-bottom: 6%;
         width: 29%;
     }
-    
     .button-ver-mais {
         padding: 0;
         height: 33px;
     }
-    
     .primeiro-card-plano {
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    
     .segundo-card-plano {
         margin-bottom: 5%;
     }
-    
     .terceiro-card-plano {
         margin-bottom: 5%;
     }
-    
     .container-blog {
         height: 300vh !important;
     }
 }
+
 @media (max-width: 650px) {
     .container-card-diferencial {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
     .container-imagem-diferecial {
         height: 232px;
         width: 60%;
     }
 }
+
 @media (max-width: 650px) {
     #container-geral-planos-ld {
         height: 310vh;
     }
-    
     .container-cards-planos {
         height: 150vh;
         margin-bottom: 15%;
     }
-    
     .card-plano {
         width: 70%;
         height: 100%;
     }
-    
     .p-descricao-card-planos {
         font-size: 15px;
     }
-    
     .lista-descricao-planos {
         height: none;
         margin-top: -54px;
     }
-    
     .container-button-ver-mais {
         margin-top: 22%;
     }
-    
     .hr-index {
         display: none;
     }
-    
     .container-quinta-sec {
         margin-top: 0;
     }
 }
 
+
 /** RESPONSIVIDADE **/
+
 @media screen and (max-width: 320px) and (min-width: 820px) {
     .foto-predio {
         height: 135vh;
     }
-    
     .textos-predios {
         height: 50vh;
     }
-    
     .h3-predio {
         height: 70px;
     }
 }
 
+
 /*responsive*/
+
 @media(max-width: 767px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
     }
 }
+
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
