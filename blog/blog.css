@@ -1,0 +1,39 @@
+.container-comeco-blog {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+}
+
+.container-imagem-about {
+    width: 50%;
+    height: 100%;
+}
+
+.imagem-comeco-about {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container-textos-comeco-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** TEXTOS COMECO ABOUT**/
+
+.container-h1-about-vantagem {
+    text-align: left;
+    padding-right: 20%;
+}
+
+.h1-vantagem {
+    font-size: 3rem;
+}
+
+.container-p-data {
+    padding-right: 20%;
+}
