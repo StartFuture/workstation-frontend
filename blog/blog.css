@@ -1,0 +1,22 @@
+.container-comeco-blog {
+    height: 50vh;
+    width: auto;
+}
+
+.container-img-text-blog {
+    display: flex;
+}
+
+
+/**IMAGENS**/
+
+.container-imagem-blog {
+    height: 450px;
+    width: 50%;
+}
+
+.foto-comeco-blog {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
