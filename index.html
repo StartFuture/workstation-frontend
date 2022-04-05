@@ -9,21 +9,25 @@
 	<link rel="shortcut icon" type="imagex/png" href="images/png/icon-branco.png">
 </head>
 <body>
-	<header>
-		<a class="ld-page-return" href="index.html"><img class="logo" src="images/png/logo.png"></a>
-	<nav>
-		<ul class="nav_links">
-			<li><a href="#segunda-section">Box</a></li>
+<header id="header">
+	<a class="ld-page-return" href="#"><img class="logo" src="images/png/logo.png"></a>
+	<nav id="nav">
+		<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+			<span id="hamburger"></span>
+      	</button>
+		<ul id="menu" role="menu" >
+			<li><a href="#">Box</a></li>
 			<li><a href="planos/planos.html">Planos</a></li>
 			<li><a href="about/about.html">Sobre</a></li>
 			<li><a href="#">Blog</a></li>
+			<div id="login">
+		        <a href="../login_page/cadastro.html" id ="reg" class="cta" href="#">Register&nbsp</a>
+		        <a class="barra-espaco" target="none" style="color: white;">|&nbsp</a>
+		        <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+			</div>
+		</ul>
 	</nav>
-	<div id="login">
-		<a id ="reg" class="cta" href="#">Register&nbsp</a>
-		<a target="none" style="color: white;">|&nbsp</a>
-		<a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
-	</div>
-	</header>
+</header>
 	<section id="primeira-section">
 		<main>
 			<div id="textos-e-imgs">
@@ -290,8 +294,8 @@
 	 			<h4>Empresa</h4>
 	 			<ul>
 	 				<li><a href="#segunda-section">Box</a></li>
-	 				<li><a href="#quarta-section">Planos</a></li>
-	 				<li><a href="#">Sobre</a></li>
+	 				<li><a href="planos/planos.html">Planos</a></li>
+	 				<li><a href="about/about.html">Sobre</a></li>
 	 			</ul>
 	 		</div>
 	 		<div class="footer-col">
@@ -318,7 +322,7 @@
 	 	</div>
 	 </div>
 </footer>
-<script type="text/javascript" src="api/showmore.js"></script>
+<script type="text/javascript" src="../api/navbar.js"></script>
 </body>
 </html>
 

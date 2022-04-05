@@ -72,32 +72,6 @@ header{
 
 /*  PERSONALIZAÇÃO NAV  */
 
-}
-.nav_links{
-	list-style: none;
-
-}
-
-.nav_links li{
-	display: inline-block;
-	padding: 0 20px;
-}
-
-.nav_links li a{
-	transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover{
-	color: rgba(255, 10, 84,0.8);
-}
-.nav_links a{
-	font-family: "Asap", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	color: #edf0f1;
-	text-decoration: none;
-}
-
 #login{
 	display: flex;
 	align-items: center;
@@ -113,6 +87,9 @@ header{
 	color: rgba(212, 212, 212,0.8);
 }
 
+.barra-espaco{
+	padding: 0 !important;
+}
 
 /*  BOTÕES  */
 
@@ -157,7 +134,6 @@ header{
 	display: flex;
 	justify-content: center;
 	margin-top: 15%;
-
 }
 
 .button-conhecer:hover{
@@ -804,7 +780,6 @@ ul{
 
 
 .descricao-imagens-2{
-	
 	width: 100%;
 	color: #787878;
 	padding: 0px 20px 20px;
@@ -849,7 +824,8 @@ ul{
 	}
 
 	#textos-e-imgs{
-		margin: none;
+		margin: 0;
+		width: 100%;
 	}
 	#textos-principais{
 		margin-top: 30%;
@@ -903,155 +879,160 @@ ul{
 	}
 	.container-imagens-localizacao{
 		height: 22%;
-
 	}
+	
 }
 
 /**NAVBAR HAMBURGUER**/
 
- a {
-            color: white;
-            text-decoration: none;
-            font-family: sans-serif;
-        }
+	#logo {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
 
-        a:hover {
-            background: rgba(0, 0, 0, 0.05);
-        }
+	#header {
+		box-sizing: border-box;
+		height: 88px;
+		padding: 1rem 2rem 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		background: #2B2E51;
+	}
 
-        #logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+	#menu {
+		display: flex;
+		list-style: none;
+		gap: 0.5rem;
+		width: 1080px;
+		align-items: baseline;
+	}
 
-        #header {
-            box-sizing: border-box;
-            height: 80px;
-            padding: 1rem 2rem 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            background: #2B2E51;
-        }
+	#menu a {
+		display: block;
+		padding: 0.5rem;
+	}
+	#login{
+		margin-left: 55%;
+	}
 
-        #menu {
-            display: flex;
-            list-style: none;
-            gap: 0.5rem;
-            width: 1080px;
-            align-items: baseline;
-        }
+	#btn-mobile {
+		display: none;
+	}
+	#menu a{
+		font-family: "Asap", sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		color: #edf0f1;
+		text-decoration: none;
+	}
+	#menu li a:hover{
+		color: rgba(255, 10, 84,0.8);
+	}
+	#menu li a{
+		transition: all 0.3s ease 0s;
+	}
 
-        #menu a {
-            display: block;
-            padding: 0.5rem;
-        }
-        #login{
-            margin-left: 55%;
-        }
+@media (max-width: 600px) {
+    #menu {
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 70px;
+		right: 0px;
+		background: #2B2E51;
+		transition: 0.6s;
+		z-index: 1000;
+		height: 0px;
+		visibility: hidden;
+		overflow-y: hidden;
 
-        #btn-mobile {
-            display: none;
-        }
-
-
-        @media (max-width: 600px) {
-            #menu {
-                display: block;
-                position: absolute;
-                width: 100%;
-                top: 70px;
-                right: 0px;
-                background: #2B2E51;
-                transition: 0.6s;
-                z-index: 1000;
-                height: 0px;
-                visibility: hidden;
-                overflow-y: hidden;
-
-            }
-           
-            #nav.active #menu {
-                height: calc(100vh - 80px);
-                visibility: visible;
-                overflow-y: auto;
-            }
-            #menu a {
-                padding: 1rem 0;
-                margin: 0 1rem;
-                border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-                font-family: "Asap", sans-serif;
-
-            }
-            header{
-                flex-direction: row-reverse;
-            }
-            #btn-mobile {
-                display: flex;
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-                border: none;
-                background: none;
-                cursor: pointer;
-                gap: 0.5rem;
-            }
-            #hamburger {
-                border-top: 2px solid;
-                width: 20px;
-            }
-            #hamburger::after,
-            #hamburger::before {
-                content: '';
-                display: block;
-                width: 20px;
-                height: 2px;
-                background: currentColor;
-                margin-top: 5px;
-                transition: 0.3s;
-                position: relative;
-            }
-            #nav.active #hamburger {
-                border-top-color: transparent;
-            }
-            #nav.active #hamburger::before {
-                transform: rotate(135deg);
-            }
-            #nav.active #hamburger::after {
-                transform: rotate(-135deg);
-                top: -7px;
-            }
-            #login{
-            margin-left: 0;
-        }
-        }
-        @media (min-width: 1223px){
-            #menu{
-                width: 800px;
-            }
-            #login{
-                margin-left: 41%;
-            }
-        }
-        @media (min-width: 601px) and (max-width: 1221px){
-            #menu{
-                width: 100%;
-                gap: 0;
-            }
-            #login{
-                margin-left: 0;
-            }
-            .logo{
-                width: 90%;
-                height: 100%;
-            }
-
-        }
-        @media (min-width: 1903px){
-            #menu{
-                width: 1080px;    
-            }
-            #login{
-                margin-left: 55%;
-            }
-            
-        }
+    }
+   
+    #nav.active #menu {
+		height: calc(100vh - 88px);
+		visibility: visible;
+		overflow-y: auto;
+    }
+    #menu a {
+		padding: 1rem 0;
+		margin: 0 1rem;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+		font-family: "Asap", sans-serif;
+    }
+    header{
+		flex-direction: row-reverse;
+    }
+    #btn-mobile {
+		display: flex;
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		border: none;
+		background: none;
+		cursor: pointer;
+		gap: 0.5rem;
+    }
+    #hamburger {
+    	border-top: 2px solid;
+     	width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+		content: '';
+		display: block;
+		width: 20px;
+		height: 2px;
+		background: currentColor;
+		margin-top: 5px;
+		transition: 0.3s;
+		position: relative;
+    }
+    #nav.active #hamburger {
+		border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+		transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+		transform: rotate(-135deg);
+		top: -7px;
+    }
+    #login{
+    	margin-left: 0;
+	}
+	.social-links{
+		flex-direction: column;
+	}
+	.textos-principais{
+		margin: 0;
+	}
+}
+@media (min-width: 1223px){
+    #menu{
+		width: 800px;
+    }
+    #login{
+		margin-left: 41%;
+    }
+}
+@media (min-width: 601px) and (max-width: 1221px){
+    #menu{
+		width: 100%;
+		gap: 0;
+    }
+    #login{
+		margin-left: 0;
+    }
+    .logo{
+		width: 90%;
+		height: 100%;
+    }
+}
+@media (min-width: 1903px){
+    #menu{
+		width: 1050px;    
+    }
+    #login{
+		margin-left: 55%;
+    }
+}
 
