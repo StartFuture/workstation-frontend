@@ -16,7 +16,7 @@
         a {
             color: white;
             text-decoration: none;
-            font-family: sans-serif;
+           
         }
 
         a:hover {
@@ -41,7 +41,7 @@
             display: flex;
             list-style: none;
             gap: 0.5rem;
-            width: 1080px;
+            width: auto;
             align-items: baseline;
         }
 
@@ -50,19 +50,25 @@
             padding: 0.5rem;
         }
         #login{
-            margin-left: 55%;
+            display: flex;
+            justify-content: center;
+            width: inherit !important; 
+            margin-left: 0px !important;
         }
-
+        .nav {
+            display: flex !important;
+        }
         #btn-mobile {
             display: none;
         }
+        #nav-mobile {
+            display: none;
+        }
 
-
-        @media (max-width: 600px) {
+        @media (max-width: 820px) {
             #menu {
                 display: block;
                 position: absolute;
-                width: 100%;
                 top: 70px;
                 right: 0px;
                 background: #2B2E51;
@@ -71,11 +77,13 @@
                 height: 0px;
                 visibility: hidden;
                 overflow-y: hidden;
+                width: 100%;
 
             }
            
-            #nav.active #menu {
+            #nav-mobile.active #menu {
                 height: calc(100vh - 80px);
+                width: 100%;
                 visibility: visible;
                 overflow-y: auto;
             }
@@ -87,6 +95,9 @@
             header{
                 flex-direction: row-reverse;
             }
+            .nav {
+                display: none !important;
+            }
             #btn-mobile {
                 display: flex;
                 padding: 0.5rem 1rem;
@@ -96,9 +107,13 @@
                 cursor: pointer;
                 gap: 0.5rem;
             }
+            #nav-mobile {
+                display: block;
+            }
             #hamburger {
                 border-top: 2px solid;
                 width: 20px;
+                color: white;
             }
             #hamburger::after,
             #hamburger::before {
@@ -111,35 +126,20 @@
                 transition: 0.3s;
                 position: relative;
             }
-            #nav.active #hamburger {
+            #nav-mobile.active #hamburger {
                 border-top-color: transparent;
             }
-            #nav.active #hamburger::before {
+            #nav-mobile.active #hamburger::before {
                 transform: rotate(135deg);
             }
-            #nav.active #hamburger::after {
+            #nav-mobile.active #hamburger::after {
                 transform: rotate(-135deg);
                 top: -7px;
-            }
-            #login{
-            margin-left: 0;
-        }
-        }
-        @media (min-width: 1223px){
-            #menu{
-                width: 800px;
-            }
-            #login{
-                margin-left: 41%;
             }
         }
         @media (min-width: 601px) and (max-width: 1221px){
             #menu{
-                width: 100%;
                 gap: 0;
-            }
-            #login{
-                margin-left: 0;
             }
             .logo{
                 width: 90%;
@@ -147,38 +147,43 @@
             }
 
         }
-        @media (min-width: 1903px){
-            #menu{
-                width: 1080px;    
-            }
-            #login{
-                margin-left: 55%;
-            }
-            
-        }
-
   </style>
 </head>
 
 <body>
   <header id="header">
     <a class="ld-page-return" href="index.html"><img class="logo" src="../images/png/logo.png"></a>
-    <nav id="nav">
-      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-        <span id="hamburger"></span>
-      </button>
-      <ul id="menu" role="menu" >
-            <li><a href="#segunda-section">Box</a></li>
-            <li><a href="planos/planos.html">Planos</a></li>
-            <li><a href="about/about.html">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
+
+    <ul id="menu" role="menu" class="nav">
+        <li><a href="#segunda-section">Box</a></li>
+        <li><a href="planos/planos.html">Planos</a></li>
+        <li><a href="about/about.html">Sobre</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+    <div id="login" class="nav">
+        <a id ="reg" class="cta" href="#">Register&nbsp</a>
+        <a target="none" style="color: white;">|&nbsp</a>
+        <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+    </div>
+    
+    <div id="nav-mobile">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+        <ul id="menu" role="menu" >
             <div id="login">
                 <a id ="reg" class="cta" href="#">Register&nbsp</a>
                 <a target="none" style="color: white;">|&nbsp</a>
                 <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
             </div>
-    </nav>
-
+            <li><a href="#segunda-section">Box</a></li>
+            <li><a href="planos/planos.html">Planos</a></li>
+            <li><a href="about/about.html">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
   </header>
 </body>
 
@@ -187,9 +192,12 @@
 <script>
     const btnMobile = document.getElementById('btn-mobile');
 
-function toggleMenu(event) {
-  if (event.type === 'touchstart') event.preventDefault();
-        const nav = document.getElementById('nav');
+    function toggleMenu(event) {
+        if (event.type === 'touchstart') {
+            event.preventDefault();
+        }
+        const nav = document.getElementById('nav-mobile');
+
         nav.classList.toggle('active');
         const active = nav.classList.contains('active');
 
