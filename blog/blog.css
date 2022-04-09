@@ -64,6 +64,10 @@
         height: 100%;
         object-fit: contain;
     }
+    
+    .no-padding {
+        padding-left: 0 !important;
+    }
     /**SEGUNDA SECTION */
     
     .container-geral-cards-blog {
@@ -71,12 +75,14 @@
     }
     
     .container-cards-blog {
-        height: 100%;
+        height: auto;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-top: 5%;
+        gap: 50px;
     }
     
     .card-blog {
@@ -209,5 +215,11 @@
     @media screen and (max-width: 1019px) {
         .container-geral-cards-blog {
             height: 230vh;
+        }
+    }
+    
+    @media screen and (max-width: 679px) {
+        .container-geral-cards-blog {
+            height: 326vh;
         }
     }
