@@ -8,6 +8,7 @@
         width: 50%;
         height: 73%;
         margin: auto;
+        margin-left: 12%;
     }
     
     .imagem-comeco-about {
@@ -29,7 +30,7 @@
     
     .container-h1-about-vantagem {
         text-align: left;
-        width: 50%;
+        width: 64%;
     }
     
     .h1-vantagem {
