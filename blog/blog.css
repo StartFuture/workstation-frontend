@@ -41,6 +41,7 @@
         display: flex;
         width: 50%;
         margin-bottom: 2%;
+        margin-top: 1%;
     }
     
     .p-vantagem {
@@ -70,11 +71,12 @@
     
     .no-padding {
         padding-left: 0 !important;
+        margin-top: 0 !important;
     }
     /**SEGUNDA SECTION */
     
     .container-geral-cards-blog {
-        height: 110vh;
+        height: 200vh;
     }
     
     .container-cards-blog {
@@ -149,6 +151,7 @@
         display: flex;
         justify-content: flex-end;
         padding-right: 4%;
+        margin-top: 2%;
     }
     
     .container-button-filtro {
@@ -224,5 +227,11 @@
     @media screen and (max-width: 679px) {
         .container-geral-cards-blog {
             height: 326vh;
+        }
+    }
+    
+    @media screen and (max-width: 729px) {
+        .container-geral-cards-blog {
+            height: 406vh;
         }
     }
