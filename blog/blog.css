@@ -53,6 +53,82 @@
         width: 55%;
         justify-content: flex-end;
     }
+    
+    .container-icon-date {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .icon-date {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    /**SEGUNDA SECTION */
+    
+    .container-geral-cards-blog {
+        height: 100vh;
+    }
+    
+    .container-cards-blog {
+        height: 100%;
+    }
+    
+    .card-blog {
+        width: 340px;
+        height: 610px;
+        border: none;
+        border-radius: 9px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    /**CARD BLOG**/
+    
+    .container-imagem-card-blog {
+        width: 100%;
+        height: 45%;
+    }
+    
+    .img-card-box {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .p-card {
+        margin-top: 1%;
+        color: #787878;
+        text-align: left;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    
+    .hr-card {
+        color: #787878;
+        margin-top: 5%;
+        margin-left: 2%;
+        width: 13rem;
+    }
+    
+    .ctn-link-noticia {
+        margin-top: 2%;
+    }
+    
+    .p-link {
+        color: #FF0A54;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+    
+    .ctn-link-noticia,
+    .container-p-data,
+    .ctn-h1-card,
+    .ctn-p-card {
+        padding-left: 5%;
+    }
     /**BOTOES SEGUNDA SECTION**/
     
     .container-filtro-card {
@@ -67,7 +143,7 @@
     }
     
     .hr-divisao-section {
-        margin: 0 2% 3% 2%;
+        margin: 0 2% 0 2%;
         color: #B8B8B8
     }
     
@@ -80,6 +156,17 @@
         cursor: pointer;
         transition: all 0.3s ease 0s;
         font-weight: bold;
+    }
+    
+    .button-ler-noticia-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 4% 4% 4% 0;
+    }
+    
+    .button-ler-noticia {
+        border-radius: 5px !important;
+        margin-top: 0;
     }
     /**RESPONSIVIDADE */
     
