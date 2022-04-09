@@ -67,13 +67,14 @@
     /**SEGUNDA SECTION */
     
     .container-geral-cards-blog {
-        height: 100vh;
+        height: 110vh;
     }
     
     .container-cards-blog {
         height: 100%;
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -202,5 +203,11 @@
     @media screen and (max-width: 1208px) {
         .p-vantagem {
             width: 87%;
+        }
+    }
+    
+    @media screen and (max-width: 1019px) {
+        .container-geral-cards-blog {
+            height: 230vh;
         }
     }
