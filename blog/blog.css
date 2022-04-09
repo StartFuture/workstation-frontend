@@ -1,12 +1,13 @@
     .container-comeco-blog {
-        height: 60vh;
+        height: 80vh;
         width: 100%;
         display: flex;
     }
     
     .container-imagem-about {
         width: 50%;
-        height: 100%;
+        height: 73%;
+        margin: auto;
     }
     
     .imagem-comeco-about {
@@ -21,6 +22,7 @@
         justify-content: flex-start;
         align-items: left;
         padding-bottom: 5%;
+        padding-top: 5%;
         margin-left: 5%;
     }
     /** TEXTOS COMECO ABOUT**/
