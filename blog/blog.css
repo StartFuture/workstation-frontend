@@ -63,7 +63,12 @@
     
     .container-button-filtro {
         width: 4rem;
-        margin: 1%;
+        margin: 0.5%;
+    }
+    
+    .hr-divisao-section {
+        margin: 0 2% 3% 2%;
+        color: #B8B8B8
     }
     
     .button-filtro {
