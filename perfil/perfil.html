@@ -89,14 +89,14 @@
                         <td>CPF ou CNPJ</td>
                         <td class="hidetext">12.22.22.765-33</td>
                         <td class="lapis">
-                            <input class="editar" id="myBtn" type="submit" value="Editar">
+                            <input class="editar" id="my-btn-alterar-cpf" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="no-border">
                         <td>Telefone</td>
                         <td>+55 11 1111-1111</td>
                         <td class="lapis">
-                            <input class="editar" id="myBtn" type="submit" value="Editar">
+                            <input class="editar" id="my-btn-alterar-telefone" type="submit" value="Editar">
                         </td>
                     </tr>
                 </table>
@@ -140,6 +140,34 @@
         </div>
         <div class="button-conhecer-container button-ler-artigo-container btn-margin">
             <a class="close cancelar" id="close-alterar-senha">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-cpf" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar CPF e CNPJ </p>
+        <div class="container-input">
+            <label class="campo-requerido">CPF e CNPJ</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Alterar o CPF e CNPJ">
+
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-cpf">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-telefone" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar telefone </p>
+        <div class="container-input">
+            <label class="campo-requerido">Telefone</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Digite seu telefone">
+
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-telefone">Cancelar</a>
             <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
         </div>
     </div>

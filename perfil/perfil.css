@@ -22,12 +22,14 @@
 
 .p-header {
     color: #787878;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 table {
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 57%;
     border: 1px solid;
     border-radius: 8px;
     margin-top: 3%;
@@ -208,4 +210,13 @@ hr {
     color: black;
     font-size: 2em;
     margin-bottom: 3%;
+}
+
+
+/** RESPONSIVIDADE**/
+
+@media screen and (max-width: 695px) {
+    table {
+        width: 80%;
+    }
 }
