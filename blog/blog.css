@@ -205,11 +205,6 @@
 
 /**FILTRAGEM**/
 
-.button-filtro.active {
-    background-color: #666;
-    color: white;
-}
-
 
 /**RESPONSIVIDADE */
 
@@ -265,6 +260,12 @@
 
 /** RESPONSIVIDADE ALTURA**/
 
+@media screen and(max-height: 981px) {
+    .container-geral-cards-blog {
+        height: 200vh;
+    }
+}
+
 @media screen and (max-height: 980px) {
     .container-geral-cards-blog {
         height: 450vh;
@@ -298,5 +299,11 @@
 @media screen and (max-height: 615px) {
     .container-geral-cards-blog {
         height: 700vh;
+    }
+}
+
+@media screen and (min-height: 716px) {
+    .container-geral-cards-blog {
+        height: 200vh;
     }
 }
