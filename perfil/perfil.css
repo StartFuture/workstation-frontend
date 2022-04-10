@@ -76,6 +76,14 @@ hr {
     cursor: pointer;
 }
 
+.inputs-padding {
+    margin-top: 2%;
+}
+
+.btn-margin {
+    margin-top: 0 !important;
+}
+
 
 /* MODAL**/
 
