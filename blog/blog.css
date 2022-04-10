@@ -1,237 +1,302 @@
-    .container-comeco-blog {
-        height: 80vh;
-        width: 100%;
-        display: flex;
-    }
-    
-    .container-imagem-about {
-        width: 50%;
-        height: 73%;
-        margin: auto;
-        margin-left: 12%;
-    }
-    
-    .imagem-comeco-about {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-    }
-    
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.container-comeco-blog {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.container-imagem-about {
+    width: 50%;
+    height: 73%;
+    margin: auto;
+    margin-left: 12%;
+}
+
+.imagem-comeco-about {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container-textos-comeco-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-left: 5%;
+}
+
+
+/** TEXTOS COMECO ABOUT**/
+
+.container-h1-about-vantagem {
+    text-align: left;
+    width: 64%;
+}
+
+.h1-vantagem {
+    font-size: 2.5rem;
+}
+
+.container-p-data {
+    display: flex;
+    width: 50%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.p-vantagem {
+    color: #787878;
+    width: 50%;
+}
+
+.button-conhecer {
+    width: 44%;
+}
+
+.button-conhecer-container {
+    width: 55%;
+    justify-content: flex-end;
+}
+
+.container-icon-date {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-date {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+
+/**SEGUNDA SECTION */
+
+.container-geral-cards-blog {
+    height: 200vh;
+}
+
+.container-cards-blog {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    gap: 50px;
+}
+
+.card-blog {
+    width: 340px;
+    height: 610px;
+    border: none;
+    border-radius: 9px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+/**CARD BLOG**/
+
+.container-imagem-card-blog {
+    width: 100%;
+    height: 45%;
+}
+
+.img-card-box {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.p-card {
+    margin-top: 1%;
+    color: #787878;
+    text-align: left;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.hr-card {
+    color: #787878;
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 13rem;
+}
+
+.ctn-link-noticia {
+    margin-top: 2%;
+}
+
+.p-link {
+    color: #FF0A54;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.ctn-link-noticia,
+.container-p-data,
+.ctn-h1-card,
+.ctn-p-card {
+    padding-left: 5%;
+}
+
+
+/**BOTOES SEGUNDA SECTION**/
+
+.container-filtro-card {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4%;
+    margin-top: 2%;
+}
+
+.container-button-filtro {
+    width: 4rem;
+    margin: 0.5%;
+}
+
+.hr-divisao-section {
+    margin: 0 2% 0 2%;
+    color: #B8B8B8
+}
+
+.button-filtro {
+    width: 100%;
+    height: 34px;
+    background-color: rgba(43, 46, 81, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: bold;
+}
+
+.button-ler-noticia-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4% 4% 4% 0;
+}
+
+.button-ler-noticia {
+    border-radius: 5px !important;
+    margin-top: 0;
+}
+
+
+/**FILTRAGEM**/
+
+.button-filtro.active {
+    background-color: #666;
+    color: white;
+}
+
+
+/**RESPONSIVIDADE */
+
+@media screen and (max-width: 820px) {
     .container-textos-comeco-about {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: left;
-        padding-bottom: 5%;
-        padding-top: 5%;
-        margin-left: 5%;
+        margin-left: 0;
+        padding: 4% 4% 2% 4%;
     }
-    /** TEXTOS COMECO ABOUT**/
-    
+    .container-comeco-blog {
+        flex-direction: column;
+        height: 160vh
+    }
+    .container-imagem-about {
+        width: 80%;
+        margin: auto;
+    }
     .container-h1-about-vantagem {
         text-align: left;
-        width: 64%;
+        width: 100%;
     }
-    
-    .h1-vantagem {
-        font-size: 2.5rem;
-    }
-    
-    .container-p-data {
-        display: flex;
-        width: 50%;
-        margin-bottom: 2%;
-        margin-top: 1%;
-    }
-    
     .p-vantagem {
-        color: #787878;
-        width: 50%;
+        width: 100%;
     }
-    
     .button-conhecer {
-        width: 31%;
+        width: 61%;
     }
-    
-    .button-conhecer-container {
-        width: 55%;
-        justify-content: flex-end;
+}
+
+@media screen and (max-width: 1208px) {
+    .p-vantagem {
+        width: 87%;
     }
-    
-    .container-icon-date {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .icon-date {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-    
-    .no-padding {
-        padding-left: 0 !important;
-        margin-top: 0 !important;
-    }
-    /**SEGUNDA SECTION */
-    
+}
+
+@media screen and (max-width: 1019px) {
     .container-geral-cards-blog {
-        height: 200vh;
+        height: 230vh;
     }
-    
-    .container-cards-blog {
-        height: auto;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 5%;
-        gap: 50px;
+}
+
+@media screen and (max-width: 679px) {
+    .container-geral-cards-blog {
+        height: 326vh;
     }
-    
-    .card-blog {
-        width: 340px;
-        height: 610px;
-        border: none;
-        border-radius: 9px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width: 729px) {
+    .container-geral-cards-blog {
+        height: 406vh;
     }
-    /**CARD BLOG**/
-    
-    .container-imagem-card-blog {
-        width: 100%;
-        height: 45%;
+}
+
+
+/** RESPONSIVIDADE ALTURA**/
+
+@media screen and (max-height: 980px) {
+    .container-geral-cards-blog {
+        height: 450vh;
     }
-    
-    .img-card-box {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+}
+
+@media screen and (max-height: 885px) {
+    .container-geral-cards-blog {
+        height: 500vh;
     }
-    
-    .p-card {
-        margin-top: 1%;
-        color: #787878;
-        text-align: left;
-        overflow: hidden;
-        overflow-wrap: break-word;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
+}
+
+@media screen and (max-height: 796px) {
+    .container-geral-cards-blog {
+        height: 550vh;
     }
-    
-    .hr-card {
-        color: #787878;
-        margin-top: 5%;
-        margin-left: 2%;
-        width: 13rem;
+}
+
+@media screen and (max-height: 725px) {
+    .container-geral-cards-blog {
+        height: 600vh;
     }
-    
-    .ctn-link-noticia {
-        margin-top: 2%;
+}
+
+@media screen and (max-height: 665px) {
+    .container-geral-cards-blog {
+        height: 650vh;
     }
-    
-    .p-link {
-        color: #FF0A54;
-        font-weight: bold;
-        font-size: 0.9em;
+}
+
+@media screen and (max-height: 615px) {
+    .container-geral-cards-blog {
+        height: 700vh;
     }
-    
-    .ctn-link-noticia,
-    .container-p-data,
-    .ctn-h1-card,
-    .ctn-p-card {
-        padding-left: 5%;
-    }
-    /**BOTOES SEGUNDA SECTION**/
-    
-    .container-filtro-card {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 4%;
-        margin-top: 2%;
-    }
-    
-    .container-button-filtro {
-        width: 4rem;
-        margin: 0.5%;
-    }
-    
-    .hr-divisao-section {
-        margin: 0 2% 0 2%;
-        color: #B8B8B8
-    }
-    
-    .button-filtro {
-        width: 100%;
-        height: 34px;
-        background-color: rgba(43, 46, 81, 1);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-        font-weight: bold;
-    }
-    
-    .button-ler-noticia-container {
-        display: flex;
-        justify-content: flex-end;
-        margin: 4% 4% 4% 0;
-    }
-    
-    .button-ler-noticia {
-        border-radius: 5px !important;
-        margin-top: 0;
-    }
-    /**RESPONSIVIDADE */
-    
-    @media screen and (max-width: 820px) {
-        .container-textos-comeco-about {
-            margin-left: 0;
-            padding: 4% 4% 2% 4%;
-        }
-        .container-comeco-blog {
-            flex-direction: column;
-            height: 160vh
-        }
-        .container-imagem-about {
-            width: 80%;
-            margin: auto;
-        }
-        .container-h1-about-vantagem {
-            text-align: left;
-            width: 100%;
-        }
-        .p-vantagem {
-            width: 100%;
-        }
-        .button-conhecer {
-            width: 61%;
-        }
-    }
-    
-    @media screen and (max-width: 1208px) {
-        .p-vantagem {
-            width: 87%;
-        }
-    }
-    
-    @media screen and (max-width: 1019px) {
-        .container-geral-cards-blog {
-            height: 230vh;
-        }
-    }
-    
-    @media screen and (max-width: 679px) {
-        .container-geral-cards-blog {
-            height: 326vh;
-        }
-    }
-    
-    @media screen and (max-width: 729px) {
-        .container-geral-cards-blog {
-            height: 406vh;
-        }
-    }
+}
