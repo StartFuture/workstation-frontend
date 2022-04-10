@@ -65,6 +65,17 @@ hr {
     justify-content: flex-end;
 }
 
+.editar {
+    border: none;
+    background-color: white;
+    color: #FF0A54;
+    text-decoration: underline;
+}
+
+.editar:hover {
+    cursor: pointer;
+}
+
 
 /* MODAL**/
 

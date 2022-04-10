@@ -68,40 +68,35 @@
                         <td>Nome</td>
                         <td>Gabriel Monteiro</td>
                         <td class="lapis">
-                            <a><img src="../images/svg/lapis.svg">
-                            </a>
+                            <input class="editar" id="myBtn" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>Email</td>
                         <td>gmonteiro@workstation.com</td>
                         <td class="lapis">
-                            <a><img src="../images/svg/lapis.svg">
-                            </a>
+                            <input class="editar" id="my-btn-alterar-email" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>Senha</td>
-                        <td class="hidetext">Gabriel Monteiro</td>
+                        <td class="hidetext">Gabriel@10</td>
                         <td class="lapis">
-                            <a><img src="../images/svg/lapis.svg">
-                            </a>
+                            <input class="editar" id="myBtn" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>CPF ou CNPJ</td>
                         <td class="hidetext">12.22.22.765-33</td>
                         <td class="lapis">
-                            <a><img src="../images/svg/lapis.svg">
-                            </a>
+                            <input class="editar" id="myBtn" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="no-border">
                         <td>Telefone</td>
                         <td>+55 11 1111-1111</td>
                         <td class="lapis">
-                            <a><img src="../images/svg/lapis.svg">
-                            </a>
+                            <input class="editar" id="myBtn" type="submit" value="Editar">
                         </td>
                     </tr>
                 </table>
@@ -110,18 +105,44 @@
 </body>
 <div id="myModal" class="modal">
     <div class="modal-content">
-
         <p class="p-sucesso">Alterar nome de usuário</p>
         <div class="container-input">
             <label class="campo-requerido">Nome </label>
             <input class="inputs-login" type="text" placeholder="Gabriel Monteiro">
         </div>
         <div class="button-conhecer-container button-ler-artigo-container">
-            <a class="close cancelar">Cancelar</a>
+            <a class="close cancelar" id="close-alterar-nome">Cancelar</a>
             <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
         </div>
     </div>
 </div>
-<script type="text/javascript" src="../api/modal.js"></script>
+<div id="my-modal-alterar-email" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar e-mail</p>
+        <div class="container-input">
+            <label class="campo-requerido">Digite um novo e-mail</label>
+            <input class="inputs-login" type="text" placeholder="Digite um novo e-mail">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container">
+            <a class="close cancelar" id="close-alterar-email">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-senha" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar senha</p>
+        <div class="container-input">
+            <label class="campo-requerido">Digite uma senha</label>
+            <input class="inputs-login" type="text" placeholder="Digite uma nova senha">
+            <input class="inputs-login" type="text" placeholder="Repita a nova senha">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container">
+            <a class="close cancelar" id="close-alterar-email">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../api/modal-alterar.js"></script>
 
 </html>
