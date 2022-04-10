@@ -86,6 +86,20 @@ hr {
     margin-top: 0 !important;
 }
 
+.container-flex {
+    display: flex;
+}
+
+.container-input {
+    flex-direction: row !important;
+    gap: 5%;
+}
+
+.container-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* MODAL**/
 
@@ -114,6 +128,7 @@ hr {
 }
 
 .inputs-login {
+    width: 170px;
     height: 3em;
     border-radius: 6px;
     border: none;

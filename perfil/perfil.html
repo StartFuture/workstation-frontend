@@ -100,6 +100,22 @@
                         </td>
                     </tr>
                 </table>
+                <table>
+                    <thead>
+                        <tr class="no-border">
+                            <th>Forma de pagamento</th>
+                        </tr>
+
+                    </thead>
+                    <tr class="">
+                        <td>Cartão de crédito</td>
+                        <td>5678-8890-9087-8890</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Editar">
+                        </td>
+                    </tr>
+
+                </table>
             </div>
     </section>
 </body>
@@ -168,6 +184,33 @@
         </div>
         <div class="button-conhecer-container button-ler-artigo-container ">
             <a class="close cancelar" id="close-alterar-telefone">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-cartao" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar cartão de crédito </p>
+        <div class="container-input">
+            <div class="container-flex">
+                <div class="container-flex-column">
+                    <label class="campo-requerido">Nome do titular</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+                    <label class="campo-requerido inputs-padding">Número do cartão</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+                </div>
+            </div>
+            <div class="container-flex ">
+                <div class="container-flex-column">
+                    <label class="campo-requerido">Validade</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+                    <label class="campo-requerido inputs-padding">CVV</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+                </div>
+            </div>
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container btn-margin ">
+            <a class="close cancelar" id="close-alterar-cartao">Cancelar</a>
             <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
         </div>
     </div>
