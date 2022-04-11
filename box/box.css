@@ -1,0 +1,45 @@
+.container-geral-box-pesquisa-loc {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-pesquisa-box-localizacao {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+.container-imagem-pesquisa-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-pesquisa-box {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.button-conhecer-container {
+    width: 100%;
+}
+
+.button-conhecer {
+    width: 100%;
+}
+
+.container-select {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
