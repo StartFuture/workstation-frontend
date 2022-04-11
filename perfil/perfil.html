@@ -57,7 +57,7 @@
                         <p class="p-header">Gerencie suas informações, privacidade e segurança para que WorkStation atenda suas necessidades.</p>
                     </div>
                 </div>
-                <table>
+                <table class="table-dados-gerais">
                     <thead>
                         <tr class="no-border">
                             <th>Meus dados</th>
@@ -100,18 +100,34 @@
                         </td>
                     </tr>
                 </table>
-                <table>
+                <table class="table-forma-pagamento ">
                     <thead>
-                        <tr class="no-border">
+                        <tr class="no-border ">
                             <th>Forma de pagamento</th>
                         </tr>
 
                     </thead>
-                    <tr class="">
+                    <tr class="no-bd-bottom">
                         <td>Cartão de crédito</td>
                         <td>5678-8890-9087-8890</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Editar">
+                        </td>
+                    </tr>
+
+                </table>
+                <table class="table-minhas-reservas">
+                    <thead>
+                        <tr class="no-border">
+                            <th>Minhas reservas</th>
+                        </tr>
+
+                    </thead>
+                    <tr class="no-bd-bottom">
+                        <td>Box Faria Lima</td>
+                        <td>18 de março de 2022 (4 horas - 13:00 às 17:00)</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Cancelar reserva">
                         </td>
                     </tr>
 
@@ -189,27 +205,19 @@
     </div>
 </div>
 <div id="my-modal-alterar-cartao" class="modal">
-    <div class="modal-content">
+    <div class="modal-content modal-content-cartao">
         <p class="p-sucesso">Alterar cartão de crédito </p>
         <div class="container-input">
-            <div class="container-flex">
-                <div class="container-flex-column">
-                    <label class="campo-requerido">Nome do titular</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
-                    <label class="campo-requerido inputs-padding">Número do cartão</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
-                </div>
-            </div>
-            <div class="container-flex ">
-                <div class="container-flex-column">
-                    <label class="campo-requerido">Validade</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
-                    <label class="campo-requerido inputs-padding">CVV</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
-                </div>
-            </div>
+            <label class="campo-requerido">Nome do titular</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+            <label class="campo-requerido">Número do cartão</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+            <label class="campo-requerido">Validade</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+            <label class="campo-requerido">CVV</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
         </div>
-        <div class="button-conhecer-container button-ler-artigo-container btn-margin ">
+        <div class="button-conhecer-container button-ler-artigo-container ">
             <a class="close cancelar" id="close-alterar-cartao">Cancelar</a>
             <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
         </div>
