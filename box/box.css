@@ -69,6 +69,19 @@ hr {
     border-radius: 8px;
 }
 
+
+/** CONTAINER BOX**/
+
+.container-boxes {
+    height: 120vh;
+}
+
+.card-box {
+    display: flex;
+}
+
+.container-icons-textos {}
+
 @media screen and (max-width: 696px) {
     .container-filtro {
         flex-direction: column;
