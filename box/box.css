@@ -52,3 +52,30 @@ hr {
     margin: 0 5% 0 5%;
     color: #ddd;
 }
+
+.container-calendario-input {
+    padding-left: 25px;
+}
+
+.input-calendario {
+    width: 100%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 696px) {
+    .container-filtro {
+        flex-direction: column;
+    }
+    .container-select-zona,
+    .container-calendario-input {
+        padding-left: 0;
+        width: 40%;
+    }
+}
