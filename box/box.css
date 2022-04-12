@@ -13,7 +13,7 @@
     /* Position the search icon */
     background-repeat: no-repeat;
     /* Do not repeat the icon image */
-    width: 50%;
+    width: 40%;
     /* Full-width */
     font-size: 16px;
     /* Increase font-size */
@@ -21,7 +21,34 @@
     /* Add some padding */
     border: 1px solid #ddd;
     /* Add a grey border */
-    margin-bottom: 12px;
-    /* Add some space below the input */
     border-radius: 8px;
+}
+
+.select-zona {
+    background-image: url("../images/svg/bussola.svg");
+    /* Add a search icon to input */
+    background-position: 7px 8px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 100%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    border-radius: 8px;
+}
+
+.container-select-zona {
+    padding-left: 25px;
+}
+
+hr {
+    color: black;
+    width: 90;
+    margin: 0 5% 0 5%;
+    color: #ddd;
 }

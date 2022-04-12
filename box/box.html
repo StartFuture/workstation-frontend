@@ -46,10 +46,24 @@
             </ul>
         </div>
     </header>
-    <div class="container-filtro">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="São Paulo">
-
-    </div>
+    <section id="section-filtro">
+        <div class="container-filtro">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="São Paulo">
+            <div class="container-select-zona">
+                <select class="select-zona">
+                <option>Zona</option>
+                <option>Zona Norte</option>
+                <option>Zona Sul</option>
+                <option>Zona Leste</option>
+                <option>Zona Oeste</option>
+            </select>
+            </div>
+            <div class="container-calendario-input">
+                <input type="date" id="myInput" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" placeholder="Teste">
+            </div>
+        </div>
+        <hr>
+    </section>
 </body>
 
 </html>
