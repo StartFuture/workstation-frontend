@@ -31,3 +31,10 @@ function getToday() {
         }
     }
 }
+
+function getAll() {
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.add("visible")
+        cards[i].classList.remove("invisible")
+    }
+}
