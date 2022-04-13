@@ -73,7 +73,7 @@ hr {
 /** CONTAINER BOX**/
 
 .container-imagem-box {
-    max-height: 43%;
+    max-height: 100%;
     width: 100%;
 }
 
@@ -92,7 +92,7 @@ hr {
     margin-top: 3%;
     display: flex;
     width: 90%;
-    height: 62%;
+    height: 35%;
 }
 
 .container-textos-informacoes-box {
@@ -101,7 +101,6 @@ hr {
 
 .h1-nome-box {
     color: #FF0A54;
-    font-size: 3vw;
 }
 
 .p-endereco {
@@ -138,7 +137,7 @@ hr {
 
 .button-ver-detalhes-container {
     justify-content: flex-end;
-    margin-top: 26%;
+    ;
 }
 
 .ar-svg {
@@ -171,6 +170,7 @@ hr {
 @media screen and (max-width: 987px) {
     .card-box-geral {
         flex-direction: column;
+        height: 70%;
     }
     .container-textos-informacoes-box {
         padding-left: 10%;
