@@ -1,0 +1,17 @@
+.a-voltar {
+    color: #FF0A54;
+}
+
+.container-h1-box-and-voltar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.container-estrelinha {
+    display: flex;
+}
+
+.container-avaliacao-and-coments {
+    display: flex;
+}
