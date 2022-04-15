@@ -73,6 +73,7 @@ hr {
 
 .dois-textos {
     height: -1vh !important;
+    margin: 2rem 0 2rem 0;
 }
 
 .p-end {
@@ -144,11 +145,6 @@ hr {
 .container-imagem-local-farialima {
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding-right: 9%;
-    /* margin-right: 16%; */
-    padding-top: 5%;
-    padding-left: 9%;
 }
 
 .img-maps {
@@ -212,11 +208,14 @@ hr {
 
 /** CARD **/
 
+.container {
+    padding-top: 0;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F2F2F2;
     transition: 0.3s;
-    width: 75%;
     height: 80%;
     border-radius: 33px;
     margin-bottom: 10%;
@@ -383,12 +382,12 @@ hr {
 }
 
 .container-h1-box-and-voltar {
-    padding: 2% 2% 0 2%;
+    padding: 4% 8% 0 8%;
 }
 
 .container-p-endereco,
 .container-avaliacao-and-coments {
-    padding: 0 2% 0 2%;
+    padding: 0 8% 0 8%;
 }
 
 .container-avaliacao-and-coments {
