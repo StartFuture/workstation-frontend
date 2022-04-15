@@ -101,7 +101,7 @@
 }
 
 .button-conhecer {
-    width: 10rem;
+    width: 10rem !important;
     height: 35px;
     background-color: rgba(255, 10, 84, 1);
     border: none;
@@ -114,6 +114,99 @@
 
 hr {
     margin: 2% 4% 0 4%
+}
+
+
+/* MODAL**/
+
+.modal-content-cartao {
+    height: 70% !important;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.inputs-login {
+    width: 170px;
+    height: 3em;
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding-left: 2%;
+}
+
+.button-conhecer-container {
+    display: flex;
+    margin-top: 10%;
+    justify-content: flex-end;
+}
+
+.btn-salvar {
+    width: 35%;
+    margin-top: 0;
+}
+
+.cancelar {
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 35%;
+    /* Could be more or less, depending on screen size */
+    height: 40%;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #B8B8B8;
+    float: right;
+    margin-right: 3%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 856px) {
