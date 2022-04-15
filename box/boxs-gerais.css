@@ -395,6 +395,15 @@ hr {
     padding-bottom: 2%;
 }
 
+.h2-selecione {
+    color: #FF0A54;
+}
+
+.h2-selecione,
+.p-sel {
+    margin-left: 5%;
+}
+
 @media screen and (max-width:827px) {
     .container-carrosel-real {
         display: flex;
