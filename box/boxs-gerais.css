@@ -60,11 +60,20 @@
     }
     
     .container-icons-gerais {
-        height: 200vh;
+        height: 166vh;
     }
     
     .ctn-p-icon {
         margin-top: 8%;
+    }
+    
+    .dois-textos {
+        height: -1vh !important;
+    }
+    
+    .p-end {
+        display: flex;
+        padding: 1% 9% 0 28%;
     }
     
     .p-icon {
@@ -119,6 +128,26 @@
     
     .embaixo {
         margin-top: 2%;
+    }
+    /*** LOCAL ***/
+    
+    .container-local {
+        height: 100vh;
+    }
+    
+    .container-imagem-local-farialima {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-right: 9%;
+        /* margin-right: 16%; */
+        padding-top: 5%;
+        padding-left: 9%;
+    }
+    
+    .img-maps {
+        width: 53%;
+        height: 100%;
     }
     /* The Modal (background) */
     
