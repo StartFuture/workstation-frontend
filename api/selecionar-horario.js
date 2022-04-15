@@ -1,7 +1,11 @@
-const teste2 = document.getElementById("container-horarios-id");
-const teste = teste2.getElementsByTagName("input");
+const y = document.getElementsByClassName("input-horario");
 
-teste.addEventListener('click', function onClick() {
-    y.style.backgroundColor = 'salmon';
-    y.style.color = 'white';
-});
+for (var i = 0; i < y.length; i++) {
+    y[i].addEventListener('click', function(i) {
+        if (y[i].style.backgroundColor == 'white') {
+            y[i].style.backgroundColor = 'salmon'
+        } else {
+            y[i].style.backgroundColor = 'white'
+        }
+    }.bind(null, i));
+}
