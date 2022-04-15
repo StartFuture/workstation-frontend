@@ -17,16 +17,16 @@
         <a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src="{{url_for('static', filename='images/png/logo.png')}}"></a>
 
         <ul id="menu" role="menu" class="nav">
-            <li><a href="#segunda-section">Box</a></li>
-            <li><a href="../planos/planos.html">Planos</a></li>
-            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="{{url_for('main.index')}}">Box</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="{{url_for('main.about')}}">Sobre</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
 
         <div id="login" class="nav">
             <a id="reg" class="cta" href="#">Register&nbsp</a>
             <a target="none" style="color: white;">|&nbsp</a>
-            <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+            <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
         </div>
 
         <div id="nav-mobile">
@@ -38,11 +38,11 @@
                 <div id="login">
                     <a id="reg" class="cta" href="#">Register&nbsp</a>
                     <a target="none" style="color: white;">|&nbsp</a>
-                    <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+                    <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
                 </div>
-                <li><a href="#segunda-section">Box</a></li>
-                <li><a href="../planos/planos.html">Planos</a></li>
-                <li><a href="../about/about.html">Sobre</a></li>
+                <li><a href="{{url_for('main.box')}}">Box</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="../">Sobre</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
         </div>
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="criar-conta">
-                            <p class="nao-tem-conta">Tem uma conta?</p> <a href="login.html">Conecte-se</a>
+                            <p class="nao-tem-conta">Tem uma conta?</p> <a href="{{url_for('.index')}}">Conecte-se</a>
                         </div>
                     </form>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="container-sucess">
-                            <img class="sucess-img" src="{{url_for('static', filename='api/navbar.js')}}../images/svg/login-page/sucess.svg">
+                            <img class="sucess-img" src="{{url_for('static', filename='api/navbar.js')}}">
                         </div>
                         <p class="p-sucesso">Sucesso!</p>
                         <div class="container-btn-continue">
