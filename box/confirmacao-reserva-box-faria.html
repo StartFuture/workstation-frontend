@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WorkStation</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../login_page/cadastro.css">
+
     <link rel="stylesheet" href="confirmacao-reserva-box.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
@@ -77,7 +79,7 @@
                 <p>*** **** **** 4567</p>
             </div>
             <div class="container-h2-forma-pagamento">
-                <input class="editar" id="my-btn-alterar-cpf" type="submit" value="Editar">
+                <input class="editar" id="my-btn-alterar-cartao-confirmacao" type="submit" value="Editar">
             </div>
         </div>
     </div>
@@ -111,9 +113,75 @@
             </div>
         </div>
         <div class="button-conhecer-container button-ler-artigo-container ">
-            <a class="close cancelar" id="close-alterar-cpf">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Confirmar</button>
+            <a class="close cancelar" id="close-alterar-cartao-confirmacao-2" href="box-faria-lima.html">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" id="my-btn-sucesso" type="submit">Confirmar</button>
+        </div>
+        <!--MODAL-->
+        <div id="my-modal-alterar-cartao-confirmacao" class="modal ">
+            <div class="modal-content modal-content-cartao">
+                <p class="p-sucesso">Alterar cartão de crédito </p>
+                <div class="container-input">
+                    <label class="campo-requerido">Nome do titular</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+                    <label class="campo-requerido">Número do cartão</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+                    <label class="campo-requerido">Validade</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+                    <label class="campo-requerido">CVV</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+                </div>
+                <div class="button-conhecer-container button-ler-artigo-container ">
+                    <a class="close cancelar" id="close-alterar-cartao-confirmacao">Cancelar</a>
+                    <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+                </div>
+            </div>
+        </div>
+        <div id="modalSucesso" class="modal">
+            <div class="modal-content">
+
+                <div class="container-sucess">
+                    <img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+                </div>
+                <p class="p-sucesso">Box agendada com sucesso</p>
+                <div class="container-btn-continue">
+                    <button class="btn-continue-cadastro">Continuar</button>
+                </div>
+            </div>
         </div>
 </body>
+<script src="../api/navbar.js"></script>
+<script src="../api/modal-alterar-cartao-confirmacao.js"></script>
+<script>
+    var modalSucesso = document.getElementById("modalSucesso");
+
+    // Get the button that opens the modal
+    var btnSucesso = document.getElementById("my-btn-sucesso");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btnSucesso.onclick = function() {
+        modalSucesso.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modalSucesso.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modalSucesso) {
+            modalSucesso.style.display = "none";
+        }
+    }
+
+    var closeBtn = document.getElementsByClassName("btn-continue-cadastro")[0];
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
 
 </html>
