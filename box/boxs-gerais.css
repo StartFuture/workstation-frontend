@@ -34,7 +34,7 @@
     }
     
     .container-carrosel-box {
-        height: 80vh;
+        height: 135vh;
     }
     
     .container-date {
@@ -299,4 +299,46 @@
     
     .container-carrosel-real {
         height: 80%;
+    }
+    
+    .image-button-carousel {
+        width: 200px;
+        height: 100px;
+        border: 0;
+    }
+    
+    #image-0 {
+        background: url(https://picsum.photos/500/250) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
+    }
+    
+    #image-1 {
+        background: url(https://picsum.photos/450/300) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
+    }
+    
+    #image-2 {
+        background: url(https://picsum.photos/510/300) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
+    }
+    
+    #image-3 {
+        background: url(https://picsum.photos/505/300) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
+    }
+    
+    #image-4 {
+        background: url(https://picsum.photos/470/300) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
+    }
+    
+    #image-5 {
+        background: url(https://picsum.photos/515/300) no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        background-size: 200px auto;
     }
