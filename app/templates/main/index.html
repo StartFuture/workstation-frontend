@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WorkStation</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for(static, filename=assets/style.css)}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="images/png/icon-branco.png">
+    <link rel="shortcut icon" type="images/png" href="{{url_for(images, filename=png/icon-branco.png)}}">
 </head>
 
 <body>
     <header id="header">
-        <a class="ld-page-return" href="index.html"><img class="logo" src="images/png/logo.png"></a>
+        <a class="ld-page-return" href="{{index.html}}"><img class="logo" src="images/png/logo.png"></a>
 
         <ul id="menu" role="menu" class="nav">
             <li><a href="#">Box</a></li>

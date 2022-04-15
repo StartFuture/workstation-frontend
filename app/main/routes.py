@@ -4,7 +4,7 @@ from main import bp
 
 @bp.route('/')
 def index():
-    return 'index'
+    return render_template('main/index.html')
 
 
 @bp.route('/about')
