@@ -1,0 +1,30 @@
+.container-img-reduzida-e-textos {
+    height: 20%;
+    display: flex;
+    width: 100%;
+    padding: 4% 4% 0 4%;
+}
+
+.container-textos-principais-inf {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-textos-inf-box {
+    width: 100%;
+    padding-left: 3%;
+}
+
+.h1-horas {
+    color: #FF0A54;
+}
+
+.p-hora-inf,
+.p-endereco-inf {
+    color: #787878;
+}
+
+.h2-forma-pagamento {
+    color: #787878;
+}

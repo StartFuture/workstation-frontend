@@ -126,6 +126,7 @@ hr {
     justify-content: baseline;
     padding: 2%;
     gap: 5%;
+    width: 100%;
 }
 
 .button-ver-detalhes {
