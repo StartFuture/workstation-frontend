@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+</head>
+
+<body>
+    <header id="header">
+        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+
+        <ul id="menu" role="menu" class="nav">
+            <li><a href="#">Box</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+        <div id="login" class="nav">
+            <a id="reg" class="cta" href="#">Register&nbsp</a>
+            <a target="none" style="color: white;">|&nbsp</a>
+            <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+        </div>
+
+        <div id="nav-mobile">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+            <ul id="menu" role="menu">
+                <div id="login">
+                    <a id="reg" class="cta" href="#">Register&nbsp</a>
+                    <a target="none" style="color: white;">|&nbsp</a>
+                    <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+                </div>
+                <li><a href="#">Box</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="../about/about.html">Sobre</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="section-perfil">
+        <div class="container-geral-perfil">
+            <div class="container-perfil-header">
+                <div class="container-textos-header">
+                    <div class="container-h1-header">
+                        <h1 class="h1-header">Bem Vindo, Mateus Toni!</h1>
+                    </div>
+                    <div class="container-p-header">
+                        <p class="p-header">Gerencie suas informações, privacidade e segurança para que WorkStation atenda suas necessidades.</p>
+                    </div>
+                </div>
+                <table class="table-dados-gerais">
+                    <thead>
+                        <tr class="no-border">
+                            <th>Meus dados</th>
+                        </tr>
+
+                    </thead>
+                    <tr class="">
+                        <td>Nome</td>
+                        <td>Gabriel Monteiro</td>
+                        <td class="lapis">
+                            <input class="editar" id="myBtn" type="submit" value="Editar">
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td>Email</td>
+                        <td>gmonteiro@workstation.com</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-email" type="submit" value="Editar">
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td>Senha</td>
+                        <td class="hidetext">Gabriel@10</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-senha" type="submit" value="Editar">
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td>CPF ou CNPJ</td>
+                        <td class="hidetext">12.22.22.765-33</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-cpf" type="submit" value="Editar">
+                        </td>
+                    </tr>
+                    <tr class="no-border">
+                        <td>Telefone</td>
+                        <td>+55 11 1111-1111</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-telefone" type="submit" value="Editar">
+                        </td>
+                    </tr>
+                </table>
+                <table class="table-forma-pagamento ">
+                    <thead>
+                        <tr class="no-border ">
+                            <th>Forma de pagamento</th>
+                        </tr>
+
+                    </thead>
+                    <tr class="no-bd-bottom">
+                        <td>Cartão de crédito</td>
+                        <td>5678-8890-9087-8890</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Editar">
+                        </td>
+                    </tr>
+
+                </table>
+                <table class="table-minhas-reservas">
+                    <thead>
+                        <tr class="no-border">
+                            <th>Minhas reservas</th>
+                        </tr>
+
+                    </thead>
+                    <tr class="no-bd-bottom">
+                        <td>Box Faria Lima</td>
+                        <td>18 de março de 2022 (4 horas - 13:00 às 17:00)</td>
+                        <td class="lapis">
+                            <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Cancelar reserva">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+    </section>
+</body>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar nome de usuário</p>
+        <div class="container-input">
+            <label class="campo-requerido">Nome </label>
+            <input class="inputs-login" type="text" placeholder="Gabriel Monteiro">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container">
+            <a class="close cancelar" id="close-alterar-nome">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-email" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar e-mail</p>
+        <div class="container-input">
+            <label class="campo-requerido">Digite um novo e-mail</label>
+            <input class="inputs-login" type="text" placeholder="Digite um novo e-mail">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container">
+            <a class="close cancelar" id="close-alterar-email">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-senha" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar senha</p>
+        <div class="container-input">
+            <label class="campo-requerido">Digite uma senha</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Digite uma nova senha">
+            <label class="campo-requerido">Repita a nova senha</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Repita a nova senha">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container btn-margin">
+            <a class="close cancelar" id="close-alterar-senha">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-cpf" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar CPF e CNPJ </p>
+        <div class="container-input">
+            <label class="campo-requerido">CPF e CNPJ</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Alterar o CPF e CNPJ">
+
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-cpf">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-telefone" class="modal">
+    <div class="modal-content">
+        <p class="p-sucesso">Alterar telefone </p>
+        <div class="container-input">
+            <label class="campo-requerido">Telefone</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Digite seu telefone">
+
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-telefone">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<div id="my-modal-alterar-cartao" class="modal">
+    <div class="modal-content modal-content-cartao">
+        <p class="p-sucesso">Alterar cartão de crédito </p>
+        <div class="container-input">
+            <label class="campo-requerido">Nome do titular</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+            <label class="campo-requerido">Número do cartão</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+            <label class="campo-requerido">Validade</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+            <label class="campo-requerido">CVV</label>
+            <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-cartao">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../api/modal-alterar.js"></script>
+
+</html>

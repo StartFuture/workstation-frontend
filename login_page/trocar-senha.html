@@ -10,56 +10,76 @@
 	<link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
 </head>
 <body>
-<header>
-	<a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
-<nav>
-	<ul class="nav_links">
-		<li><a href="#segunda-section">Box</a></li>
-		<li><a href="../planos/planos.html">Planos</a></li>
-		<li><a href="../about/about.html">Sobre</a></li>
-		<li><a href="#">Blog</a></li>
-	</ul>
-</nav>
-<div id="login">
-	<a id ="reg" class="cta" href="#">Register&nbsp</a>
-	<a target="none" style="color: white;">|&nbsp</a>
-	<a class="cta" href="login.html"><button id ="sign">Sign in</button></a>
-</div>
-</header>
-<main>
-	<div class="container-esquerda">
-		<div class="container-imagem-login">
-			<img class="img-login-principal" src="../images/svg/login-page/reset-senha.svg">
-		</div>
-	</div>
-	<div class="container-direita"> 
-		<div class="container-form-geral">
-			<div class="container-logo-rosa">
-				<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
-			</div>
-			<div class="container-form">
-				<form method="post">
-					<div class="ctn-verificacao">
-						<h2 class="h2-verificacao" style="color:black;">Esqueci minha senha </h2>
-						<p class="p-codigo-ex" style="color: #787878;">Para redefinir sua senha, informe o usuário ou e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções  </p>
-					</div>
-					<div class="container-barra-progresso">
-						<img class="barra-progresso" src="../images/svg/login-page/barra-progresso-1.svg">
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">E-mail</label>
-						<input class="inputs-login" type="text" required placeholder="Insira o seu e-mail">
-					</div>
-					
-					<div class="container-button-login">
-						<input type="submit" value="Próximo">
-					</div>
-					
-				</form>
-			</div>
-		</div>
-	</div>
-</main>
+<header id="header">
+    <a class="ld-page-return" href="index.html"><img class="logo" src="../images/png/logo.png"></a>
 
+    <ul id="menu" role="menu" class="nav">
+        <li><a href="#segunda-section">Box</a></li>
+        <li><a href="planos/planos.html">Planos</a></li>
+        <li><a href="about/about.html">Sobre</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+    <div id="login" class="nav">
+        <a id ="reg" class="cta" href="#">Register&nbsp</a>
+        <a target="none" style="color: white;">|&nbsp</a>
+        <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+    </div>
+    
+    <div id="nav-mobile">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+        <ul id="menu" role="menu" >
+            <div id="login">
+                <a id ="reg" class="cta" href="#">Register&nbsp</a>
+                <a target="none" style="color: white;">|&nbsp</a>
+                <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+            </div>
+            <li><a href="#segunda-section">Box</a></li>
+            <li><a href="../planos/planos.html">Planos</a></li>
+            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+  </header>
+	<main>
+		<div class="container-esquerda">
+			<div class="container-imagem-login">
+				<img class="img-login-principal" src="../images/svg/login-page/reset-senha.svg">
+			</div>
+		</div>
+		<div class="container-direita"> 
+			<div class="container-form-geral">
+				<div class="container-logo-rosa">
+					<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
+				</div>
+				<div class="container-form">
+					<form method="post">
+						<div class="ctn-verificacao">
+							<h2 class="h2-verificacao" style="color:black;">Esqueci minha senha </h2>
+							<p class="p-codigo-ex" style="color: #787878;">Para redefinir sua senha, informe o usuário ou e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções  </p>
+						</div>
+						<div class="container-barra-progresso">
+							<img class="barra-progresso" src="../images/svg/login-page/barra-progresso-1.svg">
+						</div>
+						<div class="campo_txt">
+							<label class="campo-requerido">E-mail</label>
+							<input class="inputs-login" type="text" required placeholder="Insira o seu e-mail">
+						</div>
+						
+						<div class="container-button-login">
+							<input type="submit" value="Próximo">
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+<script type="text/javascript" src="../api/navbar.js"></script>
+</html>
 
 
