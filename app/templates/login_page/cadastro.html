@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cadastro.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 
 <body>
     <header id="header">
-        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+        <a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src="{{url_for('static', filename='images/png/logo.png')}}"></a>
 
         <ul id="menu" role="menu" class="nav">
             <li><a href="#segunda-section">Box</a></li>
@@ -50,13 +50,13 @@
     <main>
         <div class="container-esquerda">
             <div class="container-imagem-login">
-                <img class="img-login-principal" src="../images/svg/login-page/Login-principal.svg">
+                <img class="img-login-principal" src="{{url_for('static', filename='images/svg/login-page/Login-principal.svg')}}"/>
             </div>
         </div>
         <div class="container-direita">
             <div class="container-form-geral">
                 <div class="container-logo-rosa">
-                    <img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
+                    <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
                 </div>
                 <div class="container-form">
                     <form method="post">
@@ -135,7 +135,7 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="container-sucess">
-                            <img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+                            <img class="sucess-img" src="{{url_for('static', filename='api/navbar.js')}}../images/svg/login-page/sucess.svg">
                         </div>
                         <p class="p-sucesso">Sucesso!</p>
                         <div class="container-btn-continue">
@@ -147,7 +147,7 @@
                     <div class="modal-content-2">
                         <span class="close">&times;</span>
                         <div class="container-sucess">
-                            <img class="sucess-img" src="../images/svg/login-page/error.svg">
+                            <img class="sucess-img" src="{{url_for('static', filename='images/svg/login-page/error.svg')}}">
                         </div>
                         <p class="p-sucesso">Erro!</p>
                         <div class="container-btn-continue-2">
@@ -159,9 +159,9 @@
         </div>
     </main>
 </body>
-<script type="text/javascript" src="../api/modal.js"></script>
-<script type="text/javascript" src="../api/numeros.js"></script>
-<script type="text/javascript" src="../api/years.js"></script>
-<script type="text/javascript" src="../api/navbar.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='api/modal.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='api/numeros.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='api/years.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='api/navbar.js')}}"></script>
 
 </html>
