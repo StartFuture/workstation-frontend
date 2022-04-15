@@ -1,116 +1,169 @@
-.a-voltar {
-    color: #FF0A54;
-}
-
-.container-h1-box-and-voltar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.container-estrelinha {
-    display: flex;
-}
-
-.container-avaliacao-and-coments {
-    display: flex;
-}
-
-.input-horario {
-    width: 65%;
-    margin: 1%;
-    height: 41px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.container-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-}
-
-.container-date {
-    width: 50%;
-    height: 100%;
-}
-
-.container-horarios {
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-}
-
-.container-date-picker {
-    display: flex;
-    height: 90%;
-}
-
-.container-h1 {
-    height: 42px;
-    background-color: #2B2E51;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.melhor-horario {
-    color: white;
-}
-
-
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-
-/* Modal Content/Box */
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    height: 70%;
-}
-
-
-/* The Close Button */
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+    .a-voltar {
+        color: #FF0A54;
+    }
+    
+    .container-h1-box-and-voltar {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .container-estrelinha {
+        display: flex;
+    }
+    
+    .container-avaliacao-and-coments {
+        display: flex;
+    }
+    
+    .input-horario {
+        width: 65%;
+        margin: 1%;
+        height: 41px;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+    
+    .container-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
+    }
+    
+    .container-carrosel-box {
+        height: 80vh;
+    }
+    
+    .container-date {
+        width: 50%;
+        height: 100%;
+    }
+    
+    .container-horarios {
+        width: 50%;
+        height: 100%;
+        overflow: auto;
+    }
+    
+    .ctn-icon-real {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 11rem;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container-icons-gerais {
+        height: 200vh;
+    }
+    
+    .ctn-p-icon {
+        margin-top: 8%;
+    }
+    
+    .p-icon {
+        font-weight: bold;
+        color: #FF0A54;
+        font-size: 20px;
+    }
+    
+    .container-imagem-box-grande {
+        height: 45rem;
+        /* width: 100%; */
+        /* margin: auto; */
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-right: 9%;
+        /* margin-right: 16%; */
+        padding-top: 5%;
+        padding-left: 9%;
+    }
+    
+    .imagem-box-grande {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .container-date-picker {
+        display: flex;
+        height: 90%;
+    }
+    
+    .container-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3%;
+    }
+    
+    .container-h1 {
+        height: 42px;
+        background-color: #2B2E51;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .melhor-horario {
+        color: white;
+    }
+    
+    .embaixo {
+        margin-top: 2%;
+    }
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+    /* Modal Content/Box */
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 70%;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
