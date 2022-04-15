@@ -1,0 +1,228 @@
+.container-img-reduzida-e-textos {
+    height: 20%;
+    display: flex;
+    width: 100%;
+    padding: 4% 4% 0 4%;
+}
+
+.container-textos-principais-inf {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-textos-inf-box {
+    width: 100%;
+    padding-left: 3%;
+}
+
+.h1-horas {
+    color: #FF0A54;
+}
+
+.p-hora-inf,
+.p-endereco-inf {
+    color: #787878;
+}
+
+.h2-forma-pagamento {
+    color: #787878;
+}
+
+.container-h1-inf {
+    margin-top: 1%;
+}
+
+.editar {
+    border: none;
+    background-color: white;
+    color: #FF0A54;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.editar:hover {
+    cursor: pointer;
+}
+
+.container-forma-de-pagamento {
+    padding: 2% 4% 0 4%;
+}
+
+.container-inf-cartao {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.container-1-linha {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.p-box {
+    color: #787878;
+}
+
+.p-preco {
+    font-weight: bold;
+}
+
+.container-ultimas-infs {
+    margin-top: 2%;
+}
+
+.segunda-linha {
+    margin-top: 1%;
+}
+
+.cancelar {
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+    color: #787878;
+    font-weight: bold;
+}
+
+.button-conhecer-container {
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 1rem;
+    margin-right: 4%;
+    padding-top: 1%;
+}
+
+.button-conhecer {
+    width: 10rem !important;
+    height: 35px;
+    background-color: rgba(255, 10, 84, 1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+hr {
+    margin: 2% 4% 0 4%
+}
+
+
+/* MODAL**/
+
+.modal-content-cartao {
+    height: 70% !important;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.inputs-login {
+    width: 170px;
+    height: 3em;
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding-left: 2%;
+}
+
+.btn-salvar {
+    width: 35%;
+    margin-top: 0;
+}
+
+.cancelar {
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 35%;
+    /* Could be more or less, depending on screen size */
+    height: 40%;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #B8B8B8;
+    float: right;
+    margin-right: 3%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 856px) {
+    .container-img-reduzida-e-textos {
+        flex-direction: column;
+    }
+    .container-textos-inf-box {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 658px) {
+    .container-textos-principais-inf {
+        flex-direction: column;
+    }
+    .container-inf-cartao {
+        width: 100%;
+    }
+    .button-conhecer-container {
+        padding-top: 3%;
+    }
+    .container-forma-de-pagamento {
+        padding: 4% 4% 0 4%;
+    }
+}
