@@ -14,8 +14,8 @@ def login():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('user/login.html')
-
+        return render_template('login_page/login.html')
+        
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -24,7 +24,7 @@ def register():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('user/register.html')
+        return render_template('login_page/cadastro.html')
     
     
 @bp.route('/reset_password', methods=['GET', 'POST'])
@@ -34,10 +34,20 @@ def reset_password():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        # return render_template('user/reset_password.html')
-        return 'reset_password'
+        return render_template('login_page/trocar-senha.html')
+        
+        
+@bp.route('/change_password', methods=['GET', 'POST'])
+def change_password():
+    
+    if request.method == 'POST':
+        return jsonify({'status': 'ok'})
+    
+    elif request.method == 'GET':
+        return render_template('login_page/redefinicao-senha.html')
         
     
+
 @bp.route('/valid_code', methods=['GET', 'POST'])
 def valid_code():
     
@@ -45,8 +55,8 @@ def valid_code():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        # return render_template('user/valid_code.html')
-        return 'valid_code'
+        return render_template('login_page/recuperacao-conta.html')
+        
         
 
 
