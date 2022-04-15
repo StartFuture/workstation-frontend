@@ -28,3 +28,86 @@
 .h2-forma-pagamento {
     color: #787878;
 }
+
+.editar {
+    border: none;
+    background-color: white;
+    color: #FF0A54;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.editar:hover {
+    cursor: pointer;
+}
+
+.container-forma-de-pagamento {
+    padding: 2% 4% 0 4%;
+}
+
+.container-inf-cartao {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.container-1-linha {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.p-box {
+    color: #787878;
+}
+
+.p-preco {
+    font-weight: bold;
+}
+
+.container-ultimas-infs {
+    margin-top: 2%;
+}
+
+.segunda-linha {
+    margin-top: 1%;
+}
+
+.cancelar {
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+    color: #787878;
+    font-weight: bold;
+}
+
+.button-conhecer-container {
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 1%;
+    margin-right: 4%;
+    padding-top: 1%;
+}
+
+.button-conhecer {
+    width: 10%;
+    height: 35px;
+    background-color: rgba(255, 10, 84, 1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+hr {
+    margin: 2% 4% 0 4%
+}
