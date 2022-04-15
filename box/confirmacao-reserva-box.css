@@ -29,6 +29,10 @@
     color: #787878;
 }
 
+.container-h1-inf {
+    margin-top: 1%;
+}
+
 .editar {
     border: none;
     background-color: white;
@@ -91,13 +95,13 @@
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
-    gap: 1%;
+    gap: 1rem;
     margin-right: 4%;
     padding-top: 1%;
 }
 
 .button-conhecer {
-    width: 10%;
+    width: 10rem;
     height: 35px;
     background-color: rgba(255, 10, 84, 1);
     border: none;
@@ -110,4 +114,28 @@
 
 hr {
     margin: 2% 4% 0 4%
+}
+
+@media screen and (max-width: 856px) {
+    .container-img-reduzida-e-textos {
+        flex-direction: column;
+    }
+    .container-textos-inf-box {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 658px) {
+    .container-textos-principais-inf {
+        flex-direction: column;
+    }
+    .container-inf-cartao {
+        width: 100%;
+    }
+    .button-conhecer-container {
+        padding-top: 3%;
+    }
+    .container-forma-de-pagamento {
+        padding: 4% 4% 0 4%;
+    }
 }
