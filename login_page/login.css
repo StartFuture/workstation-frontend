@@ -13,7 +13,7 @@ main{
 
 /** CONTAINER ESQUERDA**/
 .container-esquerda{
-	height: 100%;
+	height: auto;
 	width: 50%;
 	background-color: #2B2E51;
 }
