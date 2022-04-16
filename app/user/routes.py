@@ -14,8 +14,16 @@ def login():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('login_page/login.html')
-        
+        return render_template('user/login/login.html')
+
+@bp.route('/code', methods=['GET', 'POST'])
+def code():
+    
+    if request.method == 'POST':
+        return jsonify({'status': 'ok'})
+    
+    elif request.method == 'GET':
+        return render_template('user/login/login_autenticacao.html')        
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -24,7 +32,7 @@ def register():
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('login_page/cadastro.html')
+        return render_template('user/register/cadastro.html')
     
     
 @bp.route('/reset_password', methods=['GET', 'POST'])

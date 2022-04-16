@@ -4,26 +4,25 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+	<link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 <body>
-<header id="header">
-    <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+	<header id="header">
 
-    <ul id="menu" role="menu" class="nav">
-        <li><a href="#segunda-section">Box</a></li>
-        <li><a href="../planos/planos.html">Planos</a></li>
-        <li><a href="../about/about.html">Sobre</a></li>
-        <li><a href="#">Blog</a></li>
-    </ul>
+		<a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src="{{url_for('static', filename='images/png/logo.png')}}"></a>
+		<ul id="menu" role="menu" class="nav">
+			<li><a href="{{url_for('main.index')}}">Box</a></li>
+			<li><a href="{{url_for('main.about')}}">Sobre</a></li>
+			<li><a href="#">Blog</a></li>
+		</ul>
 
     <div id="login" class="nav">
-        <a id ="reg" class="cta" href="#">Register&nbsp</a>
+        <a id ="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
         <a target="none" style="color: white;">|&nbsp</a>
-        <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+        <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
     </div>
     
     <div id="nav-mobile">
@@ -33,13 +32,13 @@
 
         <ul id="menu" role="menu" >
             <div id="login">
-                <a id ="reg" class="cta" href="#">Register&nbsp</a>
+                <a id ="reg" class="cta" href="{{url_for('user.register')}}  ">Register&nbsp</a>
                 <a target="none" style="color: white;">|&nbsp</a>
-                <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+                <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
             </div>
-            <li><a href="#segunda-section">Box</a></li>
-            <li><a href="../planos/planos.html">Planos</a></li>
-            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="{{url_for('main.index')}}">Box</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="{{url_for('main.about')}}">Sobre</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
     </div>
@@ -47,13 +46,13 @@
 <main>
 	<div class="container-esquerda">
 		<div class="container-imagem-login">
-			<img class="img-login-principal" src="../images/svg/login-page/Login-principal.svg">
+			<img class="img-login-principal" src="{{url_for('static', filename='images/svg/login-page/Login-principal.svg')}}">
 		</div>
 	</div>
 	<div class="container-direita">
 		<div class="container-form-geral">
 			<div class="container-logo-rosa">
-				<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
+				<img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
 			</div>
 			<div class="container-form">
 				<form method="post">
@@ -75,13 +74,13 @@
 						<hr class="hr-login"> <p class="p-ou">ou</p> <hr class="hr-login">
 					</div>
 					<div class="criar-conta">
-						<p class="nao-tem-conta">Não tem uma conta?</p><a href="cadastro.html">Inscrever-se</a>
+						<p class="nao-tem-conta">Não tem uma conta?</p><a href="{{url_for('user.register')}}">Inscrever-se</a>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </main>
-<script type="text/javascript" src="../api/change-color-input.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='api/change-color-input.js')}}"></script>
 </html>
 

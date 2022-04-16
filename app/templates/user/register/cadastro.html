@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/cadastro.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/cadastro.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
@@ -19,12 +19,12 @@
         <ul id="menu" role="menu" class="nav">
             <li><a href="{{url_for('main.index')}}">Box</a></li>
             <li><a href="#">Planos</a></li>
-            <li><a href="{{url_for('main.about')}}">Sobre</a></li>
+            <li><a href="#">Sobre</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
 
         <div id="login" class="nav">
-            <a id="reg" class="cta" href="#">Register&nbsp</a>
+            <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
             <a target="none" style="color: white;">|&nbsp</a>
             <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
         </div>
@@ -36,13 +36,13 @@
 
             <ul id="menu" role="menu">
                 <div id="login">
-                    <a id="reg" class="cta" href="#">Register&nbsp</a>
+                    <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
                     <a target="none" style="color: white;">|&nbsp</a>
                     <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
                 </div>
-                <li><a href="{{url_for('main.box')}}">Box</a></li>
+                <li><a href="#">Box</a></li>
                 <li><a href="#">Planos</a></li>
-                <li><a href="../">Sobre</a></li>
+                <li><a href="{{url_for('main.about')}}">Sobre</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
         </div>
