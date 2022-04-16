@@ -193,7 +193,6 @@
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
-        height: 20vh;
     }
     
     #container-imagens {
@@ -781,9 +780,6 @@
             flex-direction: column;
             margin-top: 18%;
         }
-        .h2-venha {
-            margin-bottom: 50%;
-        }
         .imagem {
             width: 60%;
             margin-right: 5% !important;
@@ -796,7 +792,7 @@
     }
     /**NAVBAR HAMBURGUER**/
     
-    a {
+    header a {
         color: white;
         text-decoration: none;
     }

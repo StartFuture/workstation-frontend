@@ -9,7 +9,7 @@ def index():
 
 @bp.route('/about')
 def about():
-    return 'about'
+    return render_template('main/about.html')
 
 
 @bp.route('/pricing')

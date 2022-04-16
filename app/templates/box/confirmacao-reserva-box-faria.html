@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../login_page/cadastro.css">
+
+    <link rel="stylesheet" href="confirmacao-reserva-box.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+</head>
+
+<body>
+    <header id="header">
+        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+
+        <ul id="menu" role="menu" class="nav">
+            <li><a href="#">Box</a></li>
+
+            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+        <div id="login" class="nav">
+            <a id="reg" class="cta" href="#">Register&nbsp</a>
+            <a target="none" style="color: white;">|&nbsp</a>
+            <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+        </div>
+
+        <div id="nav-mobile">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+            <ul id="menu" role="menu">
+                <div id="login">
+                    <a id="reg" class="cta" href="#">Register&nbsp</a>
+                    <a target="none" style="color: white;">|&nbsp</a>
+                    <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
+                </div>
+                <li><a href="#">Box</a></li>
+
+                <li><a href="../about/about.html">Sobre</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-img-reduzida-e-textos">
+        <div class="container-img-reduzida">
+            <img src="../images/svg/img-box-reduzida.svg">
+        </div>
+        <div class="container-textos-inf-box">
+            <div class="container-textos-principais-inf">
+                <div class="container-h1-inf">
+                    <h1 class="h1-inf">Faria Lima</h1>
+                    <p class="p-endereco-inf">Av. Brg. Faria Lima, 4055 Itaim Bibi, São Paulo, SP 04538-133</p>
+                </div>
+                <div class="container-h1-inf">
+                    <h1 class="h1-horas" style>4 horas</h1>
+                    <p class="p-hora-inf">
+                        13:00 às 17:00</p>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-forma-de-pagamento">
+        <div class="container-h2-forma-pagamento">
+            <h2 class="h2-forma-pagamento">Forma de pagamento</h2>
+        </div>
+        <div class="container-inf-cartao">
+            <div class="container-h2-forma-pagamento">
+                <p>Cartão de crédito</p>
+            </div>
+            <div class="container-h2-forma-pagamento">
+                <p>*** **** **** 4567</p>
+            </div>
+            <div class="container-h2-forma-pagamento">
+                <input class="editar" id="my-btn-alterar-cartao-confirmacao" type="submit" value="Editar">
+            </div>
+        </div>
+    </div>
+    <div class="container-ultimas-infs">
+        <div class="container-1-linha">
+            <div class="container-p-box">
+                <p class="p-box">Box</p>
+            </div>
+            <div class="container-p-box">
+                <p class="p-preco">100$ /h</p>
+            </div>
+
+        </div>
+        <div class="container-1-linha segunda-linha">
+            <div class="container-p-box">
+                <p class="p-box">Horas reservadas</p>
+            </div>
+            <div class="container-p-box">
+                <p class="p-preco">4 horas</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-ultimas-infs">
+        <div class="container-1-linha">
+            <div class="container-p-box">
+                <p class="p-box" style="font-weight: bold;">Total a pagar</p>
+            </div>
+            <div class="container-p-box">
+                <p class="p-preco" style="color: #FF0A54; font-weight: bold;">R$ 400,00 reais</p>
+            </div>
+        </div>
+        <div class="button-conhecer-container button-ler-artigo-container ">
+            <a class="close cancelar" id="close-alterar-cartao-confirmacao-2" href="box-faria-lima.html">Cancelar</a>
+            <button class="button-conhecer button-ler-artigo btn-salvar" id="my-btn-sucesso" type="submit">Confirmar</button>
+        </div>
+        <!--MODAL-->
+        <div id="my-modal-alterar-cartao-confirmacao" class="modal ">
+            <div class="modal-content modal-content-cartao">
+                <p class="p-sucesso">Alterar cartão de crédito </p>
+                <div class="container-input">
+                    <label class="campo-requerido">Nome do titular</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+                    <label class="campo-requerido">Número do cartão</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+                    <label class="campo-requerido">Validade</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+                    <label class="campo-requerido">CVV</label>
+                    <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+                </div>
+                <div class="button-conhecer-container button-ler-artigo-container ">
+                    <a class="close cancelar" id="close-alterar-cartao-confirmacao">Cancelar</a>
+                    <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+                </div>
+            </div>
+        </div>
+        <div id="modalSucesso" class="modal">
+            <div class="modal-content">
+
+                <div class="container-sucess">
+                    <img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+                </div>
+                <p class="p-sucesso">Box agendada com sucesso</p>
+                <div class="container-btn-continue">
+                    <button class="btn-continue-cadastro">Continuar</button>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="../api/navbar.js"></script>
+<script src="../api/modal-alterar-cartao-confirmacao.js"></script>
+<script>
+    var modalSucesso = document.getElementById("modalSucesso");
+
+    // Get the button that opens the modal
+    var btnSucesso = document.getElementById("my-btn-sucesso");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btnSucesso.onclick = function() {
+        modalSucesso.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modalSucesso.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modalSucesso) {
+            modalSucesso.style.display = "none";
+        }
+    }
+
+    var closeBtn = document.getElementsByClassName("btn-continue-cadastro")[0];
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>
