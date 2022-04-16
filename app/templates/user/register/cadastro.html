@@ -18,9 +18,8 @@
 
         <ul id="menu" role="menu" class="nav">
             <li><a href="{{url_for('main.index')}}">Box</a></li>
-            <li><a href="#">Planos</a></li>
             <li><a href="{{url_for('main.about')}}">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
         </ul>
 
         <div id="login" class="nav">
@@ -41,8 +40,7 @@
                     <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
                 </div>
                 <li><a href="{{url_for('main.box')}}">Box</a></li>
-                <li><a href="#">Planos</a></li>
-                <li><a href="../">Sobre</a></li>
+                <li><a href="{{url_for('')}}">Sobre</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
         </div>
@@ -160,8 +158,6 @@
     </main>
 </body>
 <script type="text/javascript" src="{{url_for('static', filename='api/modal.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='api/numeros.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='api/years.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static', filename='api/navbar.js')}}"></script>
 
 </html>
