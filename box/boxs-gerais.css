@@ -34,7 +34,7 @@
 }
 
 .container-carrosel-box {
-    height: 135vh;
+    height: auto;
 }
 
 .container-date {
@@ -64,7 +64,7 @@ hr {
 }
 
 .container-icons-gerais {
-    height: 166vh;
+    height: auto;
 }
 
 .ctn-p-icon {
@@ -140,7 +140,7 @@ hr {
 /*** LOCAL ***/
 
 .container-local {
-    height: 100vh;
+    height: auto;
 }
 
 .container-imagem-local-farialima {
@@ -310,7 +310,7 @@ hr {
 }
 
 .container-carrosel {
-    height: 69vh;
+    height: auto;
 }
 
 
@@ -328,31 +328,37 @@ hr {
 }
 
 #image-0 {
-    background: url(../images/png/carrosel-box/box_atras_perto_final.png) no-repeat scroll 0 0 transparent;
+    background: url(../images/png/carrosel-box/1.jpg) no-repeat scroll 0 0 transparent;
     background-size: 100%;
     background-size: 200px auto;
 }
 
 #image-1 {
-    background: url(../images/png/carrosel-box/box_atras_final.png) no-repeat scroll 0 0 transparent;
+    background: url(../images/png/carrosel-box/2.jpg) no-repeat scroll 0 0 transparent;
     background-size: 100%;
     background-size: 200px auto;
 }
 
 #image-2 {
-    background: url(../images/png/carrosel-box/box_atras_perto_cima_final.png) no-repeat scroll 0 0 transparent;
+    background: url(../images/png/carrosel-box/3.jpg) no-repeat scroll 0 0 transparent;
     background-size: 100%;
     background-size: 200px auto;
 }
 
 #image-3 {
-    background: url(../images/png/carrosel-box/box_frente_direita_cima_final.png) no-repeat scroll 0 0 transparent;
+    background: url(../images/png/carrosel-box/4.jpg) no-repeat scroll 0 0 transparent;
     background-size: 100%;
     background-size: 200px auto;
 }
 
 #image-4 {
-    background: url(../images/png/carrosel-box/box_frente_final.png) no-repeat scroll 0 0 transparent;
+    background: url(../images/png/carrosel-box/5.jpg) no-repeat scroll 0 0 transparent;
+    background-size: 100%;
+    background-size: 200px auto;
+}
+
+#image-5 {
+    background: url(../images/png/carrosel-box/6.jpg) no-repeat scroll 0 0 transparent;
     background-size: 100%;
     background-size: 200px auto;
 }
@@ -363,6 +369,7 @@ hr {
     border-radius: 8px;
     border: 1px solid #ddd;
     padding: 3%;
+    margin-left: 15px;
 }
 
 .h1-val {
@@ -415,4 +422,13 @@ hr {
     .container-carrosel-box {
         height: 200vh;
     }
+}
+
+.img-carousel-minor {
+    height: 700px !important;
+    width: 98% !important;
+}
+
+.glider-slide {
+    justify-content: start !important;
 }

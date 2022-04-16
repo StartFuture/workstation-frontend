@@ -1,8 +1,8 @@
 const $thumbsCarousel = document.querySelector(".js-carousel--thumbs");
 const $thumbs = document.querySelectorAll("[data-carousel-index]");
 const thumbsGlider = new Glider($thumbsCarousel, {
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 1.1,
+    slidesToScroll: 1.1,
     draggable: true,
     duration: 0.25,
     arrows: {
@@ -11,8 +11,8 @@ const thumbsGlider = new Glider($thumbsCarousel, {
     },
     responsive: [{
         settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 1.1,
+            slidesToScroll: 1.1,
         },
     }, ],
 });
