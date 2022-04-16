@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="box.css">
     <link rel="stylesheet" href="boxs-gerais.css">
+    <link rel="stylesheet" href="date-picker.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -57,9 +58,7 @@
         <div class="container-carrosel-box">
             <div class="container-h1-box-and-voltar">
                 <h1 class="h1-nome-box">Espaço Faria Lima</h1>
-                <a class="a-voltar" href="box.html">
-                    < Voltar a listagem </a>
-
+                <a class="a-voltar" href="box.html">Voltar a listagem </a>
             </div>
             <div class="container-p-endereco">
                 <p class="p-endereco">Av. Brig. Faria Lima (Zona Sul)</p>
@@ -339,7 +338,19 @@
                 <p class="p-sel" style="color: #787878;">Escolha uma data e hora disponível para reservar o seu uso na box.</p>
                 <hr>
                 <div class="container-date-picker">
-                    <div class="container-date"></div>
+                    <div class="container-date">
+                        <div class="date-picker">                    
+                            <div class="dates">
+                                <div class="month container-h1">
+                                    <div class="arrows prev-mth">&lt;</div>
+                                    <div class="mth"></div>
+                                    <div class="arrows next-mth">&gt;</div>
+                                </div>
+                    
+                                <div class="days"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container-horarios">
                         <div class="container-h1">
                             <h3 class="melhor-horario">Qual o melhor horário para você?</h3>
@@ -365,6 +376,10 @@
     </footer>
 </body>
 <script type="text/javascript" src="../api/navbar.js"></script>
+<script src="../api/selecionar-horario.js"></script>
+<script src="../api/carrosel-card.js"></script>
+<script src="../api/carrosel-fotos-box.js"></script>
+<script src="../api/date-picker.js"></script>
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -392,8 +407,5 @@
         }
     }
 </script>
-<script src="../api/selecionar-horario.js"></script>
-<script src="../api/carrosel-card.js"></script>
-<script src="../api/carrosel-fotos-box.js"></script>
 
 </html>
