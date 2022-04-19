@@ -699,10 +699,6 @@
         height: 100%;
     }
     
-    .container-button-blog {
-        margin-top: 10% !important;
-    }
-    
     .container-blog {
         height: 110vh !important;
     }
@@ -778,12 +774,15 @@
         }
         #container-imagens {
             flex-direction: column;
-            margin-top: 18%;
+            display: flex;
+            gap: 7%;
+            margin-top: 16%;
+            justify-content: center;
+            align-items: center;
         }
         .imagem {
             width: 60%;
-            margin-right: 5% !important;
-            margin-left: 5%;
+            margin: 3%;
             height: 500px;
         }
         .social-links {
