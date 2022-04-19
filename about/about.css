@@ -237,9 +237,6 @@ hr {
 }
 
 @media (min-width: 1223px) {
-    #container-valores-etc {
-        margin-bottom: 20%;
-    }
     .container-avaliacao-txt {
         height: 70vh;
     }
