@@ -5,25 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WorkStation</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
     <link rel="stylesheet" href="box-pesquisa.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 
 <body>
     <header id="header">
-        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+        <a class="id-page-return" href="{{url_for(main.index)}}"><img class="logo" src="{{url_for('static', filename='images/png/logo.png')}}"></a>
 
         <ul id="menu" role="menu" class="nav">
-            <li><a href="#">Box</a></li>
+            <li><a href="{{url_for(box.index_box)}}">Box</a></li>
 
-            <li><a href="../about/about.html">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="{{url_for(main.about)}}">Sobre</a></li>
+            <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
         </ul>
 
         <div id="login" class="nav">
-            <a id="reg" class="cta" href="#">Register&nbsp</a>
+            <a id="reg" class="cta" href="{{url_for(user.register)}}">Register&nbsp</a>
             <a target="none" style="color: white;">|&nbsp</a>
             <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
         </div>
@@ -35,14 +35,14 @@
 
             <ul id="menu" role="menu">
                 <div id="login">
-                    <a id="reg" class="cta" href="#">Register&nbsp</a>
+                    <a id="reg" class="cta" href="{{url_for(user.register)}}">Register&nbsp</a>
                     <a target="none" style="color: white;">|&nbsp</a>
                     <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
                 </div>
-                <li><a href="#">Box</a></li>
+                <li><a href="{{url_for(box.index_box)}}">Box</a></li>
 
-                <li><a href="../about/about.html">Sobre</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="{{url_for(main.about)}}">Sobre</a></li>
+                <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
             </ul>
         </div>
     </header>
@@ -98,6 +98,6 @@
         <img class="imagem-pesquisa-box" src="../images/svg/box-images/box-search.svg " alt="">
     </div>
 </div>
-<script type="text/javascript" src="../api/navbar.js"></script>
+<script type="text/javascript" src="../js/navbar.js"></script>
 
 </html>

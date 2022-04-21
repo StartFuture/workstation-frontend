@@ -18,14 +18,8 @@
 
         <ul id="menu" role="menu" class="nav">
             <li><a href="{{url_for('main.index')}}">Box</a></li>
-<<<<<<< HEAD
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
-=======
             <li><a href="{{url_for('main.about')}}">Sobre</a></li>
             <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
->>>>>>> 97b3c4a4bceede71c34dea19c4b95428cbc1851e
         </ul>
 
         <div id="login" class="nav">
@@ -45,15 +39,10 @@
                     <a target="none" style="color: white;">|&nbsp</a>
                     <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
                 </div>
-<<<<<<< HEAD
-                <li><a href="#">Box</a></li>
+                <li><a href="{{url_for(box.index_box)}}">Box</a></li>
                 <li><a href="#">Planos</a></li>
                 <li><a href="{{url_for('main.about')}}">Sobre</a></li>
-=======
-                <li><a href="{{url_for('main.box')}}">Box</a></li>
-                <li><a href="{{url_for('')}}">Sobre</a></li>
->>>>>>> 97b3c4a4bceede71c34dea19c4b95428cbc1851e
-                <li><a href="#">Blog</a></li>
+                <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
             </ul>
         </div>
     </header>
@@ -145,7 +134,7 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="container-sucess">
-                            <img class="sucess-img" src="{{url_for('static', filename='api/navbar.js')}}">
+                            <img class="sucess-img" src="{{url_for('static', filename='js/navbar.js')}}">
                         </div>
                         <p class="p-sucesso">Sucesso!</p>
                         <div class="container-btn-continue">
@@ -169,7 +158,7 @@
         </div>
     </main>
 </body>
-<script type="text/javascript" src="{{url_for('static', filename='api/modal.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='api/navbar.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/modal.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/navbar.js')}}"></script>
 
 </html>

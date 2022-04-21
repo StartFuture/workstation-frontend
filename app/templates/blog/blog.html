@@ -1,62 +1,15 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WorkStation</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
-</head>
-
-<body>
-    <header id="header">
-        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
-
-        <ul id="menu" role="menu" class="nav">
-            <li><a href="#">Box</a></li>
-
-            <li><a href="../about/about.html">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-
-        <div id="login" class="nav">
-            <a id="reg" class="cta" href="#">Register&nbsp</a>
-            <a target="none" style="color: white;">|&nbsp</a>
-            <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
-        </div>
-
-        <div id="nav-mobile">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
-        </button>
-
-            <ul id="menu" role="menu">
-                <div id="login">
-                    <a id="reg" class="cta" href="#">Register&nbsp</a>
-                    <a target="none" style="color: white;">|&nbsp</a>
-                    <a class="cta" href="login_page/login.html"><button id ="sign">Sign in</button></a>
-                </div>
-                <li><a href="#">Box</a></li>
-
-                <li><a href="../about/about.html">Sobre</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-    </header>
+{% include 'generic/header.html' %}
     <section id="primeira-section-blog">
         <div class="container-comeco-blog">
             <div class="container-imagem-about">
-                <img src="../images/svg/tela-blog/homem-about.svg" class="imagem-comeco-about">
+                <img src="{{url_for('static', filename='images/svg/tela-blog/homem-about.svg')}}" class="imagem-comeco-about">
             </div>
             <div class="container-textos-comeco-about">
                 <div class="container-h1-about-vantagem">
                     <h1 class="h1-vantagem">WorkStation: o que é e quais as vantagens para sua empresa</h1>
                 </div>
                 <div class="container-p-data no-padding">
-                    <img src="../images/svg/tela-blog/icon-agenda.svg">
+                    <img src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                     <p class="p-data">28/03/2002</p>
                 </div>
                 <div class="container-p-descricao-vantagem">
@@ -85,11 +38,11 @@
             <div class="container-cards-blog">
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                            <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">09/04/2021</p>
                     </div>
@@ -110,11 +63,11 @@
                 </div>
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                            <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">13/04/2022</p>
                     </div>
@@ -135,11 +88,11 @@
                 </div>
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                            <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">11/04/2022</p>
                     </div>
@@ -160,11 +113,11 @@
                 </div>
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                            <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">09/04/2022</p>
                     </div>
@@ -185,11 +138,11 @@
                 </div>
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                            <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">09/04/2022</p>
                     </div>
@@ -210,11 +163,11 @@
                 </div>
                 <div class="card-blog">
                     <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="../images/svg/blog-images/card-blog-img.svg">
+                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                     </div>
                     <div class="container-p-data">
                         <div class="container-icon-date">
-                           <img class="icon-date" src="../images/svg/tela-blog/icon-agenda.svg">
+                           <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
                         </div>
                         <p class="p-data-card">09/04/2022</p>
                     </div>
@@ -245,13 +198,13 @@
                     <ul>
                         <li><a href="">Box</a></li>
 
-                        <li><a href="../about/about.html">Sobre</a></li>
+                        <li><a href="{{url_for('main.about')}}">Sobre</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Recursos</h4>
                     <ul>
-                        <li><a href="#sexta section">Blog</a></li>
+                        <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -273,7 +226,7 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="../api/navbar.js"></script>
-<script type="text/javascript" src="../api/get-date.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/navbar.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/get-date.js')}}"></script>
 
 </html>

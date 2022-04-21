@@ -4,7 +4,7 @@ from blog import bp
 
 @bp.route('/')
 def index_blog():
-    return 'teste route blog'
+    return render_template('blog/blog.html')
 
 
 
