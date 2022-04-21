@@ -311,6 +311,7 @@
         width: 40%;
         background-color: grey;
         border-radius: 32px;
+        display: block;
     }
     
     #container-icons-textos {
@@ -755,7 +756,7 @@
             flex-direction: column;
         }
         #container-big-img {
-            width: 100%;
+            display: none;
         }
         #container-icons-textos {
             width: 100%;
