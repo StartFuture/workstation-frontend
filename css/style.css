@@ -183,7 +183,6 @@
     }
     
     .container-card-box {
-        height: 195vh;
         display: flex;
         flex-direction: column;
     }
@@ -198,7 +197,7 @@
     #container-imagens {
         display: flex;
         gap: 6%;
-        margin-top: 50px;
+        margin: 50px 0px;
         justify-content: center;
         height: auto;
     }
@@ -208,7 +207,6 @@
     }
     
     #container-ultimos-textos {
-        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -267,6 +265,7 @@
         border: 1px solid white;
         border-radius: 33px;
         box-shadow: 3px 3px 40px #B8B8B8;
+        margin: 10px 0px;
     }
     /** ULTIMO CONTAINER **/
     
@@ -304,6 +303,7 @@
         justify-content: center;
         grid-gap: 8%;
         padding: 5%;
+        margin-top: 25px;
     }
     
     #container-big-img {
@@ -593,6 +593,7 @@
     
     .row {
         display: flex;
+        word-break: break-all;
     }
     
     ul {
@@ -704,7 +705,7 @@
     }
     
     .container-blog {
-        height: 110vh !important;
+        height: auto !important;
     }
     /**TELA 404**/
     
@@ -732,7 +733,7 @@
     }
     /* RESPONSIVIDADE */
     
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         #textos-principais {
             margin-top: 30%;
         }
@@ -779,12 +780,13 @@
         #container-imagens {
             flex-direction: column;
             margin-top: 18%;
+            align-items: center;
         }
         .imagem {
             width: 60%;
             margin-right: 5% !important;
             margin-left: 5%;
-            height: 500px;
+            height: auto;
         }
         .social-links {
             flex-direction: column;
@@ -945,7 +947,6 @@
             height: auto;
         }
         #container-ultimos-textos {
-            height: auto;
             margin: 3.5em 0;
         }
         .textos-predios {
@@ -1006,7 +1007,7 @@
             margin-bottom: 5%;
         }
         .container-blog {
-            height: 300vh !important;
+            height: auto !important;
         }
     }
     
