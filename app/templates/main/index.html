@@ -15,13 +15,13 @@
         <a class="ld-page-return" href="url_for('main.index')"><img class="logo" src=" {{url_for('static', filename='images/png/logo.png')}}"></a>
 
         <ul id="menu" role="menu" class="nav">
-            <li><a href="{{url_for(box.index_box)}}">Box</a></li>
+            <li><a href="{{url_for('box.index_box')}}">Box</a></li>
             <li><a href="{{ url_for('main.about') }}">Sobre</a></li>
-            <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
+            <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
         </ul>
 
         <div id="login" class="nav">
-            <a id="reg" class="cta" href="{{url_for(user.register)}}">Register&nbsp</a>
+            <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
             <a target="none" style="color: white;">|&nbsp</a>
             <a class="cta" href="url_for('user.login')"><button id ="sign">Sign in</button></a>
         </div>
@@ -33,13 +33,13 @@
 
             <ul id="menu" role="menu">
                 <div id="login">
-                    <a id="reg" class="cta" href="{{url_for(user.register)}}">Register&nbsp</a>
+                    <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
                     <a target="none" style="color: white;">|&nbsp</a>
                     <a class="cta" href=" url_for('user.login') "><button id ="sign">Sign in</button></a>
                 </div>
-                <li><a href="{{url_for(box.index_box)}}">Box</a></li>
+                <li><a href="{{url_for('box.index_box')}}">Box</a></li>
                 <li><a href=" {{url_for('main.about')}} ">Sobre</a></li>
-                <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
+                <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
             </ul>
         </div>
     </header>
@@ -222,7 +222,7 @@
                 <div class="footer-col">
                     <h4>Recursos</h4>
                     <ul>
-                        <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
+                        <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
