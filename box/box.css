@@ -85,14 +85,15 @@ hr {
 }
 
 .container-boxes {
-    height: 200vh;
+    height: auto;
+    margin: 50px 0px;
 }
 
 .card-box-geral {
-    margin-top: 3%;
+    margin: 50px 0px;
     display: flex;
     width: 90%;
-    height: 35%;
+    height: auto;
 }
 
 .container-textos-informacoes-box {
@@ -171,7 +172,7 @@ hr {
 @media screen and (max-width: 987px) {
     .card-box-geral {
         flex-direction: column;
-        height: 70%;
+        
     }
     .container-textos-informacoes-box {
         padding-left: 10%;

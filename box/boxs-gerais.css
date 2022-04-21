@@ -51,8 +51,8 @@
 .ctn-icon-real {
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 11rem;
-    height: 115px;
+    width: 15rem;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,6 +69,7 @@ hr {
 
 .ctn-p-icon {
     margin-top: 8%;
+    text-align: center;
 }
 
 .dois-textos {
@@ -87,23 +88,10 @@ hr {
     font-size: 20px;
 }
 
-.container-imagem-box-grande {
-    height: 45rem;
-    /* width: 100%; */
-    /* margin: auto; */
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding-right: 9%;
-    /* margin-right: 16%; */
-    padding-top: 5%;
-    padding-left: 9%;
-}
-
 .imagem-box-grande {
-    height: 100%;
-    width: 100%;
-    margin: auto;
+    height: auto; 
+    width: 70%; 
+    margin-left: 5%;
 }
 
 .container-date-picker {
@@ -217,7 +205,7 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F2F2F2;
     transition: 0.3s;
-    height: 80%;
+    height: 100%;
     border-radius: 33px;
     margin-bottom: 10%;
 }
@@ -419,8 +407,34 @@ hr {
         align-items: center;
         margin-top: 12%;
     }
-    .container-carrosel-box {
-        height: 200vh;
+    .ctn-icon-real {
+        width: 10rem;
+        height: 150px;
+    }
+    .icon-box-detalhe {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container-carrosel-real {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12%;
+    }
+    .ctn-icon-real {
+        width: 7rem;
+        height: 150px;
+    }
+    .icon-box-detalhe {
+        width: 35px;
+        height: 50px;
+    }
+    .p-icon {
+        font-size: 16px;
     }
 }
 
