@@ -16,7 +16,7 @@
 		<ul id="menu" role="menu" class="nav">
 			<li><a href="{{url_for('main.index')}}">Box</a></li>
 			<li><a href="{{url_for('main.about')}}">Sobre</a></li>
-			<li><a href="#">Blog</a></li>
+			<li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
 		</ul>
 
     <div id="login" class="nav">
@@ -37,9 +37,8 @@
                 <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
             </div>
             <li><a href="{{url_for('main.index')}}">Box</a></li>
-            <li><a href="#">Planos</a></li>
             <li><a href="{{url_for('main.about')}}">Sobre</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="{{url_for(blog.index_blog)}}">Blog</a></li>
         </ul>
     </div>
   </header>
@@ -81,6 +80,6 @@
 		</div>
 	</div>
 </main>
-<script type="text/javascript" src="{{url_for('static', filename='api/change-color-input.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/change-color-input.js')}}"></script>
 </html>
 
