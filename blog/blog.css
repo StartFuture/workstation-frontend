@@ -7,9 +7,10 @@
 }
 
 .container-comeco-blog {
-    height: 80vh;
+    height: auto;
     width: 100%;
     display: flex;
+    margin: 50px 0px;
 }
 
 .container-imagem-about {
@@ -88,7 +89,8 @@
 /**SEGUNDA SECTION */
 
 .container-geral-cards-blog {
-    height: 200vh;
+    height: auto;
+    margin-bottom: 50px;
 }
 
 .container-cards-blog {
@@ -202,10 +204,6 @@
     margin-top: 0;
 }
 
-
-/**FILTRAGEM**/
-
-
 /**RESPONSIVIDADE */
 
 @media screen and (max-width: 820px) {
@@ -215,7 +213,6 @@
     }
     .container-comeco-blog {
         flex-direction: column;
-        height: 160vh
     }
     .container-imagem-about {
         width: 80%;
@@ -236,74 +233,5 @@
 @media screen and (max-width: 1208px) {
     .p-vantagem {
         width: 87%;
-    }
-}
-
-@media screen and (max-width: 1019px) {
-    .container-geral-cards-blog {
-        height: 230vh;
-    }
-}
-
-@media screen and (max-width: 679px) {
-    .container-geral-cards-blog {
-        height: 326vh;
-    }
-}
-
-@media screen and (max-width: 729px) {
-    .container-geral-cards-blog {
-        height: 406vh;
-    }
-}
-
-
-/** RESPONSIVIDADE ALTURA**/
-
-@media screen and(max-height: 981px) {
-    .container-geral-cards-blog {
-        height: 200vh;
-    }
-}
-
-@media screen and (max-height: 980px) {
-    .container-geral-cards-blog {
-        height: 450vh;
-    }
-}
-
-@media screen and (max-height: 885px) {
-    .container-geral-cards-blog {
-        height: 500vh;
-    }
-}
-
-@media screen and (max-height: 796px) {
-    .container-geral-cards-blog {
-        height: 550vh;
-    }
-}
-
-@media screen and (max-height: 725px) {
-    .container-geral-cards-blog {
-        height: 600vh;
-    }
-}
-
-@media screen and (max-height: 665px) {
-    .container-geral-cards-blog {
-        height: 650vh;
-    }
-}
-
-@media screen and (max-height: 615px) {
-    .container-geral-cards-blog {
-        height: 700vh;
-    }
-}
-
-@media screen and (min-height: 716px) {
-    .container-geral-cards-blog {
-        height: 200vh;
     }
 }

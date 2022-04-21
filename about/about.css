@@ -1,5 +1,5 @@
 #container-geral-about {
-    height: 120vh;
+    height: auto;
     background-color: white;
 }
 
@@ -70,7 +70,7 @@
 /** SEGUNDA SECTION - missao VISÃO E VALORES **/
 
 #container-valores-etc {
-    height: 285vh;
+    height: auto;
 }
 
 #ctn-txt-missao-valores {
@@ -219,12 +219,6 @@ hr {
 /* RESPONSIVIDADE */
 
 @media (max-width: 800px) {
-    #container-valores-etc {
-        height: 130vh;
-    }
-    #container-geral-about {
-        height: 150vh;
-    }
     .descricao-valores {
         grid-gap: 0;
     }
@@ -238,10 +232,7 @@ hr {
 
 @media (min-width: 1223px) {
     #container-valores-etc {
-        margin-bottom: 20%;
-    }
-    .container-avaliacao-txt {
-        height: 70vh;
+        margin-bottom: 10px;
     }
     .card {
         width: 100%;
@@ -278,14 +269,7 @@ hr {
     .segundo-ctn-temos {
         padding-top: 3.5%;
     }
-    #container-geral-about {
-        height: 210vh;
-    }
-    #container-valores-etc {
-        height: 180vh;
-    }
     .container-avaliacao-txt {
-        height: 60vh;
         margin-bottom: 20%;
     }
     hr {
@@ -304,7 +288,7 @@ hr {
     background-color: #F2F2F2;
     transition: 0.3s;
     width: 75%;
-    height: 80%;
+    height: auto;
     border-radius: 33px;
     margin-bottom: 10%;
 }
