@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
 </head>
 
 <body>
@@ -57,8 +58,7 @@
         <div class="container-carrosel-box">
             <div class="container-h1-box-and-voltar">
                 <h1 class="h1-nome-box">Espaço Faria Lima</h1>
-                <a class="a-voltar" href="{{url_for(box.index_box)}}">
-                    < Voltar a listagem </a>
+                <a class="a-voltar" href="{{url_for(box.index_box)}}">Voltar a listagem </a>
 
             </div>
             <div class="container-p-endereco">
@@ -76,60 +76,50 @@
 
             </div>
             <div class="container-carrosel-real">
-                <article class="c-carousel c-carousel--thumbs" style="height: 500; width: 50%; margin-left: 5%;">
+                <article class="c-carousel c-carousel--thumbs imagem-box-grande">
                     <div class="c-carousel__slides js-carousel--thumbs">
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_atras_perto_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/1.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_atras_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/2.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_atras_perto_cima_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/3.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_frente_close_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/4.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_frente_direita_cima_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/5.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
                         <article class="c-carousel__slide">
-                            <img src="../images/png/carrosel-box/box_frente_final.png" height="500" width="95%" alt="">
+                            <img src="{{ url_for('static', filename='images/png/carrosel-box/6.png') }}" class="img-carousel-minor" alt="">
                         </article>
 
 
                     </div>
 
                     <div class="c-carousel__thumbs">
-                        <button id="image-0" class="c-carousel__thumb image-button-carousel" data-carousel-index="0">
-                      </button>
-
-                        <button id="image-1" class="c-carousel__thumb image-button-carousel" data-carousel-index="1">
-                      </button>
-
-                        <button id="image-2" class="c-carousel__thumb image-button-carousel" data-carousel-index="2">
-                      </button>
-
-                        <button id="image-3" class="c-carousel__thumb image-button-carousel" data-carousel-index="3">
-                      </button>
-
-                        <button id="image-4" class="c-carousel__thumb image-button-carousel" data-carousel-index="4">
-                      </button>
-
+                        <button id="image-1" class="c-carousel__thumb image-button-carousel" data-carousel-index="1"></button>
+                        <button id="image-2" class="c-carousel__thumb image-button-carousel" data-carousel-index="2"></button>
+                        <button id="image-3" class="c-carousel__thumb image-button-carousel" data-carousel-index="3"></button>
+                        <button id="image-4" class="c-carousel__thumb image-button-carousel" data-carousel-index="4"></button>
+                        <button id="image-5" class="c-carousel__thumb image-button-carousel" data-carousel-index="5"></button>
 
                     </div>
                 </article>
                 <div class="container-valores">
                     <div class="ctn-val/dia">
-                        <h1 class="h1-val">R$ 180 reais / Dia</h1>
+                        <h1 class="h1-val">R$ 180 / Dia</h1>
                     </div>
                     <div class="ctn-p-val">
-                        <p class="p-val">R$ 70 reais / Hora</p>
+                        <p class="p-val">R$ 70 / Hora</p>
                     </div>
                     <div class="ctn-p-desc-val">
                         <p class="p-val-desc" style="font-weight: bold;">Muito mais que uma sala de reunião, um espaço para fechar negócios importantes e ter grandes ideias. Capacidade para até 12 pessoas.</p>
@@ -147,46 +137,43 @@
             </div>
             <div class="container-icons">
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-isolamento-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Isolamento acústico</p>
                     </div>
                 </div>
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-wifi-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Internet</p>
                     </div>
                 </div>
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-arcondicionado-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Ar condicionado</p>
                     </div>
                 </div>
             </div>
             <div class="container-icons embaixo">
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-porta-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Fechadura digital</p>
                     </div>
                 </div>
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-tv-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Smart TV</p>
                     </div>
                 </div>
                 <div class="ctn-icon-real">
-                    <img src="../images/svg/Icone de Boxes/Isolamento.svg" alt="">
+                    <img class="icon-box-detalhe" src="{{ url_for('static', filename='images/svg/Icone de Boxes/icon-lousa-rosa.svg') }}" alt="">
                     <div class="ctn-p-icon">
-                        <p class="p-icon">Isolamento</p>
+                        <p class="p-icon">Lousa</p>
                     </div>
                 </div>
-            </div>
-            <div class="container-imagem-box-grande">
-                <img class="imagem-box-grande" src="../images/svg/box-images/img-box.svg" alt="">
             </div>
         </div>
         <div class="container-local">
@@ -241,7 +228,7 @@
                                 </div>
                             </div>
                             <div class="container">
-                                <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                                <p class="avaliacao-atendimento">Atendimento incrível!!! muito satisfeito!</p>
                                 <p class="lugar-avaliacao">Avaliação feita no WorkStation </p>
                             </div>
                         </div>
@@ -250,7 +237,7 @@
                         <div class="card">
                             <div class="container-name_cliente_estrelas">
                                 <div class="container-nome">
-                                    <p class="nome-cliente">Thiago</p>
+                                    <p class="nome-cliente">Lucas</p>
                                     <p class="p-tipo-cliente">Cliente</p>
                                 </div>
                                 <div class="estrelas-avaliacao">
@@ -262,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="container">
-                                <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                                <p class="avaliacao-atendimento">Atendimento incrível!!! muito satisfeito!</p>
                                 <p class="lugar-avaliacao">Avaliação feita no WorkStation </p>
                             </div>
                         </div>
@@ -271,7 +258,7 @@
                         <div class="card">
                             <div class="container-name_cliente_estrelas">
                                 <div class="container-nome">
-                                    <p class="nome-cliente">Thiago</p>
+                                    <p class="nome-cliente">Mateus</p>
                                     <p class="p-tipo-cliente">Cliente</p>
                                 </div>
                                 <div class="estrelas-avaliacao">
@@ -283,7 +270,7 @@
                                 </div>
                             </div>
                             <div class="container">
-                                <p class="avaliacao-atendimento">Atendimento incrivel!!! muito satisfeita!</p>
+                                <p class="avaliacao-atendimento">Atendimento incrível!!! muito satisfeito!</p>
                                 <p class="lugar-avaliacao">Avaliação feita no WorkStation </p>
                             </div>
                         </div>
@@ -339,7 +326,19 @@
                 <p class="p-sel" style="color: #787878;">Escolha uma data e hora disponível para reservar o seu uso na box.</p>
                 <hr>
                 <div class="container-date-picker">
-                    <div class="container-date"></div>
+                    <div class="container-date">
+                        <div class="date-picker">                    
+                            <div class="dates">
+                                <div class="month container-h1">
+                                    <div class="arrows prev-mth">&lt;</div>
+                                    <div class="mth"></div>
+                                    <div class="arrows next-mth">&gt;</div>
+                                </div>
+                    
+                                <div class="days"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container-horarios">
                         <div class="container-h1">
                             <h3 class="melhor-horario">Qual o melhor horário para você?</h3>
@@ -364,7 +363,12 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="../js/navbar.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/selecionar-horario.js') }}"></script>
+<script src="{{ url_for('static', filename='js/carrosel-card.js') }}"></script>
+<script src="{{ url_for('static', filename='js/carrosel-fotos-box.js') }}"></script>
+<script src="{{ url_for('static', filename='js/date-picker.js') }}"></script>
+
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -392,8 +396,5 @@
         }
     }
 </script>
-<script src="../js/selecionar-horario.js"></script>
-<script src="../js/carrosel-card.js"></script>
-<script src="../js/carrosel-fotos-box.js"></script>
 
 </html>

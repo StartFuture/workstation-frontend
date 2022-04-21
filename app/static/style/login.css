@@ -1,185 +1,185 @@
 /** GERAL**/
 
 input[required]{
- 	border-color: #FF0A54 ;
- 	
- }
+	border-color: #FF0A54 ;
+	
+}
 
 main{
-	height: 100vh;
-	width: 100%;
-	display: flex;
+   height: 100vh;
+   width: 100%;
+   display: flex;
 }
 
 /** CONTAINER ESQUERDA**/
 .container-esquerda{
-	height: 100%;
-	width: 50%;
-	background-color: #2B2E51;
+   height: auto;
+   width: 50%;
+   background-color: #2B2E51;
 }
 .container-imagem-login{
-	height: 60%;
-	width: 60%;
-	margin: auto;
-	margin-top: 20%;
+   height: 60%;
+   width: 60%;
+   margin: auto;
+   margin-top: 20%;
 }
 
 .img-login-principal{
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
 }
 
 /** CONTAINER DIREITA**/
 .container-direita{
-	height: 100%;
-	width: 50%;
+   height: 100%;
+   width: 50%;
 }
 
 /** IMAGEM CONTAINER**/
 .container-logo-rosa{
-	height: 18%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
+   height: 18%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
 
 }
 .img-logo-rosa{
-	height: 100%;
-	width: 90%;
-	object-fit: contain;
+   height: 100%;
+   width: 90%;
+   object-fit: contain;
 
 }
 
 /** LOGIN FORM**/
 
 .container-form-geral{
-	padding: 10%;
-	height: 100%;
+   padding: 10%;
+   height: 100%;
 
 }
 .campo_txt{
-	display: flex;
-	flex-direction: column;
+   display: flex;
+   flex-direction: column;
 }
 
 .esqueceu-senha{
-	display: flex;
-	justify-content: flex-end;
+   display: flex;
+   justify-content: flex-end;
 }
 
 .campo-requerido{
-	padding-bottom: 2.5%;
-	padding-top: 2%;
+   padding-bottom: 2.5%;
+   padding-top: 2%;
 }
 
 .esqueceu-senha{
-	color: #FF0A54;
-	padding-top: 1%;
+   color: #FF0A54;
+   padding-top: 1%;
 }
 .container-button-login{
-	display: flex;
-	justify-content: center;
-	margin-bottom: 5%;
-	margin-top: 3%;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 5%;
+   margin-top: 3%;
 }
 input[type="submit"]{
-	width: 60%;
-	background-color: rgba(255, 10, 84,1);
-	padding: 12px 30px;
-	border: none;
-	border-radius: 54px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-	margin-top: 20px;
-	color: white;
-	font-size: 18px;
+   width: 60%;
+   background-color: rgba(255, 10, 84,1);
+   padding: 12px 30px;
+   border: none;
+   border-radius: 54px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+   margin-top: 20px;
+   color: white;
+   font-size: 18px;
 }
 
 .inputs-login{
-	height: 3em;
-	border-radius: 6px;
-	border: none;
-	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-	padding-left: 2%;
+   height: 3em;
+   border-radius: 6px;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   padding-left: 2%;
 }
 
 .criar-conta a{
-	text-decoration: none;
-	color: #FF0A54;
+   text-decoration: none;
+   color: #FF0A54;
 }
 .criar-conta{
-	display: flex;
-	justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 .nao-tem-conta{
-	margin-right: 2%;
-	color: #787878;
+   margin-right: 2%;
+   color: #787878;
 }
 
 .hr-ou{
-	display: flex;
-	justify-content: center;
-	margin: 5%;
-	align-items: center;
+   display: flex;
+   justify-content: center;
+   margin: 5%;
+   align-items: center;
 }
 .hr-login{
-	width: 30%;
-	height: 1%;
+   width: 30%;
+   height: 1%;
 }
 
 .p-ou{
-	padding: 0 3% 0 3%;
-	color: #787878;
+   padding: 0 3% 0 3%;
+   color: #787878;
 }
 /** RESPONSIVIDADE**/
 @media screen and (max-width: 1223px){
-	.container-esquerda{
-		width: 0;
-	}
-	.container-direita{
-		width: 100%;
-	}
-	.container-form-geral{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+   .container-esquerda{
+	   width: 0;
+   }
+   .container-direita{
+	   width: 100%;
+   }
+   .container-form-geral{
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+   }
 }
 
 
 /** PÁGINA AUTENTICAÇÃO **/
 
 form{
-	padding: 5% 10% 10% 10%;
+   padding: 5% 10% 10% 10%;
 }
 .reenviar-codigo{
-	display: flex;
-	margin-top: 1%;
+   display: flex;
+   margin-top: 1%;
 }
 
 .p-reenviar-codigo{
-	margin-left: 2%;
+   margin-left: 2%;
 }
 
 .ctn-verificacao{
-	margin-bottom: 3%;
+   margin-bottom: 3%;
 }
 .h2-verificacao{
-	padding-bottom: 1%;
+   padding-bottom: 1%;
 }
 
 /** TELA TROCAR SENHA**/
 
 .container-barra-progresso{
-	height: 20%;
-	width: 80%;
-	margin: auto;
+   height: 20%;
+   width: 80%;
+   margin: auto;
 }
 
 .barra-progresso{
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
 
 }

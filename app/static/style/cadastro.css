@@ -8,7 +8,7 @@
 }
 
 main{
-	height: 165vh;
+	height: auto;
 }
 .campo_check{
 	display: flex;

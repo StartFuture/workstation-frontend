@@ -12,8 +12,3 @@ def about():
     return render_template('main/about.html')
 
 
-@bp.route('/pricing')
-def pricing():
-    return 'pricing'
-
-
