@@ -12,40 +12,7 @@
 </head>
 
 <body>
-    <header id="header">
-        <a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src="{{url_for('static', filename='images/png/logo.png')}}"></a>
-
-        <ul id="menu" role="menu" class="nav">
-            <li><a href="{{url_for('box.index_box')}}">Box</a></li>
-
-            <li><a href="{{url_for('static', filename='main.about')}}">Sobre</a></li>
-            <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
-        </ul>
-
-        <div id="login" class="nav">
-            <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
-            <a target="none" style="color: white;">|&nbsp</a>
-            <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
-        </div>
-
-        <div id="nav-mobile">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
-        </button>
-
-            <ul id="menu" role="menu">
-                <div id="login">
-                    <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
-                    <a target="none" style="color: white;">|&nbsp</a>
-                    <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
-
-                </div>
-                <li><a href="{{url_for('box.index_box')}}">Box</a></li>
-                <li><a href="{{url_for('main.about')}}">Sobre</a></li>
-                <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
-            </ul>
-        </div>
-    </header>
+    {% include 'generic/section_header.html' %}
     <section class="section-perfil">
         <div class="container-geral-perfil">
             <div class="container-perfil-header">

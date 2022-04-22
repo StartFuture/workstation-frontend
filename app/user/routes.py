@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify
-
+import logging
 from user import bp
 
 @bp.route('/')
@@ -29,42 +29,42 @@ def code():
 def register():
     
     if request.method == 'POST':
+        infos = request.form
+        logging.warning(infos)
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
     
     
-@bp.route('/reset_password', methods=['GET', 'POST'])
+@bp.route('/reset/password', methods=['GET', 'POST'])
 def reset_password():
     
     if request.method == 'POST':
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('login_page/trocar-senha.html')
-        
-        
-@bp.route('/change_password', methods=['GET', 'POST'])
-def change_password():
-    
-    if request.method == 'POST':
-        return jsonify({'status': 'ok'})
-    
-    elif request.method == 'GET':
-        return render_template('login_page/redefinicao-senha.html')
-        
-    
+        return render_template('user/reset_password/trocar-senha.html')
 
-@bp.route('/valid_code', methods=['GET', 'POST'])
+
+@bp.route('/valid/code', methods=['GET', 'POST'])
 def valid_code():
     
     if request.method == 'POST':
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
-        return render_template('login_page/recuperacao-conta.html')
-        
+        return render_template('user/reset_password/recuperacao-conta.html')
+
+
+@bp.route('/change/password', methods=['GET', 'POST'])
+def change_password():
+    
+    if request.method == 'POST':
+        return jsonify({'status': 'ok'})
+    
+    elif request.method == 'GET':
+        return render_template('user/reset_password/redefinicao-senha.html')
         
 
 

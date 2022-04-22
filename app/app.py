@@ -12,5 +12,15 @@ app.register_blueprint(bp_main)
 app.register_blueprint(bp_box)
 app.register_blueprint(bp_blog)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('errors/erro-400.html'), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('errors/erro-500.html'), 500
+
 if __name__ == '__main__':
     app.run(debug=True)

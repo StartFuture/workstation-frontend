@@ -1,9 +1,30 @@
-{% include 'generic/header.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/box.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/boxs-gerais.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/date-picker.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
+    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+</head>
+
+<body>
+    {% include 'generic/section_header.html' %}
+
     <section id="container-carrosel-box">
         <div class="container-carrosel-box">
             <div class="container-h1-box-and-voltar">
                 <h1 class="h1-nome-box">Espaço Faria Lima</h1>
-                <a class="a-voltar" href=" {{ url_for('box') }} ">Voltar a listagem </a>
+                <a class="a-voltar" href=" {{ url_for('box.index_box') }} ">Voltar a listagem </a>
             </div>
             <div class="container-p-endereco">
                 <p class="p-endereco">Av. Brig. Faria Lima (Zona Sul)</p>
@@ -58,7 +79,7 @@
 
                         <button id="image-4" class="c-carousel__thumb image-button-carousel" data-carousel-index="4"></button>
 
-                        <button id="image-5" class="c-carousel__thumb image-button-carousel" data-carousel-index="4"></button>
+                        <button id="image-5" class="c-carousel__thumb image-button-carousel" data-carousel-index="5"></button>
                     </div>
                 </article>
                 
@@ -236,7 +257,7 @@
                     <ul>
                         <li><a href="">Box</a></li>
                         <li><a href="#">Planos</a></li>
-                        <li><a href=" {{ url_for('about.index_about') }} ">Sobre</a></li>
+                        <li><a href=" {{ url_for('main.about') }} ">Sobre</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -311,11 +332,11 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src=" {{ url_for('static', filename='api/navbar.js') }} "></script>
-<script src=" {{ url_for('static', filename='api/selecionar-horario.js') }} "></script>
-<script src=" {{ url_for('static', filename='api/carrosel-card.js') }} "></script>
-<script src=" {{ url_for('static', filename='api/carrosel-fotos-box.js') }} "></script>
-<script src=" {{ url_for('static', filename='api/date-picker.js') }} "></script>
+<script type="text/javascript" src=" {{ url_for('static', filename='js/navbar.js') }} "></script>
+<script src=" {{ url_for('static', filename='js/selecionar-horario.js') }} "></script>
+<script src=" {{ url_for('static', filename='js/carrosel-card.js') }} "></script>
+<script src=" {{ url_for('static', filename='js/carrosel-fotos-box.js') }} "></script>
+<script src=" {{ url_for('static', filename='js/date-picker.js') }} "></script>
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");

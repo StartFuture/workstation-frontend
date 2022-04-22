@@ -5,50 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WorkStation</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../login_page/cadastro.css">
-
-    <link rel="stylesheet" href="confirmacao-reserva-box.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/cadastro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/confirmacao-reserva-box.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="../images/png/icon-branco.png">
+    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
 </head>
 
 <body>
-    <header id="header">
-        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
 
-        <ul id="menu" role="menu" class="nav">
-            <li><a href="../box/box.html">Box</a></li>
-            <li><a href="../about/about.html">Sobre</a></li>
-            <li><a href="../blog/blog.html">Blog</a></li>
-        </ul>
-
-        <div id="login" class="nav">
-            <a id="reg" class="cta" href="../login_page/cadastro.html">Register&nbsp</a>
-            <a target="none" style="color: white;">|&nbsp</a>
-            <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
-        </div>
-
-        <div id="nav-mobile">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
-        </button>
-
-            <ul id="menu" role="menu">
-                <div id="login">
-                    <a id="reg" class="cta" href="../login_page/cadastro.html">Register&nbsp</a>
-                    <a target="none" style="color: white;">|&nbsp</a>
-                    <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
-                </div>
-                <li><a href="../box/box.html">Box</a></li>
-                <li><a href="../about/about.html">Sobre</a></li>
-                <li><a href="../blog/blog.html">Blog</a></li>
-            </ul>
-        </div>
-    </header>
+    {% include 'generic/section_header.html' %}
+    
     <div class="container-img-reduzida-e-textos">
         <div class="container-img-reduzida">
-            <img src="../images/svg/img-box-reduzida.svg">
+            <img src=" {{ url_for('static', filename='images/svg/img-box-reduzida.svg') }} ">
         </div>
         <div class="container-textos-inf-box">
             <div class="container-textos-principais-inf">
@@ -138,7 +108,7 @@
             <div class="modal-content">
 
                 <div class="container-sucess">
-                    <img class="sucess-img" src="../images/svg/login-page/sucess.svg">
+                    <img class="sucess-img" src=" {{ url_for('static', filename='images/svg/login-page/sucess.svg') }} ">
                 </div>
                 <p class="p-sucesso">Box agendada com sucesso</p>
                 <div class="container-btn-continue">
@@ -147,8 +117,8 @@
             </div>
         </div>
 </body>
-<script src="../api/navbar.js"></script>
-<script src="../api/modal-alterar-cartao-confirmacao.js"></script>
+<script src=" {{ url_for('static', filename='js/navbar.js') }} "></script>
+<script src=" {{ url_for('static', filename='js/modal-alterar-cartao-confirmacao.js') }} "></script>
 <script>
     var modalSucesso = document.getElementById("modalSucesso");
 
