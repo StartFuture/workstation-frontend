@@ -1,0 +1,1 @@
+PATH_LOGIN_API = 'login/'

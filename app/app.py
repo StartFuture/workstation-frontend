@@ -7,6 +7,8 @@ from blog import bp as bp_blog
 
 app = Flask(__name__)
 
+app.secret_key = 'super secret key'
+
 app.register_blueprint(bp_user)
 app.register_blueprint(bp_main)
 app.register_blueprint(bp_box)

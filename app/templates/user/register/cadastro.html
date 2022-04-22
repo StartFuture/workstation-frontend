@@ -45,7 +45,7 @@
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">E-mail</label>
-                            <input class="inputs-login" type="e-mail" required placeholder="Digite seu e-mail">
+                            <input class="inputs-login" name="email" type="e-mail" required placeholder="Digite seu e-mail">
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Confirme o e-mail</label>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Pessoa Física ou Pessoa Jurídica</label>
-                            <input class="inputs-login" type="password" required placeholder="Digite seu CPF ou CNPJ">
+                            <input class="inputs-login" name="cpf_cnpj" type="password" required placeholder="Digite seu CPF ou CNPJ">
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Número de telefone</label>
@@ -61,7 +61,7 @@
                                 <select name="ddd">
 									<option value="">Brasil +55</option>
 								</select>
-                                <input class="inputs-login" type="text" required placeholder="(11) 91234-5678">
+                                <input class="inputs-login" type="tel" required placeholder="(11) 91234-5678">
                             </div>
                         </div>
                         <div class="campo_txt">
@@ -91,8 +91,8 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="container-sucess">
-                            <img class="sucess-img" src="{{url_for('static', filename='js/navbar.js')}}">
-                        </div>89/
+                            <img class="sucess-img" src="{{url_for('static', filename='images/svg/login-page/sucess.svg')}}">
+                        </div>
                         <p class="p-sucesso">Sucesso!</p>
                         <div class="container-btn-continue">
                             <button class="btn-continue-cadastro">Continuar</button>

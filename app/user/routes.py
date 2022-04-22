@@ -29,8 +29,10 @@ def code():
 def register():
     
     if request.method == 'POST':
-        infos = request.form
+        infos = request.form.to_dict()
+        
         logging.warning(infos)
+        
         return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
