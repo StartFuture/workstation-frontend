@@ -12,7 +12,7 @@
 
 <body>
     <header id="header">
-        <a class="ld-page-return" href="url_for('main.index')"><img class="logo" src=" {{url_for('static', filename='images/png/logo.png')}}"></a>
+        <a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src=" {{url_for('static', filename='images/png/logo.png')}}"></a>
 
         <ul id="menu" role="menu" class="nav">
             <li><a href="{{url_for('box.index_box')}}">Box</a></li>
@@ -23,7 +23,7 @@
         <div id="login" class="nav">
             <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
             <a target="none" style="color: white;">|&nbsp</a>
-            <a class="cta" href="url_for('user.login')"><button id ="sign">Sign in</button></a>
+            <a class="cta" href="{{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
         </div>
 
         <div id="nav-mobile">
@@ -35,7 +35,7 @@
                 <div id="login">
                     <a id="reg" class="cta" href="{{url_for('user.register')}}">Register&nbsp</a>
                     <a target="none" style="color: white;">|&nbsp</a>
-                    <a class="cta" href=" url_for('user.login') "><button id ="sign">Sign in</button></a>
+                    <a class="cta" href=" {{url_for('user.login')}}"><button id ="sign">Sign in</button></a>
                 </div>
                 <li><a href="{{url_for('box.index_box')}}">Box</a></li>
                 <li><a href=" {{url_for('main.about')}} ">Sobre</a></li>
@@ -57,7 +57,7 @@
                         <p id="suporte-h1" style="font-size: 22px; color: white; ">Nosso objetivo é criar um sistema para a locação de estações reservadas para trabalho. <br>Prezamos por um ambiente limpo, tranquilo e ideal, <br>para um home-office sem interrupções caseiras.</p>
                     </div>
                     <div id="saiba-mais">
-                        <button id="button-saiba">Saiba mais</button>
+                        <button id="button-saiba"><a class="aoi" href="{{url_for('blog.index_blog')}}">Saiba mais</a></button>
                     </div>
                 </div>
             </div>
@@ -137,12 +137,13 @@
     <section id="terceira-section">
         <div id="terceiro-container">
             <div id="container-big-img">
+                <img src="{{url_for('static', filename='images/png/img-nos-oferecemos-lp.png')}}" style="width: 100%; height: 100%;">
             </div>
             <div id="container-icons-textos">
                 <div class="titulo-sub">
                     <h3 class="h3-oque">O que são boxes?</h3>
                     <h1 class="h1-produtos">O que nós oferecemos:</h1>
-                    <p class="p-sub">As WorkStation’s são estações de trabalho com as comodidades perfeitas para melhorar as suas atividades profissionais e estudantis.</p>
+                    <p class="p-sub">As WorkStations são estações de trabalho com as comodidades perfeitas para melhorar as suas atividades profissionais e estudantis.</p>
                     <div id="container-icon-dif">
                         <img class="icon-dif" src="{{url_for('static', filename='images/svg/icones-diferenciais.svg')}}">
                     </div>
@@ -151,20 +152,6 @@
         </div>
     </section>
 
-    <section id="quinta-section">
-        <div class="container-quinta-sec">
-            <div class="container-texto-loc">
-                <h2 class="h2-loc" style="color:white;">Localização</h2>
-                <p class="p-desc-loc" style="color: white;">Estão distribuídos pela cidade em locais de fácil acesso, como shoppings, cafeterias, hotéis, universidades e coworkings.</p>
-                <div class="container-imagens-localizacao">
-                    <img class="icon-loc" src="{{url_for('static', filename='images/svg/Icones_da_localização.svg')}}">
-                </div>
-            </div>
-            <div class="container-api-mapa">
-
-            </div>
-        </div>
-    </section>
     <section id="sexta section">
         <div class="segundo-container container-blog">
             <div class="dois-textos">
