@@ -3,7 +3,8 @@ import logging
 from user import bp
 import utils
 import parameters
-import requests
+import functions
+
 
 
 @bp.route('/')
@@ -16,47 +17,39 @@ def login():
     
     if request.method == 'POST':
 
-        # infos = request.form.to_dict()
-
-        # dict_front_login = {
-        #     "user_login": infos["login"],
-        #     "password_user": infos["password"]
-        # }
-        
-        # logging.warning(dict_front_login)
-
-        return redirect(url_for('main.index'))
-
-    elif request.method == 'GET':
-        
-        dict_user_example = {
-            'id_user': 1,
-            'username' : 'Lucas Nunes',
-            'email' : 'lucas@gmail.com',
-            'password' : '1234',
-            'cpf_cnpj' : '000.000.000-00',
-            'telefone' : '0000-0000',
-            'credit_card' : '0000 0000 0000 0000',
+        dict_login = {
+            "email": "mateustoni04@gmail.com",
+            "senha": 12345
         }
         
-        session['user'] = dict_user_example
+        if request.form['login'] == dict_login['email']:
+            if str(request.form['password']) == str(dict_login['senha']):
+                return redirect(url_for('user.code'))
+            else:
+                return redirect(url_for('user.login'))
+        else:
+            return redirect(url_for('user.login'))
+
+    elif request.method == 'GET':
         
         return render_template('user/login/login.html')
 
 @bp.route('/code', methods=['GET', 'POST'])
 def code():
     
-    if request.method == 'POST':
-        infos = request.form.to_dict()
-
-        dict_front_code = {
-            "code_user": infos['cod_user'],
-            "email": infos['email']
-        }
+    dict_code = {
+        'code': 588634,
+        'email': 'mateustoni04@gmail.com'
+    }
     
-        return dict_front_code
+    if request.method == 'POST':
+        
+        if str(request.form['cod_user']) == str(dict_code['code']):
+            return redirect(url_for('box.confirm_box'))
 
     elif request.method == 'GET':
+        
+        functions.send_email(cod=dict_code['code'], client_email=dict_code['email'])
 
         return render_template('user/login/login_autenticacao.html')        
 
@@ -144,12 +137,12 @@ def profile():
     
     dict_user_example = {
             'id_user': 1,
-            'username' : 'Lucas Nunes',
-            'email' : 'lucas@gmail.com',
-            'password' : '1234',
-            'cpf_cnpj' : '000.000.000-00',
-            'telefone' : '0000-0000',
-            'credit_card' : '0000 0000 0000 0000',
+            'username' : 'Mateus Toni Vieira',
+            'email' : 'mateustoni04@gmail.com',
+            'password' : '12345',
+            'cpf_cnpj' : '338.058.828-82',
+            'telefone' : '(11)94103-0316',
+            'credit_card' : '4723.7623.2130.7436',
         }
         
     list_reservations = [
@@ -160,7 +153,7 @@ def profile():
         },
         {
             'id' : '2',
-            'box': 'Box Faria Lima 2',
+            'box': 'Box Biblioteca de Osasco',
             'details': '20 de março de 2022 (4 horas - 13:00 às 17:00)'
         },
     ]

@@ -33,7 +33,7 @@ def index_box():
                     "bairro": "aqui mesmo",
                     "cidade": "osasco",
                     "estado": "Sao paulo",
-                    "nome": "Espaço Faria Lima 2",
+                    "nome": "Biblioteca de Osasco",
                     "preco_hora": "200",
                     "descricao": """
                                 Muito mais que uma sala de
@@ -63,7 +63,7 @@ def detalhes_box():
         
         logging.warning(infos)
         
-        return render_template('box/box-detalhes.html')
+        return redirect(url_for('user.login'))
 
     elif request.method == 'GET':
         
