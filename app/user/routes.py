@@ -11,8 +11,14 @@ def index():
 def login():
     
     if request.method == 'POST':
-        return jsonify({'status': 'ok'})
-    
+        login = request.form['login']
+        password = request.form['password']
+
+        dict_values_login = {
+            "user_login": login,
+            "password_user": password
+        }
+        pass
     elif request.method == 'GET':
         return render_template('user/login/login.html')
 
@@ -30,10 +36,9 @@ def register():
     
     if request.method == 'POST':
         infos = request.form.to_dict()
+        pass
         
-        logging.warning(infos)
         
-        return jsonify({'status': 'ok'})
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')

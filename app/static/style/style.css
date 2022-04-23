@@ -641,7 +641,7 @@ body {
 }
 
 .container {
-    max-width: 1170px;
+    margin: 0px 5% 0px 10%
 }
 
 .row {
@@ -656,6 +656,7 @@ ul {
 .footer {
     background-color: #2B2E51;
     padding: 70px 0;
+    margin-top: 70px;
 }
 
 .footer-col {
