@@ -284,22 +284,58 @@
                             <h3 class="melhor-horario">Qual o melhor horário para você?</h3>
                         </div>
                         <div class="container-buttons" id="container-horarios-id">
-                            <input class="input-horario" type="checkbox" name="time_0" value="10:00" />
-                            <input class="input-horario" type="checkbox" name="time_1" value="11:00" />
-                            <input class="input-horario" type="checkbox" name="time_2" value="12:00" />
-                            <input class="input-horario" type="button" name="time_3" value="13:00" />
-                            <input class="input-horario" type="button" name="time_4" value="14:00" />
-                            <input class="input-horario" type="button" name="time_5" value="15:00" />
-                            <input class="input-horario" type="button" name="time_6" value="16:00" />
-                            <input class="input-horario" type="button" name="time_7" value="17:00" />
-                            <input class="input-horario" type="button" name="time_8" value="18:00" />
-                            <input class="input-horario" type="button" name="time_9" value="19:00" />
+                            <div style="display: flex; justify-content: space-around; margin: 10px 0px 50px 0px; width: 100%;">
+                                <label class="container-time">10:00
+                                    <input class="input-horario" type="checkbox" name="time_0" value="10:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">11:00
+                                    <input class="input-horario" type="checkbox" name="time_1" value="11:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">12:00
+                                    <input class="input-horario" type="checkbox" name="time_2" value="12:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">13:00
+                                    <input class="input-horario" type="checkbox" name="time_3" value="13:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">14:00
+                                    <input class="input-horario" type="checkbox" name="time_4" value="14:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div style="display: flex; justify-content: space-around; margin: 10px 0px 50px 0px; width: 100%;">
+                                <label class="container-time">15:00
+                                    <input class="input-horario" type="checkbox" name="time_5" value="15:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">16:00
+                                    <input class="input-horario" type="checkbox" name="time_6" value="16:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">17:00
+                                    <input class="input-horario" type="checkbox" name="time_7" value="17:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">18:00
+                                    <input class="input-horario" type="checkbox" name="time_8" value="18:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-time">19:00
+                                    <input class="input-horario" type="checkbox" name="time_9" value="19:00" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="container-reservar-botao">
                     <div class="container-button-login">
-                        <input id="Login" type="submit" value="Login">
+                        <input class="button-conhecer button-ver-detalhes"
+                            style="width: 20%; color: white"
+                            id="Registrar" type="submit" value="Reservar">
                     </div>
                 </div>
             </form>

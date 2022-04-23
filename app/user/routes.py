@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify
 import logging
 from user import bp
+import utils
 
 @bp.route('/')
 def index():
@@ -123,15 +124,61 @@ def change_password():
 @bp.route('/profile', methods=['GET', 'POST'])
 def profile():
     
+    dict_user_example = {
+            'id_user': 1,
+            'username' : 'Lucas Nunes',
+            'email' : 'lucas@gmail.com',
+            'password' : '1234',
+            'cpf_cnpj' : '000.000.000-00',
+            'telefone' : '0000-0000',
+            'credit_card' : '0000 0000 0000 0000',
+        }
+        
+    list_reservations = [
+        {
+            'id' : '1',
+            'box': 'Box Faria Lima',
+            'details': '18 de março de 2022 (4 horas - 13:00 às 17:00)'
+        },
+        {
+            'id' : '2',
+            'box': 'Box Faria Lima 2',
+            'details': '20 de março de 2022 (4 horas - 13:00 às 17:00)'
+        },
+    ]
+    
     if request.method == 'POST':
+
+        valid_inputs = ['username','email','password','cpf_cnpj','telefone','credit_card']
+        
         infos = request.form.to_dict()
-
+        
         logging.warning(infos)
+        
+        id_user = infos['id_user']
+        
+        key = list(infos.keys())[1]
+        value = list(infos.values())[1]
+        
+        if key in valid_inputs:
+            if key == 'username':
+                utils.update_username(id_user, value)
+            elif key == 'email':
+                utils.update_email(id_user, value)
+            elif key == 'password':
+                utils.update_password(id_user, value)
+            elif key == 'cpf_cnpj':
+                utils.update_cpf_cnpj(id_user, value)
+            elif key == 'telefone':
+                utils.update_telefone(id_user, value)
+            elif key == 'credit_card':
+                utils.update_credit_card(id_user, value)
 
-        return render_template('user/profile.html')
+        return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
     
     elif request.method == 'GET':
-        return render_template('user/profile.html')
+        
+        return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
 
 
 
