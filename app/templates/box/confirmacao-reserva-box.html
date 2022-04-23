@@ -13,13 +13,42 @@
 </head>
 
 <body>
+    <header id="header">
+        <a class="ld-page-return" href="{{url_for('main.index')}}"><img class="logo" src=" {{url_for('static', filename='images/png/logo.png')}}"></a>
 
-    {% include 'generic/section_header.html' %}
+        <ul id="menu" role="menu" class="nav">
+            <li><a href="{{ url_for('box.index_box') }}">Box</a></li>
+            <li><a href="{{ url_for('main.about') }}">Sobre</a></li>
+            <li><a href="{{ url_for('blog.index_blog')}}">Blog</a></li>
+        </ul>
+
+        <div id="login" class="nav">
+            <a id="reg" class="cta" href="{{ url_for('user.profile') }}">Mateus Toni&nbsp</a>
+            <a target="none" style="color: white;">|&nbsp</a>
+            <a class="cta" href="{{ url_for('main.index') }}"><button id ="sign">Logout</button></a>
+        </div>
+
+        <div id="nav-mobile">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+            <ul id="menu" role="menu">
+                <div id="login">
+                    <a id="reg" class="cta" href="{{ url_for('user.profile') }}">Mateus Toni&nbsp</a>
+                    <a target="none" style="color: white;">|&nbsp</a>
+                    <a class="cta" href=" {{ url_for('main.index') }}"><button id ="sign">Logout</button></a>
+                </div>
+                <li><a href="{{ url_for('box.index_box') }}">Box</a></li>
+                <li><a href=" {{ url_for('main.about') }} ">Sobre</a></li>
+                <li><a href="{{ url_for('blog.index_blog') }}">Blog</a></li>
+            </ul>
+        </div>
+    </header>
     
     <div class="container-img-reduzida-e-textos">
-        <div class="container-img-reduzida">
-            <img src=" {{ url_for('static', filename='images/svg/img-box-reduzida.svg') }} ">
-        </div>
+        <img class="container-img-reduzida" src=" {{ url_for('static', filename='images/png/carrosel-box/1.jpg') }} ">
+        
         <div class="container-textos-inf-box">
             <div class="container-textos-principais-inf">
                 <div class="container-h1-inf">
@@ -114,7 +143,7 @@
                 </div>
                 <p class="p-sucesso">Box agendada com sucesso</p>
                 <div class="container-btn-continue">
-                    <button class="btn-continue-cadastro">Continuar</button>
+                    <a class="btn-continue-cadastro" style="text-align: center" href="{{ url_for('user.profile') }}">Continuar</a>
                 </div>
             </div>
         </div>

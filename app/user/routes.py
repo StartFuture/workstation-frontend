@@ -5,7 +5,10 @@ import utils
 import parameters
 import functions
 
-
+dict_login = {
+            "email": "mateustoni04@gmail.com",
+            "senha": 12345
+        }
 
 @bp.route('/')
 def index():
@@ -17,11 +20,6 @@ def login():
     
     if request.method == 'POST':
 
-        dict_login = {
-            "email": "mateustoni04@gmail.com",
-            "senha": 12345
-        }
-        
         if request.form['login'] == dict_login['email']:
             if str(request.form['password']) == str(dict_login['senha']):
                 return redirect(url_for('user.code'))
@@ -88,14 +86,12 @@ def register():
 @bp.route('/reset/password', methods=['GET', 'POST'])
 def reset_password():
     
+    email = 'mateustoni04@gmail.com'
+    
     if request.method == 'POST':
-        infos = request.form.to_dict()
-
-        dict_reset_password = {
-            "email": infos['email']
-        }
-
-        return dict_reset_password
+        if request.form['email_recover'] == email:
+            functions.send_email_password(cod='145544', client_email='mateustoni04@gmail.com')
+            return redirect(url_for('user.valid_code'))
 
     elif request.method == 'GET':
         return render_template('user/reset_password/trocar-senha.html')
@@ -105,13 +101,8 @@ def reset_password():
 def valid_code():
     
     if request.method == 'POST':
-        infos = request.form.to_dict()
-
-        dict_valid_code = {
-            "cod_user": infos['cod_user']
-        }
-
-        return dict_valid_code
+        if str(request.form['code_user']) == str('145544'):
+            return redirect(url_for('user.change_password'))
     
     elif request.method == 'GET':
         return render_template('user/reset_password/recuperacao-conta.html')
@@ -121,13 +112,8 @@ def valid_code():
 def change_password():
     
     if request.method == 'POST':
-        infos = request.form.to_dict()
-
-        dict_change_password = {
-            "new_password": infos['new_password']
-        }
-
-        return dict_change_password
+        dict_login['senha'] = request.form['senha_recover']
+        return redirect(url_for('user.login'))
     
     elif request.method == 'GET':
         return render_template('user/reset_password/redefinicao-senha.html')
@@ -150,12 +136,7 @@ def profile():
             'id' : '1',
             'box': 'Box Faria Lima',
             'details': '18 de março de 2022 (4 horas - 13:00 às 17:00)'
-        },
-        {
-            'id' : '2',
-            'box': 'Box Biblioteca de Osasco',
-            'details': '20 de março de 2022 (4 horas - 13:00 às 17:00)'
-        },
+        }
     ]
     
     if request.method == 'POST':

@@ -154,6 +154,7 @@ hr {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     padding-left: 2%;
+    width: 100%;
 }
 
 .btn-salvar {
@@ -208,12 +209,21 @@ hr {
     cursor: pointer;
 }
 
+.container-img-reduzida {
+    width: 35%;
+    height: 35%;
+}
+
 @media screen and (max-width: 856px) {
     .container-img-reduzida-e-textos {
         flex-direction: column;
     }
     .container-textos-inf-box {
         padding: 0;
+    }
+    .container-img-reduzida {
+        width: 90%;
+        height: 90%;
     }
 }
 

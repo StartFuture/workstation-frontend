@@ -35,14 +35,17 @@
 						</div>
 						<div class="campo_txt">
 							<label class="campo-requerido">Nova Senha</label>
-							<input class="inputs-login" type="text" required placeholder="Digite a nova senha" name="senha_recover">
+							<input class="inputs-login" type="password" required placeholder="Digite a nova senha" name="senha_recover">
 						</div>
 						<div class="campo_txt">
 							<label class="campo-requerido">Repita a nova senha</label>
-							<input class="inputs-login" type="text" required placeholder="Repita a nova senha" >
+							<input class="inputs-login" type="password" required placeholder="Repita a nova senha" >
 						</div>
 						<div class="container-button-login">
-							<a class="voltar" href="{{url_for('user.reset_password')}}">Voltar</a>
+							<button>
+								<a href="{{url_for('user.reset_password')}}">Voltar</a>
+							</button>
+
 							<input type="submit" value="Concluir">
 						</div>
 					</form>

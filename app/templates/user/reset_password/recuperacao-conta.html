@@ -28,14 +28,14 @@
 					<form method="post" target="{{url_for('user.valid_code')}}">
 						<div class="ctn-verificacao">
 							<h2 class="h2-verificacao" style="color:black;">Recuperação de conta  </h2>
-							<p class="p-codigo-ex" style="color: #787878;">Um código foi enviado para email.teste@gmail.com Por favor digite-o no campo abaixo  </p>
+							<p class="p-codigo-ex" style="color: #787878;">Um código foi enviado para mateustoni04@gmail.com Por favor digite-o no campo abaixo  </p>
 						</div>
 						<div class="container-barra-progresso">
 							<img class="barra-progresso" src="{{url_for('static', filename='images/svg/login-page/barra-progresso-2.svg')}}">
 						</div>
 						<div class="campo_txt">
 							<label class="campo-requerido">Código de 6 caracteres</label>
-							<input class="inputs-login" type="text" required placeholder="Insira o código" maxlength="6">
+							<input class="inputs-login" type="text" required placeholder="Insira o código" maxlength="6" name="code_user">
 						</div>
 						<div class="reenviar-codigo">
 							<p class="nao-recebeu" style="color: #787878;">Não recebeu o código?</p>

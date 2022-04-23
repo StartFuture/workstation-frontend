@@ -15,7 +15,7 @@ window.onclick = function(event) {
 
 var divPagamento = document.getElementById("coontainer-pagamento-confirmar-reserva");
 var titleModalEditCard = document.getElementById("title-modal-confirmar-reserva-cartao");
-if (true) {
+if (false) {
     divPagamento.style.display = "none";
     btnAlterarCartaoConfirmacao.value = "Adicionar novo cartão";
     titleModalEditCard.textContent = "Adicionar novo cartão de crédito"
