@@ -208,7 +208,8 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F2F2F2;
     transition: 0.3s;
-    height: auto;
+    height: 195px;
+    width: 400px;
     border-radius: 33px;
     margin: 10% 20px;
 }
@@ -360,7 +361,7 @@ hr {
     border-radius: 8px;
     border: 1px solid #ddd;
     padding: 3%;
-    margin-left: 15px;
+    margin: 0px 13px;
 }
 
 .h1-val {
@@ -472,6 +473,3 @@ hr {
     width: 98% !important;
 }
 
-.glider-slide {
-    justify-content: start !important;
-}

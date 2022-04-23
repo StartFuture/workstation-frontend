@@ -38,127 +38,70 @@
     </section>
     <section>
         <div class="container-boxes">
-            <div class="card-box-geral">
-                <div class="container-imagem-box">
-                    <img class="img-box" src=" {{ url_for('static', filename='images/png/box-scene-1.png') }} " alt="">
-                </div>
-                <div class="container-textos-informacoes-box">
-                    <div class="container-h1-box">
-                        <h1 class="h1-nome-box">Espaço Faria Lima</h1>
+            {% for dict_box in boxes: %}
+                <div class="card-box-geral">
+                    <div class="container-imagem-box">
+                        <img class="img-box" src=" {{ url_for('static', filename='images/png/box-scene-1.png') }} " alt="">
                     </div>
-                    <div class="container-p-endereco">
-                        <p class="p-endereco">Av. Brig. Faria Lima (Zona Sul)</p>
-                    </div>
-                    <div class="container-avaliacao-estrelas">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                    </div>
-                    <div class="container-p-descricao">
-                        <p class="p-descricao">Muito mais que uma sala de reunião, um espaço para fechar negócios importantes e ter grandes ideias. Capacidade para até 12 pessoas.</p>
-                    </div>
-                    <div class="container-icons">
-                        <div class="container-icons-textos">
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-isolamento.svg') }} ">
-                                <p>Isolamento acústico</p>
-                            </div>
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-wifi.svg') }} ">
-                                <p>Internet</p>
-                            </div>
+                    <div class="container-textos-informacoes-box">
+                        <div class="container-h1-box">
+                            <h1 class="h1-nome-box">{{dict_box['nome']}}</h1>
                         </div>
-                        <div class="container-icons-textos">
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-arcondicionado.svg') }} ">
-                                <p>Ar condicionado</p>
-                            </div>
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-porta.svg') }} ">
-                                <p>Fechadura digital</p>
-                            </div>
+                        <div class="container-p-endereco">
+                            <p class="p-endereco">{{dict_box['rua']}}, {{dict_box['cidade']}}, {{dict_box['estado']}}</p>
                         </div>
-                        <div class="container-icons-textos">
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-tv.svg') }} ">
-                                <p>Smart TV</p>
-                            </div>
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-lousa.svg') }} ">
-                                <p>Lousa</p>
-                            </div>
+                        <div class="container-avaliacao-estrelas">
+                            <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
+                            <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
+                            <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
+                            <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
+                            <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
                         </div>
-                        <div class="button-conhecer-container button-ver-detalhes-container">
-                            <button class="button-conhecer button-ver-detalhes">
-                                <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
-                            </button>
+                        <div class="container-p-descricao">
+                            <p class="p-descricao">{{dict_box['descricao']}}</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-box-geral">
-                <div class="container-imagem-box">
-                    <img class="img-box" src=" {{ url_for('static', filename='images/png/box-scene-2.png') }} " alt="">
-                </div>
-                <div class="container-textos-informacoes-box">
-                    <div class="container-h1-box">
-                        <h1 class="h1-nome-box">Espaço Faria Lima</h1>
-                    </div>
-                    <div class="container-p-endereco">
-                        <p class="p-endereco">Av. Brig. Faria Lima (Zona Sul)</p>
-                    </div>
-                    <div class="container-avaliacao-estrelas">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                        <img class="estrela-svg" src=" {{ url_for('static', filename='images/svg/star.svg') }} ">
-                    </div>
-                    <div class="container-p-descricao">
-                        <p class="p-descricao">Muito mais que uma sala de reunião, um espaço para fechar negócios importantes e ter grandes ideias. Capacidade para até 12 pessoas.</p>
-                    </div>
-                    <div class="container-icons">
-                        <div class="container-icons-textos">
+                        <div class="container-icons">
                             <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-isolamento.svg') }} ">
-                                <p>Isolamento acústico</p>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-isolamento.svg') }} ">
+                                    <p>Isolamento acústico</p>
+                                </div>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-wifi.svg') }} ">
+                                    <p>Internet</p>
+                                </div>
                             </div>
                             <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-wifi.svg') }} ">
-                                <p>Internet</p>
-                            </div>
-                        </div>
-                        <div class="container-icons-textos">
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-arcondicionado.svg') }} ">
-                                <p>Ar condicionado</p>
-                            </div>
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-porta.svg') }} ">
-                                <p>Fechadura digital</p>
-                            </div>
-                        </div>
-                        <div class="container-icons-textos">
-                            <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-tv.svg') }} ">
-                                <p>Smart TV</p>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-arcondicionado.svg') }} ">
+                                    <p>Ar condicionado</p>
+                                </div>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-porta.svg') }} ">
+                                    <p>Fechadura digital</p>
+                                </div>
                             </div>
                             <div class="container-icons-textos">
-                                <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-lousa.svg') }} ">
-                                <p>Lousa</p>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-tv.svg') }} ">
+                                    <p>Smart TV</p>
+                                </div>
+                                <div class="container-icons-textos">
+                                    <img class="ar-svg" src=" {{ url_for('static', filename='images/svg/icons-box/icon-lousa.svg') }} ">
+                                    <p>Lousa</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-conhecer-container button-ver-detalhes-container">
-                            <button class="button-conhecer button-ver-detalhes">
-                                <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
-                            </button>
+                            <div class="button-conhecer-container button-ver-detalhes-container">
+                                <button class="button-conhecer button-ver-detalhes">
+                                    <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            {% endfor %}
+        </div>
     </section>
 
     {% include 'generic/footer.html' %}

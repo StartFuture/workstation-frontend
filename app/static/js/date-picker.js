@@ -54,12 +54,16 @@ function populateDates (e) {
 	}
 
 	for (let i = 0; i < amount_days; i++) {
-		const day_element = document.createElement('div');
+		const day_element = document.createElement('input');
+		day_element.type = 'checkbox';
 		day_element.classList.add('day');
+		day_element.setAttribute('value', i + 1 + '-' + (selectedMonth + 1) + '-' + selectedYear);
+		day_element.setAttribute('name', 'date');
 		day_element.textContent = i + 1;
 
 		if (selectedDay == (i + 1) && selectedYear == year && selectedMonth == month) {
 			day_element.classList.add('selected');
+			day_element.checked = true;
 		}
 
 		day_element.addEventListener('click', function () {
@@ -100,3 +104,4 @@ function formatDate (d) {
 
 	return day + ' / ' + month + ' / ' + year;
 }
+

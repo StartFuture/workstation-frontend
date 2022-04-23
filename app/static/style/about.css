@@ -303,6 +303,7 @@ hr {
 
 .c-carousel--responsive {
     max-width: 100%;
+    margin-left: 40px;
 }
 
 .c-carousel__slide {

@@ -106,7 +106,7 @@
 
 .card-blog {
     width: 340px;
-    height: 610px;
+    /* height: 610px; */
     border: none;
     border-radius: 9px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -202,6 +202,18 @@
 .button-ler-noticia {
     border-radius: 5px !important;
     margin-top: 0;
+}
+
+.button-artigo {
+    width: 10rem !important;
+    height: 35px;
+    background-color: rgba(255, 10, 84, 1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin: 20px;
+    font-weight: bold;
 }
 
 /**RESPONSIVIDADE */

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/boxs-gerais.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/date-picker.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
-    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
@@ -260,7 +260,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <form action="" style="height: 100%;">
+            <form method="post" target="{{url_for('box.detalhes_box')}}" style="height: 100%;">
                 <span class="close">&times;</span>
                 <h2 class="h2-selecione">Selecionar período da reserva</h2>
                 <p class="p-sel" style="color: #787878;">Escolha uma data e hora disponível para reservar o seu uso na box.</p>
@@ -284,23 +284,23 @@
                             <h3 class="melhor-horario">Qual o melhor horário para você?</h3>
                         </div>
                         <div class="container-buttons" id="container-horarios-id">
-                            <input class="input-horario" type="button" value="10:00" />
-                            <input class="input-horario" type="button" value="11:00" />
-                            <input class="input-horario" type="button" value="12:00" />
-                            <input class="input-horario" type="button" value="13:00" />
-                            <input class="input-horario" type="button" value="14:00" />
-                            <input class="input-horario" type="button" value="15:00" />
-                            <input class="input-horario" type="button" value="16:00" />
-                            <input class="input-horario" type="button" value="17:00" />
-                            <input class="input-horario" type="button" value="18:00" />
-                            <input class="input-horario" type="button" value="19:00" />
+                            <input class="input-horario" type="checkbox" name="time_0" value="10:00" />
+                            <input class="input-horario" type="checkbox" name="time_1" value="11:00" />
+                            <input class="input-horario" type="checkbox" name="time_2" value="12:00" />
+                            <input class="input-horario" type="button" name="time_3" value="13:00" />
+                            <input class="input-horario" type="button" name="time_4" value="14:00" />
+                            <input class="input-horario" type="button" name="time_5" value="15:00" />
+                            <input class="input-horario" type="button" name="time_6" value="16:00" />
+                            <input class="input-horario" type="button" name="time_7" value="17:00" />
+                            <input class="input-horario" type="button" name="time_8" value="18:00" />
+                            <input class="input-horario" type="button" name="time_9" value="19:00" />
                         </div>
                     </div>
                 </div>
                 <div class="container-reservar-botao">
-                    <input class="button-conhecer button-ver-detalhes" 
-                        style="width: 15%; height: 40px; margin: 0px 30px; padding: 0px 10px; color: white"
-                        type="button" value="Reservar" />
+                    <div class="container-button-login">
+                        <input id="Login" type="submit" value="Login">
+                    </div>
                 </div>
             </form>
         </div>
