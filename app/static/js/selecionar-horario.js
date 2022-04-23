@@ -7,5 +7,13 @@ for (var i = 0; i < y.length; i++) {
         } else {
             y[i].style.backgroundColor = 'white'
         }
+
+        return;
     }.bind(null, i));
+
+    if (y[i].style.backgroundColor == 'white') {
+        y[i].style.backgroundColor = 'salmon'
+    } else {
+        y[i].style.backgroundColor = 'white'
+    }
 }

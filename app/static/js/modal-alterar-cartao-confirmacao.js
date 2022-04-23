@@ -12,3 +12,15 @@ window.onclick = function(event) {
         modalAlterarCartaoConfirmacao.style.display = "none";
     }
 }
+
+var divPagamento = document.getElementById("coontainer-pagamento-confirmar-reserva");
+var titleModalEditCard = document.getElementById("title-modal-confirmar-reserva-cartao");
+if (true) {
+    divPagamento.style.display = "none";
+    btnAlterarCartaoConfirmacao.value = "Adicionar novo cartão";
+    titleModalEditCard.textContent = "Adicionar novo cartão de crédito"
+} else {
+    divPagamento.style.display = "block";
+    btnAlterarCartaoConfirmacao.value = "Editar cartão";
+    titleModalEditCard.textContent = "Alterar cartão de crédito";
+}

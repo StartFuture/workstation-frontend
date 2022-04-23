@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                     <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
                 </div>
                 <div class="container-form">
-                    <form method="post" tearget="{{url_for('user.login')}}">
+                     <form method="post" target="{{url_for('user.login')}}"> 
                         <div class="campo_txt">
                             <label class="campo-requerido">E-mail ou CPF</label>
                             <input class="inputs-login" type="text" placeholder="E-mail ou CPF" required name="login">
@@ -35,7 +35,9 @@
                             <input class="inputs-login" type="password" placeholder="Senha" required name="password">
                         </div>
                         <div class="esqueceu-senha">
-                            <a class="esqueceu-senha" href="#">Esqueceu a senha?</a>
+                            <a class="esqueceu-senha" href="{{url_for('user.reset_password')}}">
+                                Esqueceu a senha?
+                            </a>
                         </div>
                         <div class="container-button-login">
                             <input id="Login" type="submit" value="Login">
@@ -46,7 +48,8 @@
                             <hr class="hr-login">
                         </div>
                         <div class="criar-conta">
-                            <p class="nao-tem-conta">Não tem uma conta?</p><a href="{{url_for('user.register')}}">Inscrever-se</a>
+                            <p class="nao-tem-conta">Não tem uma conta?</p>
+                            <a href="{{url_for('user.register')}}">Inscrever-se</a>
                         </div>
                     </form>
                 </div>

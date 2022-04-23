@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
 	<link rel="stylesheet" href="redefinicao-senha.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
+	<link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 <body>
 	{% include 'generic/section_header.html' %}
@@ -42,7 +42,7 @@
 							<input class="inputs-login" type="text" required placeholder="Repita a nova senha" >
 						</div>
 						<div class="container-button-login">
-							<a class="voltar" href="">Voltar</a>
+							<a class="voltar" href="{{url_for('user.reset_password')}}">Voltar</a>
 							<input type="submit" value="Concluir">
 						</div>
 					</form>

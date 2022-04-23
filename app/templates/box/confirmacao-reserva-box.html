@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/cadastro.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/confirmacao-reserva-box.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/png/icon-branco.png') }}">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
             <div class="container-h2-forma-pagamento">
                 <p>Cartão de crédito</p>
             </div>
-            <div class="container-h2-forma-pagamento">
+            <div id="coontainer-pagamento-confirmar-reserva" class="container-h2-forma-pagamento">
                 <p>*** **** **** 4567</p>
             </div>
             <div class="container-h2-forma-pagamento">
@@ -87,7 +87,7 @@
         <!--MODAL-->
         <div id="my-modal-alterar-cartao-confirmacao" class="modal ">
             <div class="modal-content modal-content-cartao">
-                <p class="p-sucesso">Alterar cartão de crédito </p>
+                <p id="title-modal-confirmar-reserva-cartao" class="p-sucesso">Adicionar novo cartão de crédito</p>
                 <form method="post" target="{{url_for('box.confirm_box')}}">
                     <div class="container-input">
                         <label class="campo-requerido">Nome do titular</label>

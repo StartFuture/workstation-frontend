@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='style/perfil.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <div class="container-perfil-header">
                 <div class="container-textos-header">
                     <div class="container-h1-header">
-                        <h1 class="h1-header">Bem Vindo, Mateus Toni!</h1>
+                        <h1 class="h1-header">Bem Vindo, {{dict_user['username']}}!</h1>
                     </div>
                     <div class="container-p-header">
                         <p class="p-header">Gerencie suas informações, privacidade e segurança para que WorkStation atenda suas necessidades.</p>
@@ -33,35 +33,35 @@
                     </thead>
                     <tr class="">
                         <td>Nome</td>
-                        <td>Gabriel Monteiro</td>
+                        <td>{{dict_user['username']}}</td>
                         <td class="lapis">
                             <input class="editar" id="myBtn" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>Email</td>
-                        <td>gmonteiro@workstation.com</td>
+                        <td>{{dict_user['email']}}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-email" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>Senha</td>
-                        <td class="hidetext">Gabriel@10</td>
+                        <td class="hidetext">{{dict_user['password']}}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-senha" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="">
                         <td>CPF ou CNPJ</td>
-                        <td class="hidetext">12.22.22.765-33</td>
+                        <td class="hidetext">{{dict_user['cpf_cnpj']}}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-cpf" type="submit" value="Editar">
                         </td>
                     </tr>
                     <tr class="no-border">
                         <td>Telefone</td>
-                        <td>+55 11 1111-1111</td>
+                        <td>{{dict_user['telefone']}}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-telefone" type="submit" value="Editar">
                         </td>
@@ -76,7 +76,7 @@
                     </thead>
                     <tr class="no-bd-bottom">
                         <td>Cartão de crédito</td>
-                        <td>5678-8890-9087-8890</td>
+                        <td>{{dict_user['credit_card']}}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Editar">
                         </td>
@@ -90,106 +90,121 @@
                         </tr>
 
                     </thead>
+                    {% for reserva in list_reservations %}
                     <tr class="no-bd-bottom">
-                        <td>Box Faria Lima</td>
-                        <td>18 de março de 2022 (4 horas - 13:00 às 17:00)</td>
+                        <td>{{ reserva['box'] }}</td>
+                        <td>{{ reserva['details'] }}</td>
                         <td class="lapis">
                             <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Cancelar reserva">
                         </td>
                     </tr>
+                    {% endfor %}
 
                 </table>
             </div>
     </section>
 </body>
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <p class="p-sucesso">Alterar nome de usuário</p>
-        <div class="container-input">
-            <label class="campo-requerido">Nome </label>
-            <input class="inputs-login" type="text" placeholder="Gabriel Monteiro">
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container">
-            <a class="close cancelar" id="close-alterar-nome">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
-        </div>
-    </div>
-</div>
-<div id="my-modal-alterar-email" class="modal">
-    <div class="modal-content">
-        <p class="p-sucesso">Alterar e-mail</p>
-        <div class="container-input">
-            <label class="campo-requerido">Digite um novo e-mail</label>
-            <input class="inputs-login" type="text" placeholder="Digite um novo e-mail">
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container">
-            <a class="close cancelar" id="close-alterar-email">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Alterar nome de usuário</p>
+            <div class="container-input">
+                <label class="campo-requerido">Nome </label>
+                <input class="inputs-login" type="text" name="username" placeholder="Gabriel Monteiro">
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container">
+                <a class="close cancelar" id="close-alterar-nome">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
         </div>
     </div>
-</div>
-<div id="my-modal-alterar-senha" class="modal">
-    <div class="modal-content">
-        <p class="p-sucesso">Alterar senha</p>
-        <div class="container-input">
-            <label class="campo-requerido">Digite uma senha</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Digite uma nova senha">
-            <label class="campo-requerido">Repita a nova senha</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Repita a nova senha">
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container btn-margin">
-            <a class="close cancelar" id="close-alterar-senha">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+</form>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <div id="my-modal-alterar-email" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Alterar e-mail</p>
+            <div class="container-input">
+                <label class="campo-requerido">Digite um novo e-mail</label>
+                <input class="inputs-login" type="text" name="email" placeholder="Digite um novo e-mail">
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container">
+                <a class="close cancelar" id="close-alterar-email">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
         </div>
     </div>
-</div>
-<div id="my-modal-alterar-cpf" class="modal">
-    <div class="modal-content">
-        <p class="p-sucesso">Alterar CPF e CNPJ </p>
-        <div class="container-input">
-            <label class="campo-requerido">CPF e CNPJ</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Alterar o CPF e CNPJ">
+</form>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <div id="my-modal-alterar-senha" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Alterar senha</p>
+            <div class="container-input">
+                <label class="campo-requerido">Digite uma senha</label>
+                <input class="inputs-login inputs-padding" type="text" name="password" placeholder="Digite uma nova senha">
+                <label class="campo-requerido">Repita a nova senha</label>
+                <input class="inputs-login inputs-padding" type="text" placeholder="Repita a nova senha">
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container btn-margin">
+                <a class="close cancelar" id="close-alterar-senha">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <div id="my-modal-alterar-cpf" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Alterar CPF e CNPJ </p>
+            <div class="container-input">
+                <label class="campo-requerido">CPF e CNPJ</label>
+                <input class="inputs-login inputs-padding" type="text" name="cpf_cnpj" placeholder="Alterar o CPF e CNPJ">
 
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container ">
-            <a class="close cancelar" id="close-alterar-cpf">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container ">
+                <a class="close cancelar" id="close-alterar-cpf">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
         </div>
     </div>
-</div>
-<div id="my-modal-alterar-telefone" class="modal">
-    <div class="modal-content">
-        <p class="p-sucesso">Alterar telefone </p>
-        <div class="container-input">
-            <label class="campo-requerido">Telefone</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Digite seu telefone">
+</form>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <input type="text" name="id_user" value="{{dict_user['id_user']}}" hidden>
+    <div id="my-modal-alterar-telefone" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Alterar telefone</p>
+            <div class="container-input">
+                <label class="campo-requerido">Telefone</label>
+                <input class="inputs-login inputs-padding" type="text" name="telefone" placeholder="Digite seu telefone">
 
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container ">
-            <a class="close cancelar" id="close-alterar-telefone">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
-        </div>
-    </div>
-</div>
-<div id="my-modal-alterar-cartao" class="modal">
-    <div class="modal-content modal-content-cartao">
-        <p class="p-sucesso">Alterar cartão de crédito </p>
-        <div class="container-input">
-            <label class="campo-requerido">Nome do titular</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
-            <label class="campo-requerido">Número do cartão</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
-            <label class="campo-requerido">Validade</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
-            <label class="campo-requerido">CVV</label>
-            <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
-        </div>
-        <div class="button-conhecer-container button-ler-artigo-container ">
-            <a class="close cancelar" id="close-alterar-cartao">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container ">
+                <a class="close cancelar" id="close-alterar-telefone">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
         </div>
     </div>
-</div>
+</form>
+<form method="post" target="{{ url_for('user.profile') }}">
+    <div id="my-modal-alterar-cartao" class="modal">
+        <div class="modal-content modal-content-cartao">
+            <p class="p-sucesso">Alterar cartão de crédito </p>
+            <div class="container-input">
+                <label class="campo-requerido">Nome do titular</label>
+                <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+                <label class="campo-requerido">Número do cartão</label>
+                <input class="inputs-login inputs-padding" type="text" name="cartao_credito" placeholder="Número do cartão">
+                <label class="campo-requerido">Validade</label>
+                <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+                <label class="campo-requerido">CVV</label>
+                <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container ">
+                <a class="close cancelar" id="close-alterar-cartao">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form>
 <script type="text/javascript" src="{{url_for('static', filename='js/modal-alterar.js')}}"></script>
 
 </html>

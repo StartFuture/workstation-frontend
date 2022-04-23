@@ -53,13 +53,22 @@ function populateDates (e) {
 		amount_days = 28;
 	}
 
-	for (let i = 0; i < amount_days; i++) {
-		const day_element = document.createElement('div');
-		day_element.classList.add('day');
+	for (let i = 0; i < amount_days; i++) {		
+		const day_input = document.createElement('input');
+		day_input.type = 'checkbox';
+		day_input.setAttribute('value', selectedYear + '-' + (selectedMonth + 1) + '-' + i + 1);
+		day_input.setAttribute('name', 'data');
+
+		const day_span = document.createElement('span');
+		day_span.classList.add('checkmark');
+
+		const day_element = document.createElement('label');
+		day_element.classList.add('container-time');
+		
 		day_element.textContent = i + 1;
 
-		if (selectedDay == (i + 1) && selectedYear == year && selectedMonth == month) {
-			day_element.classList.add('selected');
+		if (selectedDay == (i + 1) && selectedYear == year && selectedMonth == month) {	
+			day_input.checked = true;
 		}
 
 		day_element.addEventListener('click', function () {
@@ -71,6 +80,8 @@ function populateDates (e) {
 			populateDates();
 		});
 
+		day_element.appendChild(day_input);
+		day_element.appendChild(day_span);
 		days_element.appendChild(day_element);
 	}
 }
@@ -100,3 +111,4 @@ function formatDate (d) {
 
 	return day + ' / ' + month + ' / ' + year;
 }
+
