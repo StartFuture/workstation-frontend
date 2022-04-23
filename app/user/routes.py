@@ -11,14 +11,16 @@ def index():
 def login():
     
     if request.method == 'POST':
-        login = request.form['login']
-        password = request.form['password']
 
-        dict_values_login = {
-            "user_login": login,
-            "password_user": password
+        infos = request.form.to_dict()
+
+        dict_front_login = {
+            "user_login": infos['login'],
+            "password_user": infos['password']
         }
-        pass
+
+        return dict_front_login
+
     elif request.method == 'GET':
         return render_template('user/login/login.html')
 
@@ -26,7 +28,7 @@ def login():
 def code():
     
     if request.method == 'POST':
-        return jsonify({'status': 'ok'})
+        pass
     
     elif request.method == 'GET':
         return render_template('user/login/login_autenticacao.html')        
@@ -36,9 +38,10 @@ def register():
     
     if request.method == 'POST':
         infos = request.form.to_dict()
-        pass
         
-        
+        dict_front_register = {
+            ""
+        }
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')

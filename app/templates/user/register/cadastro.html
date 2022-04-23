@@ -58,7 +58,7 @@
                             <label class="campo-requerido">Número de telefone</label>
                             <div class="container-select">
                                 {% include 'generic/all_contry_code_phones.html' %}
-                                <input class="inputs-login" type="tel" required placeholder="(11) 91234-5678" name="phone"
+                                <input class="inputs-login" type="tel" required placeholder="(11) 91234-5678" name="phone"/>
                             </div>
                         </div>
                         <div class="campo_txt">
@@ -76,7 +76,7 @@
                             <p class="p-check-box">Eu li e concordo com os termos de uso</p>
                         </div>
                         <div class="container-button-login">
-                            <input id="myBtn" type="submit" value="Finalizar cadastro">
+                            <input id="finalizar-cadastro" type="submit" value="Finalizar cadastro">
                         </div>
 
                         <div class="criar-conta">
@@ -113,6 +113,6 @@
     </main>
 </body>
 <script type="text/javascript" src="{{url_for('static', filename='js/modal.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/cadastro.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static', filename='js/navbar.js')}}"></script>
-
 </html>
