@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login</title>
-	<link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
-	<link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
-</head>
-<body>
-	{% include 'generic/section_header.html' %}
-<main>
-	<div class="container-esquerda">
-		<div class="container-imagem-login">
-			<img class="img-login-principal" src="{{url_for('static', filename='images/svg/login-page/Login-principal.svg')}}">
-		</div>
-	</div>
-	<div class="container-direita">
-		<div class="container-form-geral">
-			<div class="container-logo-rosa">
-				<img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
-			</div>
-			<div class="container-form">
-				<form method="post">
-					<div class="campo_txt">
-						<label class="campo-requerido">E-mail ou CPF</label>
-						<input class="inputs-login" type="text"  placeholder="E-mail ou CPF" required>
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Senha</label>
-						<input class="inputs-login" type="password"  placeholder="Senha" required>
-					</div>
-					<div class="esqueceu-senha">
-						<p class="esqueceu-senha">Esqueceu a senha?</p>
-					</div>
-					<div class="container-button-login">
-						<input id="Login" type="submit" value="Login">
-					</div>
-					<div class="hr-ou">
-						<hr class="hr-login"> <p class="p-ou">ou</p> <hr class="hr-login">
-					</div>
-					<div class="criar-conta">
-						<p class="nao-tem-conta">Não tem uma conta?</p><a href="{{url_for('user.register')}}">Inscrever-se</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</main>
-<script type="text/javascript" src="{{url_for('static', filename='js/change-color-input.js')}}"></script>
-</html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
+</head>
+
+<body>
+    {% include 'generic/section_header.html' %}
+    <main>
+        <div class="container-esquerda">
+            <div class="container-imagem-login">
+                <img class="img-login-principal" src="{{url_for('static', filename='images/svg/login-page/Login-principal.svg')}}">
+            </div>
+        </div>
+        <div class="container-direita">
+            <div class="container-form-geral">
+                <div class="container-logo-rosa">
+                    <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
+                </div>
+                <div class="container-form">
+                    <form method="post" tearget="{{url_for('user.login')}}">
+                        <div class="campo_txt">
+                            <label class="campo-requerido">E-mail ou CPF</label>
+                            <input class="inputs-login" type="text" placeholder="E-mail ou CPF" required name="login">
+                        </div>
+                        <div class="campo_txt">
+                            <label class="campo-requerido">Senha</label>
+                            <input class="inputs-login" type="password" placeholder="Senha" required name="password">
+                        </div>
+                        <div class="esqueceu-senha">
+                            <a class="esqueceu-senha" href="#">Esqueceu a senha?</a>
+                        </div>
+                        <div class="container-button-login">
+                            <input id="Login" type="submit" value="Login">
+                        </div>
+                        <div class="hr-ou">
+                            <hr class="hr-login">
+                            <p class="p-ou">ou</p>
+                            <hr class="hr-login">
+                        </div>
+                        <div class="criar-conta">
+                            <p class="nao-tem-conta">Não tem uma conta?</p><a href="{{url_for('user.register')}}">Inscrever-se</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="{{url_for('static', filename='js/change-color-input.js')}}"></script>
+
+</html>

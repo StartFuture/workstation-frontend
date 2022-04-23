@@ -25,7 +25,7 @@
 					<img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
 				</div>
 				<div class="container-form">
-					<form method="post">
+					<form method="post" target="{{url_for('user.change_password')}}">
 						<div class="ctn-verificacao">
 							<h2 class="h2-verificacao" style="color:black;">Recuperação de conta  </h2>
 							<p class="p-codigo-ex" style="color: #787878;">Defina a senha e finalize a recuperação da sua conta.</p>
@@ -35,7 +35,7 @@
 						</div>
 						<div class="campo_txt">
 							<label class="campo-requerido">Nova Senha</label>
-							<input class="inputs-login" type="text" required placeholder="Digite a nova senha">
+							<input class="inputs-login" type="text" required placeholder="Digite a nova senha" name="senha_recover">
 						</div>
 						<div class="campo_txt">
 							<label class="campo-requerido">Repita a nova senha</label>

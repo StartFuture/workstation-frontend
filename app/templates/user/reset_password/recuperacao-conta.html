@@ -25,7 +25,7 @@
 					<img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
 				</div>
 				<div class="container-form">
-					<form method="post">
+					<form method="post" target="{{url_for('user.valid_code')}}">
 						<div class="ctn-verificacao">
 							<h2 class="h2-verificacao" style="color:black;">Recuperação de conta  </h2>
 							<p class="p-codigo-ex" style="color: #787878;">Um código foi enviado para email.teste@gmail.com Por favor digite-o no campo abaixo  </p>

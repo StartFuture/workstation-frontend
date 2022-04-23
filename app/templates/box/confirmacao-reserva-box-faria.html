@@ -88,20 +88,22 @@
         <div id="my-modal-alterar-cartao-confirmacao" class="modal ">
             <div class="modal-content modal-content-cartao">
                 <p class="p-sucesso">Alterar cartão de crédito </p>
-                <div class="container-input">
-                    <label class="campo-requerido">Nome do titular</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
-                    <label class="campo-requerido">Número do cartão</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
-                    <label class="campo-requerido">Validade</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
-                    <label class="campo-requerido">CVV</label>
-                    <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
-                </div>
-                <div class="button-conhecer-container button-ler-artigo-container ">
-                    <a class="close cancelar" id="close-alterar-cartao-confirmacao">Cancelar</a>
-                    <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
-                </div>
+                <form method="post" target="{{url_for('box.confirm_box')}}">
+                    <div class="container-input">
+                        <label class="campo-requerido">Nome do titular</label>
+                        <input class="inputs-login inputs-padding" type="text" placeholder="Digite o nome do titular">
+                        <label class="campo-requerido">Número do cartão</label>
+                        <input class="inputs-login inputs-padding" type="text" placeholder="Número do cartão">
+                        <label class="campo-requerido">Validade</label>
+                        <input class="inputs-login inputs-padding" type="text" placeholder="MM/AA">
+                        <label class="campo-requerido">CVV</label>
+                        <input class="inputs-login inputs-padding" type="text" placeholder="Cód. de segurança">
+                    </div>
+                    <div class="button-conhecer-container button-ler-artigo-container ">
+                        <a class="close cancelar" id="close-alterar-cartao-confirmacao">Cancelar</a>
+                        <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="modalSucesso" class="modal">

@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/**A DIFERENTE**/
+
+.a-red {
+    font-family: "Asap", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* GERAL */
 
 html {
@@ -21,6 +36,8 @@ html {
 #primeira-section {
     background-color: #2B2E51;
 }
+
+
 /**SIDE SCROLL BAR**/
 
  ::-webkit-scrollbar {
@@ -36,6 +53,8 @@ html {
     border-radius: 5px;
     background-color: rgba(255, 10, 84, 0.8);
 }
+
+
 /*  PERSONALIZAÇÃO GERAL  */
 
 li,
@@ -60,6 +79,8 @@ header {
     display: flex;
     justify-content: flex-start;
 }
+
+
 /*  PERSONALIZAÇÃO NAV  */
 
 #login {
@@ -81,6 +102,8 @@ header {
 .barra-espaco {
     padding: 0 !important;
 }
+
+
 /*  BOTÕES  */
 
 #sign {
@@ -137,6 +160,8 @@ header {
 #sign:hover {
     background-color: rgba(255, 10, 84, 0.8);
 }
+
+
 /*  LANDING PAGE */
 
 main {
@@ -155,6 +180,8 @@ main {
     color: white;
     margin-bottom: 30px;
 }
+
+
 /** TEXTOS PRINCIPAIS**/
 
 #textos-principais {
@@ -171,11 +198,15 @@ main {
     display: flex;
     justify-content: flex-end;
 }
+
+
 /**  IMAGENS  **/
 
 #elipse {
     height: 50vh;
 }
+
+
 /**SEGUNDO CONTAINER **/
 
 .segundo-container {
@@ -211,6 +242,8 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+
+
 /** TEXTOS **/
 
 .p-encontre {
@@ -251,6 +284,8 @@ main {
     height: 45px;
     font-size: 1.1em;
 }
+
+
 /** BORDAS IMAGENS**/
 
 .foto-um {
@@ -267,6 +302,8 @@ main {
     box-shadow: 3px 3px 40px #B8B8B8;
     margin: 10px 0px;
 }
+
+
 /** ULTIMO CONTAINER **/
 
 #h2-ultimo-titulo {
@@ -293,6 +330,8 @@ main {
 .p-predio {
     color: #787878;
 }
+
+
 /* TERCEIRA SECTION */
 
 #terceiro-container {
@@ -349,6 +388,8 @@ main {
     width: 100%;
     object-fit: contain;
 }
+
+
 /* QUARTA SECTION */
 
 #container-geral-planos-ld {
@@ -391,6 +432,8 @@ h2 {
     background-position: center;
     border-radius: 33px;
 }
+
+
 /** IMAGENS DE FUNDO CARD PLANOS **/
 
 .plano-daily {
@@ -428,6 +471,8 @@ h2 {
     border-radius: 30px;
     border: none;
 }
+
+
 /** BUTTONS QUARTA SECTION **/
 
 .button-ver-mais {
@@ -476,6 +521,8 @@ h2 {
 .terceiro-button-ver-mais:hover {
     background-color: rgba(250, 134, 21, 0.8);
 }
+
+
 /* 2° PARTE DA QUARTA SECTION */
 
 .container-card-diferencial {
@@ -533,6 +580,8 @@ h2 {
 .p-oferecemos {
     padding-top: 1%;
 }
+
+
 /** QUINTA SECTION **/
 
 .container-quinta-sec {
@@ -572,7 +621,11 @@ h2 {
 .p-desc-loc {
     padding-top: 15px;
 }
+
+
 /** SEXTA SECTION**/
+
+
 /** FOOTER **/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -671,6 +724,8 @@ ul {
     display: flex;
     flex-direction: row;
 }
+
+
 /** SEXTA SECTION**/
 
 #dois-textos-2 {
@@ -707,6 +762,8 @@ ul {
 .container-blog {
     height: auto !important;
 }
+
+
 /**TELA 404**/
 
 .container-erro {
@@ -731,6 +788,8 @@ ul {
     width: 40%;
     text-align: center;
 }
+
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 800px) {
@@ -792,6 +851,8 @@ ul {
         flex-direction: column;
     }
 }
+
+
 /**NAVBAR HAMBURGUER**/
 
 header a {
@@ -1052,6 +1113,8 @@ header a {
         margin-top: 0;
     }
 }
+
+
 /** RESPONSIVIDADE **/
 
 @media screen and (max-width: 320px) and (min-width: 820px) {
@@ -1065,6 +1128,8 @@ header a {
         height: 70px;
     }
 }
+
+
 /*responsive*/
 
 @media(max-width: 767px) {
