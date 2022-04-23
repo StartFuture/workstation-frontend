@@ -23,14 +23,14 @@
                     <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
                 </div>
                 <div class="container-form">
-                    <form method="post">
+                    <form method="post" target="{{url_for('user.login')}}">
                         <div class="ctn-verificacao">
                             <h2 class="h2-verificacao" style="color:black;">Verificação de duas etapas</h2>
                             <p class="p-codigo-ex" style="color: #787878;">Digite o código de verificação enviado no seu email.</p>
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Código de verificação</label>
-                            <input class="inputs-login" type="text" required placeholder="Código de verificação">
+                            <input class="inputs-login" type="text" required placeholder="Código de verificação" name="cod_user">
                         </div>
                         <div class="reenviar-codigo">
                             <p class="nao-recebeu" style="color: #787878;">Não recebeu o código?</p>

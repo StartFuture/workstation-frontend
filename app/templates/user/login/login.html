@@ -23,14 +23,14 @@
 				<img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
 			</div>
 			<div class="container-form">
-				<form method="post">
+				<form method="post" tearget="{{url_for('user.login')}}">
 					<div class="campo_txt">
 						<label class="campo-requerido">E-mail ou CPF</label>
-						<input class="inputs-login" type="text"  placeholder="E-mail ou CPF" required>
+						<input class="inputs-login" type="text"  placeholder="E-mail ou CPF" required name="login">
 					</div>
 					<div class="campo_txt">
 						<label class="campo-requerido">Senha</label>
-						<input class="inputs-login" type="password"  placeholder="Senha" required>
+						<input class="inputs-login" type="password"  placeholder="Senha" required name="password">
 					</div>
 					<div class="esqueceu-senha">
 						<p class="esqueceu-senha">Esqueceu a senha?</p>

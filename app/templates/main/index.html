@@ -26,7 +26,7 @@
                         <p id="suporte-h1" style="font-size: 22px; color: white; ">Nosso objetivo é criar um sistema para a locação de estações reservadas para trabalho. <br>Prezamos por um ambiente limpo, tranquilo e ideal, <br>para um home-office sem interrupções caseiras.</p>
                     </div>
                     <div id="saiba-mais">
-                        <button id="button-saiba"><a class="aoi" href="{{url_for('blog.index_blog')}}">Saiba mais</a></button>
+                        <button id="button-saiba"><a class="a-red" href="{{url_for('blog.index_blog')}}">Veja mais</a></button>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                         <p class="descricao-imagens descricao-card-blog">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo. </p>
                     </div>
                     <div class="button-conhecer-container container-button-blog">
-                        <button class="button-conhecer">Ler artigo</button>
+                        <a class="button-conhecer a-red" href="#">Ler artigo</a>
                     </div>
 
                 </div>
@@ -148,7 +148,7 @@
                         <p class="descricao-imagens descricao-card-blog">Devido à pandemia do coronavírus, 43% das empresas brasileiras adotaram o home office, segundo pesquisa realizada com 359 corporações...</p>
                     </div>
                     <div class="button-conhecer-container container-button-blog">
-                        <button class="button-conhecer">Ler artigo</button>
+                        <a class="button-conhecer a-red" href="#">Ler artigo</a>
                     </div>
 
                 </div>
@@ -159,7 +159,7 @@
                         <p class="descricao-imagens descricao-card-blog">Carreiras digitais: 56% dos profissionais afirmam ganhar mais de R$6,6 mil. As profissões no mercado digital têm atraído ver mais</p>
                     </div>
                     <div class="button-conhecer-container container-button-blog">
-                        <button class="button-conhecer">Ler artigo</button>
+                        <a class="button-conhecer a-red" href="#">Ler artigo</a>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                 <div class="footer-col">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#segunda-section">Box</a></li>
+                        <li><a href="{{ url_for('box.index_box') }}">Box</a></li>
                         <li><a href=" {{ url_for('main.about') }} ">Sobre</a></li>
                     </ul>
                 </div>
@@ -184,16 +184,16 @@
                 <div class="footer-col">
                     <h4>Suporte</h4>
                     <ul>
-                        <li><a href="#">Chat com um Work</a></li>
-                        <li><a href="#">Contato por e-mail</a></li>
+                        <li><a href="https://web.whatsapp.com/">Chat com um Work</a></li>
+                        <li><a href="">Contato por e-mail</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Sigam-nos</h4>
                     <div class="social-links">
                         <a href="https://github.com/StartFuture/WorkStation" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com" target="_blanc"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>

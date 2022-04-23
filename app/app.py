@@ -20,7 +20,7 @@ def page_not_found(e):
     return render_template('errors/erro-400.html'), 404
 
 @app.errorhandler(500)
-def page_not_found(e):
+def page_not_load(e):
     # note that we set the 404 status explicitly
     return render_template('errors/erro-500.html'), 500
 
