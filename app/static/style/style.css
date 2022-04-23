@@ -119,7 +119,7 @@ header {
     width: 100%;
 }
 
-#button-saiba {
+.button-voltar {
     width: 170px;
     background-color: rgba(255, 10, 84, 1);
     padding: 12px 30px;

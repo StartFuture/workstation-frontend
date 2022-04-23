@@ -41,12 +41,12 @@
 							<label class="campo-requerido">Repita a nova senha</label>
 							<input class="inputs-login" type="password" required placeholder="Repita a nova senha" >
 						</div>
-						<div class="container-button-login">
-							<button>
-								<a href="{{url_for('user.reset_password')}}">Voltar</a>
-							</button>
+						<div>
+							<a href="{{url_for('user.reset_password')}}" style="margin-right: 70%">Voltar</a>
 
-							<input type="submit" value="Concluir">
+							<input class="button-conhecer button-ver-detalhes"
+								style="width: 20%; color: white; padding: 1px 10px;"
+								id="Registrar" type="submit" value="Concluir">
 						</div>
 					</form>
 				</div>
