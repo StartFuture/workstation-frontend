@@ -106,7 +106,7 @@
 
 .card-blog {
     width: 340px;
-    height: 610px;
+    height: 650px;
     border: none;
     border-radius: 9px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -141,8 +141,10 @@
 .hr-card {
     color: #787878;
     margin-top: 5%;
-    margin-left: 2%;
+    margin-left: 5%;
     width: 13rem;
+    background-color: none;
+    height: 0;
 }
 
 .ctn-link-noticia {
@@ -153,6 +155,7 @@
     color: #FF0A54;
     font-weight: bold;
     font-size: 0.9em;
+    text-decoration: none;
 }
 
 .ctn-link-noticia,
@@ -179,7 +182,9 @@
 
 .hr-divisao-section {
     margin: 0 2% 0 2%;
-    color: #B8B8B8
+    color: #B8B8B8;
+    background-color: none;
+    height: 0;
 }
 
 .button-filtro {
@@ -203,6 +208,7 @@
     border-radius: 5px !important;
     margin-top: 0;
 }
+
 
 /**RESPONSIVIDADE */
 

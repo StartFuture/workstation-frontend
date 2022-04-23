@@ -1,230 +1,230 @@
 {% include 'generic/header.html' %}
-    <section id="primeira-section-blog">
-        <div class="container-comeco-blog">
-            <div class="container-imagem-about">
-                <img src="{{url_for('static', filename='images/svg/tela-blog/homem-about.svg')}}" class="imagem-comeco-about">
+<section id="primeira-section-blog">
+    <div class="container-comeco-blog">
+        <div class="container-imagem-about">
+            <img src="{{url_for('static', filename='images/svg/tela-blog/homem-about.svg')}}" class="imagem-comeco-about">
+        </div>
+        <div class="container-textos-comeco-about">
+            <div class="container-h1-about-vantagem">
+                <h1 class="h1-vantagem">WorkStation: o que é e quais as vantagens para sua empresa</h1>
             </div>
-            <div class="container-textos-comeco-about">
-                <div class="container-h1-about-vantagem">
-                    <h1 class="h1-vantagem">WorkStation: o que é e quais as vantagens para sua empresa</h1>
+            <div class="container-p-data no-padding">
+                <img src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                <p class="p-data">23/03/2022</p>
+            </div>
+            <div class="container-p-descricao-vantagem">
+                <p class="p-vantagem">Ter um domicílio fiscal é uma obrigatoriedade para toda empresa. Entenda o que é e qual a diferença do endereço comercial.</p>
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container">
+                <a class="button-conhecer button-ler-artigo a-red" href="#">Ler artigo</a>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-divisao-section">
+</section>
+<section id="segunda-section-blog">
+    <div class="container-geral-cards-blog">
+        <div class="container-filtro-card">
+            <div class="container-button-filtro">
+                <button class="button-filtro" onclick="getToday()">Hoje</button>
+            </div>
+            <div class="container-button-filtro">
+                <button class="button-filtro" onclick="getMonth()">Mês</button>
+            </div>
+            <div class="container-button-filtro">
+                <button class="button-filtro" onclick="getAll()">Sempre</button>
+            </div>
+        </div>
+        <div class="container-cards-blog">
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
                 </div>
-                <div class="container-p-data no-padding">
-                    <img src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                    <p class="p-data">28/03/2002</p>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">23/04/2022</p>
                 </div>
-                <div class="container-p-descricao-vantagem">
-                    <p class="p-vantagem">Ter um domicílio fiscal é uma obrigatoriedade para toda empresa. Entenda o que é e qual a diferença do endereço comercial.</p>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
                 </div>
-                <div class="button-conhecer-container button-ler-artigo-container">
-                    <button class="button-conhecer button-ler-artigo">Ler Artigo</button>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <p class="p-link">https://g1.globo.com/HomeOffice</p>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
+                </div>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">13/04/2022</p>
+                </div>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
+                </div>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <p class="p-link">https://g1.globo.com/HomeOffice</p>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
+                </div>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">18/02/2022</p>
+                </div>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
+                </div>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <p class="p-link">https://g1.globo.com/HomeOffice</p>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
+                </div>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">23/04/2022</p>
+                </div>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
+                </div>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <p class="p-link">https://g1.globo.com/HomeOffice</p>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
+                </div>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">09/03/2022</p>
+                </div>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Teste Home office aumenta problemas físicos e mentais;</h1>
+                </div>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <a class="p-link" href="google.com">https://g1.globo.com/HomeOffice</a>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-imagem-card-blog">
+                    <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
+                </div>
+                <div class="container-p-data">
+                    <div class="container-icon-date">
+                        <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
+                    </div>
+                    <p class="p-data-card">19/11/2021</p>
+                </div>
+                <div class="ctn-h1-card">
+                    <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
+                </div>
+                <div class="ctn-p-card">
+                    <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro do trabalho.
+                        Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
+                </div>
+                <hr class="hr-card">
+                <div class="ctn-link-noticia">
+                    <a class="p-link" href="google.com">https://g1.globo.com/HomeOffice</a>
+                </div>
+                <div class=" button-ler-artigo-container  button-ler-noticia-container">
+                    <a class="button-conhecer button-ler-noticia a-red" href="#">Ler artigo</a>
                 </div>
             </div>
         </div>
-        <hr class="hr-divisao-section">
-    </section>
-    <section id="segunda-section-blog">
-        <div class="container-geral-cards-blog">
-            <div class="container-filtro-card">
-                <div class="container-button-filtro">
-                    <button class="button-filtro" onclick="getToday()">Hoje</button>
-                </div>
-                <div class="container-button-filtro">
-                    <button class="button-filtro" onclick="getMonth()">Mês</button>
-                </div>
-                <div class="container-button-filtro">
-                    <button class="button-filtro" onclick="getAll()">Sempre</button>
-                </div>
-            </div>
-            <div class="container-cards-blog">
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">09/04/2021</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">13/04/2022</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">11/04/2022</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">09/04/2022</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                            <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">09/04/2022</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Teste Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-                <div class="card-blog">
-                    <div class="container-imagem-card-blog">
-                        <img class="img-card-box" src="{{url_for('static', filename='images/svg/blog-images/card-blog-img.svg')}}">
-                    </div>
-                    <div class="container-p-data">
-                        <div class="container-icon-date">
-                           <img class="icon-date" src="{{url_for('static', filename='images/svg/tela-blog/icon-agenda.svg')}}">
-                        </div>
-                        <p class="p-data-card">09/04/2022</p>
-                    </div>
-                    <div class="ctn-h1-card">
-                        <h1 class="h1-card"> Home office aumenta problemas físicos e mentais;</h1>
-                    </div>
-                    <div class="ctn-p-card">
-                        <p class="p-card">Solução adotada a fórceps pelas empresas durante os meses de isolamento social, o home office vai se consolidando como algo definitivo em muitos setores, e deverá se tornar uma das principais heranças da pandemia para o futuro
-                            do trabalho. Mas um estudo norte-americano mostra que ainda há muito a se desenvolver para que o sistema casa-escritório seja sustentável no longo prazo, ao menos do ponto de vista da saúde e do bem-estar.</p>
-                    </div>
-                    <hr class="hr-card">
-                    <div class="ctn-link-noticia">
-                        <p class="p-link">https://g1.globo.com/HomeOffice</p>
-                    </div>
-                    <div class=" button-ler-artigo-container  button-ler-noticia-container">
-                        <button class="button-conhecer button-ler-noticia">Ler artigo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
 
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="">Box</a></li>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="">Box</a></li>
 
-                        <li><a href="{{url_for('main.about')}}">Sobre</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li><a href="#">Chat com um Work</a></li>
-                        <li><a href="#">Contato por e-mail</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Sigam-nos</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/StartFuture/WorkStation" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <li><a href="{{url_for('main.about')}}">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Chat com um Work</a></li>
+                    <li><a href="#">Contato por e-mail</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sigam-nos</h4>
+                <div class="social-links">
+                    <a href="https://github.com/StartFuture/WorkStation" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 <script type="text/javascript" src="{{url_for('static', filename='js/navbar.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static', filename='js/get-date.js')}}"></script>
