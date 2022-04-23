@@ -52,13 +52,18 @@
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Pessoa Física ou Pessoa Jurídica</label>
-                            <input class="inputs-login" name="cpf_cnpj" type="password" required placeholder="Digite seu CPF ou CNPJ">
+                            <input class="inputs-login" name="cpf_cnpj" type="text" 
+                                required placeholder="Digite seu CPF ou CNPJ"
+                                onfocus="javascript: retirarFormatacao(this);" 
+                                onblur="javascript: formatarCampo(this);" maxlength="14"/>
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Número de telefone</label>
                             <div class="container-select">
                                 {% include 'generic/all_contry_code_phones.html' %}
-                                <input class="inputs-login" type="tel" required placeholder="(11) 91234-5678" name="phone"/>
+                                <input class="inputs-login" type="tel" id="phone" name="phone" 
+                                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"
+                                    required placeholder="(11) 91234-5678" style="padding: 0px 15px;" />
                             </div>
                         </div>
                         <div class="campo_txt">
@@ -93,18 +98,6 @@
                         <p class="p-sucesso">Sucesso!</p>
                         <div class="container-btn-continue">
                             <button class="btn-continue-cadastro "><a class="btn-continue-a" href="google.com">Continuar</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div id="myModal-2" class="modal-2">
-                    <div class="modal-content-2">
-                        <span class="close">&times;</span>
-                        <div class="container-sucess">
-                            <img class="sucess-img" src="{{url_for('static', filename='images/svg/login-page/error.svg')}}">
-                        </div>
-                        <p class="p-sucesso">Erro!</p>
-                        <div class="container-btn-continue-2">
-                            <button class="btn-continue-cadastro-2"><a class="btn-novamente-a" href="google.com">Tente Novamente</a></button>
                         </div>
                     </div>
                 </div>

@@ -71,4 +71,4 @@ def detalhes_box():
 
 @bp.route('/confirm', methods=['GET', 'POST'])
 def confirm_box():    
-    return render_template('box/confirmacao-reserva-box-faria.html')
+    return render_template('box/confirmacao-reserva-box.html')

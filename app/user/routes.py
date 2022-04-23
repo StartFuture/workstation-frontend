@@ -1,7 +1,10 @@
-from flask import render_template, request, redirect, url_for, flash, jsonify
+from flask import render_template, request, redirect, url_for, flash, jsonify, session
 import logging
 from user import bp
 import utils
+import parameters
+import requests
+
 
 @bp.route('/')
 def index():
@@ -13,16 +16,31 @@ def login():
     
     if request.method == 'POST':
 
-        infos = request.form.to_dict()
+        # infos = request.form.to_dict()
 
-        dict_front_login = {
-            "user_login": infos["login"],
-            "password_user": infos["password"]
-        }
+        # dict_front_login = {
+        #     "user_login": infos["login"],
+        #     "password_user": infos["password"]
+        # }
+        
+        # logging.warning(dict_front_login)
 
-        return dict_front_login
+        return redirect(url_for('main.index'))
 
     elif request.method == 'GET':
+        
+        dict_user_example = {
+            'id_user': 1,
+            'username' : 'Lucas Nunes',
+            'email' : 'lucas@gmail.com',
+            'password' : '1234',
+            'cpf_cnpj' : '000.000.000-00',
+            'telefone' : '0000-0000',
+            'credit_card' : '0000 0000 0000 0000',
+        }
+        
+        session['user'] = dict_user_example
+        
         return render_template('user/login/login.html')
 
 @bp.route('/code', methods=['GET', 'POST'])
@@ -179,10 +197,6 @@ def profile():
     elif request.method == 'GET':
         
         return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
-
-
-
-        
 
 
 

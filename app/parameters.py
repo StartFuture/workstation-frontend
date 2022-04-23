@@ -1,1 +1,3 @@
 PATH_LOGIN_API = 'login/'
+
+PATH_API_BACKEND = 'http://127.0.0.1:8000/'
