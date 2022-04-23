@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style/login.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='style/cadastro.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
+    <link rel="shortcut icon" type="images/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
-
 <body>
     {% include 'generic/section_header.html' %}
     <main>
@@ -26,7 +25,7 @@
                     <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
                 </div>
                 <div class="container-form">
-                    <form method="post", target="{{ url_for('user.register') }}">
+                    <form method="post" target="{{ url_for('user.register') }}">
                         <div class="campo_txt">
                             <label class="campo-requerido">Nome completo</label>
                             <input class="inputs-login" name="username" type="text" required placeholder="Digite seu nome completo">
@@ -58,9 +57,7 @@
                         <div class="campo_txt">
                             <label class="campo-requerido">Número de telefone</label>
                             <div class="container-select">
-                                <select name="ddd">
-									<option value="">Brasil +55</option>
-								</select>
+                                {% include 'generic/all_contry_code_phones.html' %}
                                 <input class="inputs-login" type="tel" required placeholder="(11) 91234-5678">
                             </div>
                         </div>

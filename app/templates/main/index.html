@@ -26,7 +26,9 @@
                         <p id="suporte-h1" style="font-size: 22px; color: white; ">Nosso objetivo é criar um sistema para a locação de estações reservadas para trabalho. <br>Prezamos por um ambiente limpo, tranquilo e ideal, <br>para um home-office sem interrupções caseiras.</p>
                     </div>
                     <div id="saiba-mais">
-                        <button id="button-saiba"><a class="aoi" href="{{url_for('blog.index_blog')}}">Saiba mais</a></button>
+                        <button id="button-saiba">
+                            <a class="aoi" href="{{url_for('blog.index_blog')}}" style="color: white; text-decoration: none;">Saiba mais</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -165,40 +167,8 @@
             </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#segunda-section">Box</a></li>
-                        <li><a href=" {{ url_for('main.about') }} ">Sobre</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="{{url_for('blog.index_blog')}}">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li><a href="#">Chat com um Work</a></li>
-                        <li><a href="#">Contato por e-mail</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Sigam-nos</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/StartFuture/WorkStation" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'generic/footer.html' %}
+
     <script type="text/javascript" src="{{url_for('static', filename='js/navbar.js')}}"></script>
 </body>
 

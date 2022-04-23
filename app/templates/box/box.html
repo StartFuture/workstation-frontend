@@ -30,6 +30,9 @@
             <div class="container-calendario-input">
                 <input type="date" class="input-calendario" onfocus="(this.type=date)" placeholder="Teste ">
             </div>
+            <input class="button-conhecer button-ver-detalhes" 
+                style="width: 15%; height: 40px; margin: 0px 30px; padding: 0px 10px; color: white" 
+                type="button" value="Pesquisar" />
         </div>
         <hr>
     </section>
@@ -88,7 +91,9 @@
                             </div>
                         </div>
                         <div class="button-conhecer-container button-ver-detalhes-container">
-                            <button class="button-conhecer button-ver-detalhes">Ver detalhes</button>
+                            <button class="button-conhecer button-ver-detalhes">
+                                <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -146,7 +151,9 @@
                             </div>
                         </div>
                         <div class="button-conhecer-container button-ver-detalhes-container">
-                            <button class="button-conhecer button-ver-detalhes">Ver detalhes</button>
+                            <button class="button-conhecer button-ver-detalhes">
+                                <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
+                            </button>
                         </div>
                     </div>
                 </div>

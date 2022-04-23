@@ -5,13 +5,20 @@ import requests
 
 import parameters
 
-from app import parameters
-
 def get_credentials_header(server, user, password):
     credentials = {"username": user, "password": password}
     r = requests.post(server + parameters.PATH_LOGIN_API, json=credentials)
     token = r.json()["access_token"]
     headers = {"Authorization": "Bearer {token}".format(token=token)}
-
     return headers
 
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if "user" not in session:
+            # Redirect to Login page here
+            return redirect(url_for("user.login"))
+        return f(*args, **kwargs)
+
+    return decorated

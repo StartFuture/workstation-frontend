@@ -96,7 +96,7 @@ hr {
 
 .container-date-picker {
     display: flex;
-    height: 90%;
+    height: 72%;
 }
 
 .container-icons {
@@ -141,6 +141,9 @@ hr {
     height: 100%;
 }
 
+.container-reservar-botao {
+    text-align: right;
+}
 
 /* The Modal (background) */
 
@@ -174,7 +177,7 @@ hr {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    height: 70%;
+    height: 75%;
 }
 
 
@@ -205,9 +208,9 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F2F2F2;
     transition: 0.3s;
-    height: 100%;
+    height: auto;
     border-radius: 33px;
-    margin-bottom: 10%;
+    margin: 10% 20px;
 }
 
 .card:hover {
@@ -216,7 +219,6 @@ hr {
 
 .container {
     padding: 2px 16px;
-    margin-top: 10%;
 }
 
 .c-carousel--responsive {
@@ -271,26 +273,26 @@ hr {
 }
 
 .nome-cliente {
-    font-size: 26px;
+    font-size: 22px;
     color: black;
     font-weight: bold;
 }
 
 .p-tipo-cliente {
     color: #787878;
-    font-size: 20px;
+    font-size: 17px;
     margin-top: 1%;
     text-align: left;
 }
 
 .avaliacao-atendimento {
-    font-size: 23px;
+    font-size: 16px;
     text-align: left;
     font-weight: bold;
 }
 
 .lugar-avaliacao {
-    font-size: 18px;
+    font-size: 15px;
     color: #787878;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -299,6 +301,7 @@ hr {
 
 .container-carrosel {
     height: auto;
+    margin: 50px 20px;
 }
 
 
@@ -399,7 +402,21 @@ hr {
     margin-left: 5%;
 }
 
-@media screen and (max-width:827px) {
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 1000px;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 1000px;
+}
+
+@media screen and (max-width:920px) {
     .container-carrosel-real {
         display: flex;
         flex-direction: column;
@@ -414,6 +431,18 @@ hr {
     .icon-box-detalhe {
         width: 50px;
         height: 50px;
+    }
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 250px;
+        width: 500px;
+    }
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 250px;
+        width: 500px;
     }
 }
 
