@@ -1,3 +1,5 @@
+import logging
+
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 
 from user import bp as bp_user
@@ -5,9 +7,11 @@ from main import bp as bp_main
 from box import bp as bp_box
 from blog import bp as bp_blog
 
+import parameters
+
 app = Flask(__name__)
 
-app.secret_key = 'super secret key'
+app.secret_key = parameters.APP_SECRET_KEY
 
 app.register_blueprint(bp_user)
 app.register_blueprint(bp_main)
@@ -25,4 +29,6 @@ def page_not_load(e):
     return render_template('errors/erro-500.html'), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    if parameters.FLASK_ENV == 'development':
+        logging.basicConfig(level=logging.DEBUG)
+    app.run(debug=parameters.FLASK_DEBUG, port=parameters.FLASK_RUN_PORT)

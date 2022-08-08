@@ -1,14 +1,10 @@
-from flask import render_template, request, redirect, url_for, flash, jsonify, session
 import logging
-from user import bp
-import utils
-import parameters
-import functions
 
-dict_login = {
-            "email": "mateustoni04@gmail.com",
-            "senha": 12345
-        }
+from flask import render_template, request, redirect, url_for, flash, jsonify, session
+
+from user import bp
+import utils, parameters, functions, authorization
+
 
 @bp.route('/')
 def index():
@@ -20,17 +16,32 @@ def login():
     
     if request.method == 'POST':
 
-        if request.form['login'] == dict_login['email']:
-            if str(request.form['password']) == str(dict_login['senha']):
-                return redirect(url_for('user.code'))
-            else:
+        if 'login' in request.form and 'password' in request.form:
+            user_login = request.form['login']
+            password_user = request.form['password']
+            
+            if user_login == '' or password_user == '':
+                flash('Preencha todos os campos!')
                 return redirect(url_for('user.login'))
+            
+            token = authorization.get_credential_header(user_login, password_user)
+            
+            session['token'] = token
+            
+            return redirect(url_for('main.index'))
+        
         else:
+            flash('Preencha todos os campos!')
             return redirect(url_for('user.login'))
-
+        
     elif request.method == 'GET':
         
         return render_template('user/login/login.html')
+
+@bp.route('/logout')
+def logout():
+    authorization.logout()
+    return redirect(url_for('main.index'))
 
 @bp.route('/code', methods=['GET', 'POST'])
 def code():
@@ -68,8 +79,8 @@ def register():
                 last_name
 
         dict_front_register = {
-        "nome": name,
-        "sobrenome": last_name.lstrip(),
+        "nome": name,   
+        "sobrenome": last_name.strip(),
         "data_aniversario": infos["birthday"],
         "sexo": infos["sexo"],
         "telefone": infos["phone"],
@@ -79,6 +90,7 @@ def register():
         }
 
         return dict_front_register
+    
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
     
