@@ -1,11 +1,14 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify
 from requests import session
 import logging
+#from app import authorization
 import functions
 
+import authorization
 from box import bp
 
 @bp.route('/', methods=['GET', 'POST'])
+@authorization.is_not_auth
 def index_box():
     boxes = [
                 { 
@@ -107,11 +110,13 @@ def index_box():
 
 
 @bp.route('/search', methods=['GET', 'POST'])
+@authorization.is_not_auth
 def search_box():    
     return render_template('box/box-pesquisa.html')
 
 
 @bp.route('/details', methods=['GET', 'POST'])
+@authorization.is_not_auth
 def detalhes_box():
     if request.method == 'POST':
         
@@ -126,6 +131,7 @@ def detalhes_box():
         return render_template('box/box-detalhes.html')
 
 @bp.route('/confirm', methods=['GET', 'POST'])
+@authorization.is_auth
 def confirm_box():   
-    functions.send_email_password_box(cod='4356', client_email="mateustoni04@gmail.com")
+    #functions.send_email_password_box(cod='4356', client_email="mateustoni04@gmail.com")
     return render_template('box/confirmacao-reserva-box.html')

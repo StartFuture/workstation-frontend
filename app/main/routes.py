@@ -1,26 +1,23 @@
-from flask import render_template, redirect, url_for, flash, jsonify
 import requests
+
+from flask import render_template, redirect, url_for, flash, jsonify
+
+import authorization
 
 from main import bp
 
+
 @bp.route('/')
+@authorization.is_not_auth
 def index():
     return render_template('main/index.html')
 
-
 @bp.route('/about')
+@authorization.is_not_auth
 def about():
     return render_template('main/about.html')
 
 @bp.route('/health')
+@authorization.is_auth
 def health():
-    return jsonify({"status": "UP"}, 200)
-
-@bp.route('/test')
-def test():
-    user_email = 'lucas@gmail.com'
-    password = '123456'
-    
-    value = requests.get('http://localhost:5000/login', json={'user_login': user_email, 'password_user': password})
-    
     return jsonify({"status": "UP"}, 200)

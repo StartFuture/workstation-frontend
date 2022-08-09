@@ -5,13 +5,14 @@ from flask import render_template, request, redirect, url_for, flash, jsonify, s
 from user import bp
 import utils, parameters, functions, authorization
 
-
 @bp.route('/')
 def index():
+    print(session)
     return redirect(url_for('main.index'))
 
 
 @bp.route('/login', methods=['GET', 'POST'])
+@authorization.is_not_logged
 def login():
     
     if request.method == 'POST':
@@ -21,48 +22,58 @@ def login():
             password_user = request.form['password']
             
             if user_login == '' or password_user == '':
-                flash('Preencha todos os campos!')
+                # flash('Preencha todos os campos!')
                 return redirect(url_for('user.login'))
             
-            token = authorization.get_credential_header(user_login, password_user)
+            token, valid_token = authorization.get_jwt_token(user_login, password_user)
             
-            session['token'] = token
+            if valid_token:
             
-            return redirect(url_for('main.index'))
+                session['token'] = token
+                
+                authorization.send_code_two_auth()
+                
+                return redirect(url_for('user.code'))
+            
+            else:
+                # flash('Usuário ou senha inválidos!')
+                return redirect(url_for('user.login'))
         
         else:
-            flash('Preencha todos os campos!')
+            # flash('Preencha todos os campos!')
             return redirect(url_for('user.login'))
         
     elif request.method == 'GET':
         
         return render_template('user/login/login.html')
 
+
 @bp.route('/logout')
 def logout():
     authorization.logout()
     return redirect(url_for('main.index'))
 
+@authorization.is_login
 @bp.route('/code', methods=['GET', 'POST'])
 def code():
     
-    dict_code = {
-        'code': 588634,
-        'email': 'mateustoni04@gmail.com'
-    }
-    
     if request.method == 'POST':
+        cod_user = request.form['cod_user']
         
-        if str(request.form['cod_user']) == str(dict_code['code']):
-            return redirect(url_for('box.confirm_box'))
+        if cod_user and cod_user.isnumeric and int(cod_user) >= 111111 and int(cod_user) <= 9999999:
+            
+            authorization.get_two_auth_token(code=cod_user)
+            
+            return redirect(url_for('main.index'))
 
     elif request.method == 'GET':
         
-        functions.send_email(cod=dict_code['code'], client_email=dict_code['email'])
+        # functions.send_email(cod=dict_code['code'], client_email=dict_code['email'])
 
         return render_template('user/login/login_autenticacao.html')        
 
 @bp.route('/register', methods=['GET', 'POST'])
+@authorization.is_not_logged
 def register():
     
     if request.method == 'POST':
@@ -94,7 +105,7 @@ def register():
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
     
-    
+#@authorization.is_reset_password
 @bp.route('/reset/password', methods=['GET', 'POST'])
 def reset_password():
     
@@ -131,6 +142,7 @@ def change_password():
         return render_template('user/reset_password/redefinicao-senha.html')
 
 @bp.route('/profile', methods=['GET', 'POST'])
+@authorization.is_auth
 def profile():
     
     dict_user_example = {
