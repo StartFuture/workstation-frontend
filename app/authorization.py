@@ -1,4 +1,3 @@
-from wsgiref import headers
 import requests
 import logging
 from functools import wraps
@@ -18,6 +17,15 @@ def verify_token_infos(token):
     response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_VERIFY_JWT_INFOS, headers={'Authorization': 'Bearer ' + token})
     if response.status_code == 200:
         return response.json()
+    else:
+        return redirect(url_for('user.login'))
+
+def get_info_users(token):
+    response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_USER_INFO, headers={'Authorization': 'Bearer ' + token})
+    print(response.json())
+    if response.status_code == 200:
+        dict_infos_profile = dict(response.json())
+        session['profile'] = dict_infos_profile
     else:
         return redirect(url_for('user.login'))
 
@@ -107,15 +115,16 @@ def is_not_auth(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         token = dict(session).get('token', None)
-        
+        print('not auth')
         if token:
-            
+            print('has token')
             dict_jwt_infos = verify_token_infos(token=token)
             
             if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
                 return redirect(url_for('user.code'))
             
             elif dict_jwt_infos['two_auth'] == True:
+                print('has two auth')
                 return f(*args, **kwargs)
             
             elif dict_jwt_infos['recover_passwd'] == True:    
@@ -194,6 +203,8 @@ def get_two_auth_token(code):
             
             token = two_auth_token.json()['access_token']
             session['token'] = token
+            get_info_users(token) # update session with user info
+            
         
         elif two_auth_token.status_code == 410: # code expired
             # flash('O código de verificação expirou, por favor, tente novamente')
@@ -202,7 +213,6 @@ def get_two_auth_token(code):
         else:
             pass
             # flash('Código de autenticação inválido')
-        
 
 def get_jwt_token(user_login, password_user):
     
@@ -234,13 +244,6 @@ def get_credential_header(user_login, password_user):
         return headers, True
     else:
         return None, False
-    
-def get_user_info(headers):
-    response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_USER_INFO, headers=headers)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return {'status': 'error', 'message': 'Usuário ou senha inválidos'}, response.status_code
 
 def logout():
     session.clear()

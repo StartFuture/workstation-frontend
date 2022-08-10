@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    {% include 'generic/section_header.html' %}
+    {% with profile=profile %}
+    {% include 'generic/section_header.html'%}
+    {% endwith %}
     <section id="primeira-section">
         <main>
             <div id="textos-e-imgs">

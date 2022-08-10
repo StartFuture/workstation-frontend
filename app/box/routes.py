@@ -1,5 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash, jsonify
-from requests import session
+from flask import render_template, request, redirect, url_for, flash, jsonify, session
 import logging
 #from app import authorization
 import functions
@@ -105,15 +104,33 @@ def index_box():
             ]
     
     if request.method == 'GET':
-
-        return render_template('box/box.html', boxes=boxes)
+        profile = dict(session).get('profile', [])
+        return render_template('box/box.html', boxes=boxes, profile=profile)
 
 
 @bp.route('/search', methods=['GET', 'POST'])
 @authorization.is_not_auth
-def search_box():    
-    return render_template('box/box-pesquisa.html')
+def search_box():
+    profile = dict(session).get('profile', [])
+    return render_template('box/box-pesquisa.html', profile=profile)
 
+@bp.route('/create', methods=['POST'])
+@authorization.is_not_auth
+def create_box():
+    profile = dict(session).get('profile', [])
+    return {}
+
+@bp.route('/update', methods=['PUT'])
+@authorization.is_not_auth
+def update_box():
+    profile = dict(session).get('profile', [])
+    return {}
+
+@bp.route('/delete', methods=['DELETE'])
+@authorization.is_not_auth
+def delete_box():
+    profile = dict(session).get('profile', [])
+    return {}
 
 @bp.route('/details', methods=['GET', 'POST'])
 @authorization.is_not_auth
@@ -127,8 +144,8 @@ def detalhes_box():
         return redirect(url_for('user.login'))
 
     elif request.method == 'GET':
-        
-        return render_template('box/box-detalhes.html')
+        profile = dict(session).get('profile', [])
+        return render_template('box/box-detalhes.html', profile=profile)
 
 @bp.route('/confirm', methods=['GET', 'POST'])
 @authorization.is_auth

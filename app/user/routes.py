@@ -3,18 +3,24 @@ import logging
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 
 from user import bp
+import manager
 import utils, parameters, functions, authorization
 
 @bp.route('/')
 def index():
+    
     print(session)
+    
+    token = dict(session).get('token', {})
+    if token:
+        authorization.get_info_users(token)
     return redirect(url_for('main.index'))
 
 
 @bp.route('/login', methods=['GET', 'POST'])
 @authorization.is_not_logged
 def login():
-    
+
     if request.method == 'POST':
 
         if 'login' in request.form and 'password' in request.form:
@@ -105,7 +111,7 @@ def register():
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
     
-#@authorization.is_reset_password
+#@authorization.is_reset_password #! decorator need to be aplied only 
 @bp.route('/reset/password', methods=['GET', 'POST'])
 def reset_password():
     
@@ -120,7 +126,7 @@ def reset_password():
         return render_template('user/reset_password/trocar-senha.html')
 
 
-@bp.route('/valid/code', methods=['GET', 'POST'])
+'''@bp.route('/valid/code', methods=['GET', 'POST'])
 def valid_code():
     
     if request.method == 'POST':
@@ -128,14 +134,13 @@ def valid_code():
             return redirect(url_for('user.change_password'))
     
     elif request.method == 'GET':
-        return render_template('user/reset_password/recuperacao-conta.html')
+        return render_template('user/reset_password/recuperacao-conta.html')'''
 
 
 @bp.route('/change/password', methods=['GET', 'POST'])
 def change_password():
     
     if request.method == 'POST':
-        dict_login['senha'] = request.form['senha_recover']
         return redirect(url_for('user.login'))
     
     elif request.method == 'GET':
@@ -178,23 +183,34 @@ def profile():
         
         if key in valid_inputs:
             if key == 'username':
-                utils.update_username(id_user, value)
+                manager.update_username(id_user, value)
             elif key == 'email':
-                utils.update_email(id_user, value)
+                manager.update_email(id_user, value)
             elif key == 'password':
-                utils.update_password(id_user, value)
+                manager.update_password(id_user, value)
             elif key == 'cpf_cnpj':
-                utils.update_cpf_cnpj(id_user, value)
+                manager.update_cpf_cnpj(id_user, value)
             elif key == 'telefone':
-                utils.update_telefone(id_user, value)
+                manager.update_telefone(id_user, value)
             elif key == 'credit_card':
-                utils.update_credit_card(id_user, value)
-
+                manager.update_credit_card(id_user, value)
+        
         return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
     
     elif request.method == 'GET':
+        profile = dict(session).get('profile', {})        
         
-        return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
+        dict_user = {
+            'id_user': profile['id'],
+            'username' : str(profile['nome'] + ' ' + profile['sobrenome']).title(),
+            'email' : profile['email'],
+            'password' : '******',
+            'cpf_cnpj' : '123',
+            'telefone' : profile['telefone'],
+            'credit_card' : '1234.5678.9012.3456',
+        }
+        
+        return render_template('user/perfil.html', dict_user=dict_user, list_reservations=list_reservations, profile=profile)
 
 
 
