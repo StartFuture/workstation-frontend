@@ -252,3 +252,5 @@ def logout():
     
     # flash('Você foi deslogado com sucesso')
     return redirect(url_for('main.index'))
+
+

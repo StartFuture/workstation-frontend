@@ -5,6 +5,10 @@ from flask import url_for, redirect, session
 
 import parameters
 
+def create_user(dict_user):
+    
+    return requests.post(parameters.PATH_API_BACKEND + parameters.PATH_SIGNUP, json=dict_user)
+
 def update_username(id_user, value):
     pass
 

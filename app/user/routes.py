@@ -1,9 +1,9 @@
-import logging
+import logging, requests
 
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 
-from user import bp
-import manager
+from user import bp, manager
+
 import utils, parameters, functions, authorization
 
 @bp.route('/')
@@ -106,7 +106,21 @@ def register():
         "cpf_cnpj": infos["cpf_cnpj"]
         }
 
-        return dict_front_register
+        resp = manager.create_user(dict_front_register)
+        
+        if resp.status_code == 200:
+            
+            return redirect(url_for('user.login'))
+        
+        elif resp.status_code == 400:
+            
+            #flash('user alredy exist')
+            return render_template('user/register/cadastro.html')
+        
+        else:
+            
+            #flash('erro')
+            return render_template('user/register/cadastro.html')
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
