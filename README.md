@@ -17,7 +17,7 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [x] Login Workflow
 - [ ] Sign up Workflow
 - [x] Two auth Workflow
-- [ ] Reset Password Workflow
+- [X] Reset Password Workflow
 - [x] Redirect user to the right page
 - [x] Change header if user logged or not
 - [x] Get user infos from backend

@@ -7,7 +7,7 @@ from flask import url_for, redirect, session
 import parameters
 
 def verify_token(token):
-    response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_USER_INFO, headers={'Authorization': 'Bearer ' + token})
+    response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_VERIFY_JWT_INFOS, headers={'Authorization': 'Bearer ' + token})
     if response.status_code == 200:
         return True
     else:
@@ -38,7 +38,6 @@ def is_login(f):
         # the other data for that user/check if they exist
         
         if token and verify_token(token):
-            
             dict_jwt_infos = verify_token_infos(token=token)
             
             if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
@@ -115,9 +114,9 @@ def is_not_auth(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         token = dict(session).get('token', None)
-        print('not auth')
+        logging.debug('not auth')
         if token:
-            print('has token')
+            logging.debug('has token')
             dict_jwt_infos = verify_token_infos(token=token)
             
             if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
@@ -128,7 +127,7 @@ def is_not_auth(f):
                 return f(*args, **kwargs)
             
             elif dict_jwt_infos['recover_passwd'] == True:    
-                return redirect(url_for('user.recover_passwd'))
+                return redirect(url_for('user.change_password'))
             
             else:
                 logging.error(f'Non mapped case: {dict_jwt_infos}')
@@ -155,7 +154,7 @@ def is_not_logged(f):
                 return redirect(url_for('main.index'))
             
             elif dict_jwt_infos['recover_passwd'] == True:    
-                return redirect(url_for('user.recover_passwd'))
+                return redirect(url_for('user.change_password'))
             
             else:
                 logging.error(f'Non mapped case: {dict_jwt_infos}')
