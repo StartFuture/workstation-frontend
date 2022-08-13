@@ -22,6 +22,9 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [x] Change header if user logged or not
 - [x] Get user infos from backend
 - [x] My profile page basic infos
+- [ ] Create Flash messages html
 - [ ] My profile page box's scheduled infos
 - [ ] Edit infos user
 - [ ] CRUD box schedule
+- [ ] Tests Frontend
+- [ ] Deploy
