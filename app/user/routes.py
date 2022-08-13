@@ -1,9 +1,9 @@
-import logging
+import logging, requests
 
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 
-from user import bp
-import manager
+from user import bp, manager
+
 import utils, parameters, functions, authorization
 
 @bp.route('/')
@@ -59,8 +59,9 @@ def logout():
     authorization.logout()
     return redirect(url_for('main.index'))
 
-@authorization.is_login
+
 @bp.route('/code', methods=['GET', 'POST'])
+@authorization.is_login
 def code():
     
     if request.method == 'POST':
@@ -106,21 +107,45 @@ def register():
         "cpf_cnpj": infos["cpf_cnpj"]
         }
 
-        return dict_front_register
+        resp = manager.create_user(dict_front_register)
+        
+        if resp.status_code == 200:
+            
+            return redirect(url_for('user.login'))
+        
+        elif resp.status_code == 400:
+            
+            #flash('user alredy exist')
+            return render_template('user/register/cadastro.html')
+        
+        else:
+            
+            #flash('erro')
+            return render_template('user/register/cadastro.html')
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
     
-#@authorization.is_reset_password #! decorator need to be aplied only 
+
 @bp.route('/reset/password', methods=['GET', 'POST'])
+@authorization.is_not_auth
 def reset_password():
-    
-    email = 'mateustoni04@gmail.com'
-    
+
     if request.method == 'POST':
-        if request.form['email_recover'] == email:
-            functions.send_email_password(cod='145544', client_email='mateustoni04@gmail.com')
-            return redirect(url_for('user.valid_code'))
+
+        email = dict(request.form).get('email_recover', None)
+
+        if email:
+            print(email)
+
+            status = manager.send_reset_password_request(email)
+
+            if status:
+                flash('Email enviado com sucesso!, verifique sua caixa de entrada!')
+            else:
+                flash('Email não encontrado!')
+            # flash('Olhe sua caixa de entrada!')
+            return redirect(url_for('main.index'))
 
     elif request.method == 'GET':
         return render_template('user/reset_password/trocar-senha.html')
@@ -136,14 +161,53 @@ def valid_code():
     elif request.method == 'GET':
         return render_template('user/reset_password/recuperacao-conta.html')'''
 
+@bp.route('/reset_password', methods=['GET'])
+@authorization.is_not_auth
+def receive_token_password():
+    """Endpoint just to receive reset password token
+
+    Returns:
+        flask.redirect: redirect to change password endpoint
+    """
+    
+    args = request.args
+
+    token = args.get('token', None)
+
+    if token:
+        session['token'] = token
+
+    return redirect(url_for('user.change_password'))
 
 @bp.route('/change/password', methods=['GET', 'POST'])
+@authorization.is_reset_password
 def change_password():
     
     if request.method == 'POST':
-        return redirect(url_for('user.login'))
-    
+        password = dict(request.form).get('senha_recover', None)
+
+        token = session['token']
+        
+
+        if password:
+            print(password)
+            
+            status = manager.reset_password(token, password)
+
+            if status:
+                
+                # flash('Sua senha foi alterada com sucesso')
+                return redirect(url_for('user.logout'))
+
+            else:
+
+                # flash('Erro ao resetar sua senha, por favor tente novamente')
+                return redirect(url_for('user.logout'))
+        else:
+            return redirect(url_for('user.change_password'))
+
     elif request.method == 'GET':
+
         return render_template('user/reset_password/redefinicao-senha.html')
 
 @bp.route('/profile', methods=['GET', 'POST'])
@@ -195,7 +259,7 @@ def profile():
             elif key == 'credit_card':
                 manager.update_credit_card(id_user, value)
         
-        return render_template('user/perfil.html', dict_user=dict_user_example, list_reservations=list_reservations)
+        return redirect(url_for('user.profile'))
     
     elif request.method == 'GET':
         profile = dict(session).get('profile', {})        
