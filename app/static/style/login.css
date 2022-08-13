@@ -12,18 +12,11 @@ main {
 
 
 /** CONTAINER ESQUERDA**/
-<<<<<<< HEAD:app/static/style/login.css
 
 .container-esquerda {
     height: auto;
     width: 50%;
     background-color: #2B2E51;
-=======
-.container-esquerda{
-	height: auto;
-	width: 50%;
-	background-color: #2B2E51;
->>>>>>> main:login_page/login.css
 }
 
 .container-imagem-login {

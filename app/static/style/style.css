@@ -833,23 +833,15 @@ ul {
     .container-imagens-localizacao {
         height: 22%;
     }
-<<<<<<< HEAD:app/static/style/style.css
     /** SECTION DOS CARDS DAS BOX'S**/
     .segundo-container {
         height: 80vh;
-=======
-    
-    .container-card-box {
-        display: flex;
-        flex-direction: column;
->>>>>>> main:css/style.css
     }
     #container-imagens {
         flex-direction: column;
         margin-top: 18%;
         align-items: center;
     }
-<<<<<<< HEAD:app/static/style/style.css
     .imagem {
         width: 60%;
         margin-right: 5% !important;
@@ -857,26 +849,8 @@ ul {
         height: auto;
     }
     .social-links {
-=======
-    
-    #container-imagens {
-        display: flex;
-        gap: 6%;
-        margin: 50px 0px;
-        justify-content: center;
-        height: auto;
-    }
-    
-    .p-container {
-        height: 120px;
-    }
-    
-    #container-ultimos-textos {
-        display: flex;
->>>>>>> main:css/style.css
         flex-direction: column;
     }
-<<<<<<< HEAD:app/static/style/style.css
 }
 
 
@@ -943,117 +917,6 @@ header a {
     #elipse,
     #bolas {
         display: none;
-=======
-    /** TEXTOS **/
-    
-    .p-encontre {
-        color: #B8B8B8;
-        font-size: 30px;
-    }
-    
-    .h2-venha {
-        color: #FF0A54;
-        font-size: 50px;
-    }
-    
-    .h3-texto {
-        padding: 20px;
-        color: #FF0A54;
-    }
-    
-    .endereço-sala {
-        padding: 0px 20px 20px;
-        color: #B8B8B8;
-        font-size: 15px;
-    }
-    
-    .descricao-imagens {
-        width: 100%;
-        color: #787878;
-        padding: 0px 20px;
-        text-align: left;
-        overflow: hidden;
-        overflow-wrap: break-word;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-    }
-    
-    .h3-predio {
-        height: 45px;
-        font-size: 1.1em;
-    }
-    /** BORDAS IMAGENS**/
-    
-    .foto-um {
-        border-radius: 33px 33px 0px 0px;
-        width: 100%;
-        height: 20%;
-    }
-    
-    .imagem {
-        width: 18%;
-        height: auto;
-        border: 1px solid white;
-        border-radius: 33px;
-        box-shadow: 3px 3px 40px #B8B8B8;
-        margin: 10px 0px;
-    }
-    /** ULTIMO CONTAINER **/
-    
-    #h2-ultimo-titulo {
-        padding: 0 0 2% 0;
-        font-size: 2em;
-        text-align: center;
-    }
-    
-    .foto-predio {
-        width: 100%;
-        display: flex;
-        padding: auto;
-    }
-    
-    .textos-predios {
-        width: 100%;
-        margin: 1% 4% 0 4%;
-    }
-    
-    .work-icon {
-        padding-bottom: 20px;
-    }
-    
-    .p-predio {
-        color: #787878;
-    }
-    /* TERCEIRA SECTION */
-    
-    #terceiro-container {
-        background-color: #2B2E51;
-        height: 65vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        grid-gap: 8%;
-        padding: 5%;
-        margin-top: 25px;
-    }
-    
-    #container-big-img {
-        height: 100%;
-        width: 40%;
-        background-color: grey;
-        border-radius: 32px;
-        display: block;
-    }
-    
-    #container-icons-textos {
-        width: 45%;
-    }
-    
-    .h3-oque {
-        color: #B8B8B8;
->>>>>>> main:css/style.css
     }
     main {
         height: 100vh;
@@ -1195,69 +1058,9 @@ header a {
         padding: 0;
         height: 33px;
     }
-<<<<<<< HEAD:app/static/style/style.css
     .primeiro-card-plano {
         margin-top: 5%;
         margin-bottom: 5%;
-=======
-    
-    .container {
-        max-width: 1170px;
-        margin: auto;
-    }
-    
-    .row {
-        display: flex;
-        word-break: break-all;
-    }
-    
-    ul {
-        list-style: none;
-    }
-    
-    .footer {
-        background-color: #2B2E51;
-        padding: 70px 0;
-    }
-    
-    .footer-col {
-        width: 40%;
-        padding: 0 15px;
-    }
-    
-    .footer-col h4 {
-        font-size: 18px;
-        color: #ffffff;
-        margin-bottom: 35px;
-        font-weight: 500;
-        position: relative;
-    }
-    
-    .footer-col h4::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        background-color: #e91e63;
-        height: 2px;
-        box-sizing: border-box;
-        width: 50px;
-    }
-    
-    .footer-col ul li:not(:last-child) {
-        margin-bottom: 10px;
-    }
-    
-    .footer-col ul li a {
-        font-size: 16px;
-        text-transform: capitalize;
-        color: #FFFFFF;
-        text-decoration: none;
-        font-weight: 300;
-        color: #bbbbbb;
-        display: block;
-        transition: all 0.3s ease;
->>>>>>> main:css/style.css
     }
     .segundo-card-plano {
         margin-bottom: 5%;
@@ -1280,17 +1083,11 @@ header a {
         height: 232px;
         width: 60%;
     }
-<<<<<<< HEAD:app/static/style/style.css
 }
 
 @media (max-width: 650px) {
     #container-geral-planos-ld {
         height: 310vh;
-=======
-    
-    .container-blog {
-        height: auto !important;
->>>>>>> main:css/style.css
     }
     .container-cards-planos {
         height: 150vh;
@@ -1303,92 +1100,9 @@ header a {
     .p-descricao-card-planos {
         font-size: 15px;
     }
-<<<<<<< HEAD:app/static/style/style.css
     .lista-descricao-planos {
         height: none;
         margin-top: -54px;
-=======
-    /* RESPONSIVIDADE */
-    
-    @media (max-width: 800px) {
-        #textos-principais {
-            margin-top: 30%;
-        }
-        main {
-            height: 85vh;
-        }
-        .encontre-invisivel {
-            display: none;
-        }
-        .h2-venha,
-        .p-encontre {
-            text-align: center;
-        }
-        .textos-predios {
-            display: none;
-        }
-        /**TERCEIRA SECTION*/
-        #terceiro-container {
-            flex-direction: column;
-        }
-        #container-big-img {
-            display: none;
-        }
-        #container-icons-textos {
-            width: 100%;
-        }
-        .p-sub {
-            text-align: center;
-        }
-        /* 2° PARTE DA QUARTA SECTION */
-        .container-texto-loc {
-            width: 100%;
-        }
-        .container-quinta-sec {
-            height: 100vh;
-        }
-        .container-imagens-localizacao {
-            height: 22%;
-        }
-        /** SECTION DOS CARDS DAS BOX'S**/
-        .segundo-container {
-            height: 80vh;
-        }
-        #container-imagens {
-            flex-direction: column;
-            margin-top: 18%;
-            align-items: center;
-        }
-        .imagem {
-            width: 60%;
-            margin-right: 5% !important;
-            margin-left: 5%;
-            height: auto;
-        }
-        .social-links {
-            flex-direction: column;
-        }
-    }
-    /**NAVBAR HAMBURGUER**/
-    
-    header a {
-        color: white;
-        text-decoration: none;
-    }
-    
-    #logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    
-    #header {
-        box-sizing: border-box;
-        height: 80px;
-        padding: 1rem 2rem 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        background: #2B2E51;
->>>>>>> main:css/style.css
     }
     .container-button-ver-mais {
         margin-top: 22%;
@@ -1430,242 +1144,4 @@ header a {
     .footer-col {
         width: 100%;
     }
-<<<<<<< HEAD:app/static/style/style.css
 }
-=======
-    
-    @media screen and (max-width: 375px) {
-        .foto-predio {
-            height: 110vh;
-        }
-    }
-    
-    @media screen and (max-width: 820px) {
-        #elipse,
-        #bolas {
-            display: none;
-        }
-        main {
-            height: 100vh;
-            width: auto;
-        }
-        #textos-principais {
-            width: auto;
-        }
-        #textos-e-imgs {
-            margin-right: 0 !important;
-        }
-        .texto-h1 {
-            margin-top: 10%;
-        }
-        #menu {
-            display: block;
-            position: absolute;
-            top: 70px;
-            right: 0px;
-            background: #2B2E51;
-            transition: 0.6s;
-            z-index: 1000;
-            height: 0px;
-            visibility: hidden;
-            overflow-y: hidden;
-            width: 100%;
-        }
-        #nav-mobile.active #menu {
-            height: calc(100vh - 80px);
-            width: 100%;
-            visibility: visible;
-            overflow-y: auto;
-        }
-        #menu a {
-            padding: 1rem 0;
-            margin: 0 1rem;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-        }
-        header {
-            flex-direction: row-reverse;
-        }
-        .nav {
-            display: none !important;
-        }
-        #btn-mobile {
-            display: flex;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            border: none;
-            background: none;
-            cursor: pointer;
-            gap: 0.5rem;
-        }
-        #nav-mobile {
-            display: block;
-        }
-        #hamburger {
-            border-top: 2px solid;
-            width: 20px;
-            color: white;
-        }
-        #hamburger::after,
-        #hamburger::before {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: currentColor;
-            margin-top: 5px;
-            transition: 0.3s;
-            position: relative;
-        }
-        #nav-mobile.active #hamburger {
-            border-top-color: transparent;
-        }
-        #nav-mobile.active #hamburger::before {
-            transform: rotate(135deg);
-        }
-        #nav-mobile.active #hamburger::after {
-            transform: rotate(-135deg);
-            top: -7px;
-        }
-        .foto-predio {
-            height: auto;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
-        .container-card-box {
-            height: auto;
-        }
-        #container-ultimos-textos {
-            margin: 3.5em 0;
-        }
-        .textos-predios {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            width: 80%;
-        }
-        .h3-predio {
-            height: 40px;
-        }
-    }
-    
-    @media (min-width: 601px) and (max-width: 1221px) {
-        #menu {
-            gap: 0;
-        }
-        .logo {
-            width: 90%;
-            height: 100%;
-        }
-    }
-    
-    @media (max-width: 1200px) {
-        .container-cards-planos {
-            height: 240vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 5%;
-        }
-        #container-geral-planos-ld {
-            height: 365vh;
-        }
-        .lista-descricao-planos {
-            margin-top: -48px;
-        }
-        .container-button-ver-mais {
-            margin-top: 31%;
-        }
-        .card-plano {
-            padding-bottom: 6%;
-            width: 29%;
-        }
-        .button-ver-mais {
-            padding: 0;
-            height: 33px;
-        }
-        .primeiro-card-plano {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-        .segundo-card-plano {
-            margin-bottom: 5%;
-        }
-        .terceiro-card-plano {
-            margin-bottom: 5%;
-        }
-        .container-blog {
-            height: auto !important;
-        }
-    }
-    
-    @media (max-width: 650px) {
-        .container-card-diferencial {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .container-imagem-diferecial {
-            height: 232px;
-            width: 60%;
-        }
-    }
-    
-    @media (max-width: 650px) {
-        #container-geral-planos-ld {
-            height: 310vh;
-        }
-        .container-cards-planos {
-            height: 150vh;
-            margin-bottom: 15%;
-        }
-        .card-plano {
-            width: 70%;
-            height: 100%;
-        }
-        .p-descricao-card-planos {
-            font-size: 15px;
-        }
-        .lista-descricao-planos {
-            height: none;
-            margin-top: -54px;
-        }
-        .container-button-ver-mais {
-            margin-top: 22%;
-        }
-        .hr-index {
-            display: none;
-        }
-        .container-quinta-sec {
-            margin-top: 0;
-        }
-    }
-    /** RESPONSIVIDADE **/
-    
-    @media screen and (max-width: 320px) and (min-width: 820px) {
-        .foto-predio {
-            height: 135vh;
-        }
-        .textos-predios {
-            height: 50vh;
-        }
-        .h3-predio {
-            height: 70px;
-        }
-    }
-    /*responsive*/
-    
-    @media(max-width: 767px) {
-        .footer-col {
-            width: 50%;
-            margin-bottom: 30px;
-        }
-    }
-    
-    @media(max-width: 574px) {
-        .footer-col {
-            width: 100%;
-        }
-    }
->>>>>>> main:css/style.css

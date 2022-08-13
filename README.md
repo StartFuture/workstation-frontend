@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # workstation-backend
 
 Back-End of Workstation Project
@@ -29,9 +28,3 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [ ] CRUD box schedule
 - [ ] Tests Frontend
 - [ ] Deploy
-=======
-# workstation
-Front-End da WorkStation
-
-LINK: https://work-station-sf.netlify.app/
->>>>>>> main

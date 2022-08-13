@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
-<<<<<<< HEAD:app/templates/user/login/login.html
 
 <body>
     {% include 'generic/section_header.html' %}
@@ -58,80 +57,5 @@
         </div>
     </main>
     <script type="text/javascript" src="{{url_for('static', filename='js/change-color-input.js')}}"></script>
-=======
-<body>
-<header id="header">
-    <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
-
-    <ul id="menu" role="menu" class="nav">
-        <li><a href="../box/box.html">Box</a></li>
-		<li><a href="../about/about.html">Sobre</a></li>
-		<li><a href="../blog/blog.html">Blog</a></li>
-    </ul>
-
-    <div id="login" class="nav">
-        <a id ="reg" class="cta" href="../login_page/login.html">Register&nbsp</a>
-        <a target="none" style="color: white;">|&nbsp</a>
-        <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
-    </div>
-    
-    <div id="nav-mobile">
-        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
-        </button>
-
-        <ul id="menu" role="menu" >
-            <div id="login">
-                <a id ="reg" class="cta" href="../login_page/cadastro.html">Register&nbsp</a>
-                <a target="none" style="color: white;">|&nbsp</a>
-                <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
-            </div>
-            <li><a href="../box/box.html">Box</a></li>
-			<li><a href="../about/about.html">Sobre</a></li>
-			<li><a href="../blog/blog.html">Blog</a></li>
-        </ul>
-    </div>
-  </header>
-<main>
-	<div class="container-esquerda">
-		<div class="container-imagem-login">
-			<img class="img-login-principal" src="../images/svg/login-page/Login-principal.svg">
-		</div>
-	</div>
-	<div class="container-direita">
-		<div class="container-form-geral">
-			<div class="container-logo-rosa">
-				<img class="img-logo-rosa" src="../images/svg/Logo _workstation_rosa.svg">
-			</div>
-			<div class="container-form">
-				<form method="post">
-					<div class="campo_txt">
-						<label class="campo-requerido">E-mail ou CPF</label>
-						<input class="inputs-login" type="text"  placeholder="E-mail ou CPF" required>
-					</div>
-					<div class="campo_txt">
-						<label class="campo-requerido">Senha</label>
-						<input class="inputs-login" type="password"  placeholder="Senha" required>
-					</div>
-					<div class="esqueceu-senha">
-						<p class="esqueceu-senha">Esqueceu a senha?</p>
-					</div>
-					<div class="container-button-login">
-						<input id="Login" type="submit" value="Login">
-					</div>
-					<div class="hr-ou">
-						<hr class="hr-login"> <p class="p-ou">ou</p> <hr class="hr-login">
-					</div>
-					<div class="criar-conta">
-						<p class="nao-tem-conta">Não tem uma conta?</p><a href="cadastro.html">Inscrever-se</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</main>
-<script type="text/javascript" src="../api/change-color-input.js"></script>
-</html>
->>>>>>> main:login_page/login.html
 
 </html>
