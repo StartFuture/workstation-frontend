@@ -7,10 +7,15 @@
     display: flex;
 }
 
+<<<<<<< HEAD:app/static/style/cadastro.css
 .btn-continue-a {
     color: #70E000 !important;
     text-decoration: none !important;
     font-weight: bold !important;
+=======
+main{
+	height: auto;
+>>>>>>> main:login_page/cadastro.css
 }
 
 .btn-novamente-a {

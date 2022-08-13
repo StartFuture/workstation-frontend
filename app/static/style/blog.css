@@ -204,6 +204,7 @@
     margin-top: 0;
 }
 
+<<<<<<< HEAD:app/static/style/blog.css
 .button-artigo {
     width: 10rem !important;
     height: 35px;
@@ -216,6 +217,8 @@
     font-weight: bold;
 }
 
+=======
+>>>>>>> main:blog/blog.css
 /**RESPONSIVIDADE */
 
 @media screen and (max-width: 820px) {

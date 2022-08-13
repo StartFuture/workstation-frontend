@@ -208,8 +208,12 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F2F2F2;
     transition: 0.3s;
+<<<<<<< HEAD:app/static/style/boxs-gerais.css
     height: 195px;
     width: 400px;
+=======
+    height: 100%;
+>>>>>>> main:box/boxs-gerais.css
     border-radius: 33px;
     margin: 10% 20px;
 }
@@ -302,7 +306,10 @@ hr {
 
 .container-carrosel {
     height: auto;
+<<<<<<< HEAD:app/static/style/boxs-gerais.css
     margin: 50px 20px;
+=======
+>>>>>>> main:box/boxs-gerais.css
 }
 
 
@@ -361,7 +368,11 @@ hr {
     border-radius: 8px;
     border: 1px solid #ddd;
     padding: 3%;
+<<<<<<< HEAD:app/static/style/boxs-gerais.css
     margin: 0px 13px;
+=======
+    margin-left: 15px;
+>>>>>>> main:box/boxs-gerais.css
 }
 
 .h1-val {
@@ -456,6 +467,7 @@ hr {
         margin-top: 12%;
     }
     .ctn-icon-real {
+<<<<<<< HEAD:app/static/style/boxs-gerais.css
         width: 7rem;
         height: 150px;
     }
@@ -463,6 +475,33 @@ hr {
         width: 35px;
         height: 50px;
     }
+=======
+        width: 10rem;
+        height: 150px;
+    }
+    .icon-box-detalhe {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container-carrosel-real {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12%;
+    }
+    .ctn-icon-real {
+        width: 7rem;
+        height: 150px;
+    }
+    .icon-box-detalhe {
+        width: 35px;
+        height: 50px;
+    }
+>>>>>>> main:box/boxs-gerais.css
     .p-icon {
         font-size: 16px;
     }
@@ -473,3 +512,9 @@ hr {
     width: 98% !important;
 }
 
+<<<<<<< HEAD:app/static/style/boxs-gerais.css
+=======
+.glider-slide {
+    justify-content: start !important;
+}
+>>>>>>> main:box/boxs-gerais.css

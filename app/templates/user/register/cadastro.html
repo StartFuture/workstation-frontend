@@ -12,7 +12,42 @@
     <link rel="shortcut icon" type="images/png" href="{{url_for('static', filename='images/png/icon-branco.png')}}">
 </head>
 <body>
+<<<<<<< HEAD:app/templates/user/register/cadastro.html
     {% include 'generic/section_header.html' %}
+=======
+    <header id="header">
+        <a class="ld-page-return" href="../index.html"><img class="logo" src="../images/png/logo.png"></a>
+
+        <ul id="menu" role="menu" class="nav">
+            <li><a href="../box/box.html">Box</a></li>
+            <li><a href="../about/about.html">Sobre</a></li>
+            <li><a href="../blog/blog.html">Blog</a></li>
+        </ul>
+
+        <div id="login" class="nav">
+            <a id="reg" class="cta" href="../login_page/cadastro.html">Register&nbsp</a>
+            <a target="none" style="color: white;">|&nbsp</a>
+            <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
+        </div>
+
+        <div id="nav-mobile">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+            <ul id="menu" role="menu">
+                <div id="login">
+                    <a id="reg" class="cta" href="../login_page/cadastro.html">Register&nbsp</a>
+                    <a target="none" style="color: white;">|&nbsp</a>
+                    <a class="cta" href="../login_page/login.html"><button id ="sign">Sign in</button></a>
+                </div>
+                <li><a href="../box/box.html">Box</a></li>
+                <li><a href="../about/about.html">Sobre</a></li>
+                <li><a href="../blog/blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+>>>>>>> main:login_page/cadastro.html
     <main>
         <div class="container-esquerda">
             <div class="container-imagem-login">
@@ -28,11 +63,19 @@
                     <form method="post" target="{{ url_for('user.register') }}">
                         <div class="campo_txt">
                             <label class="campo-requerido">Nome completo</label>
+<<<<<<< HEAD:app/templates/user/register/cadastro.html
                             <input class="inputs-login" name="username" type="text" required placeholder="Digite seu nome completo">
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Senha</label>
                             <input class="inputs-login" name="password" type="password" required placeholder="Digite seu senha">
+=======
+                            <input class="inputs-login" type="text" required placeholder="Digite seu nome completo">
+                        </div>
+                        <div class="campo_txt">
+                            <label class="campo-requerido">Senha</label>
+                            <input class="inputs-login" type="password" required placeholder="Digite seu senha">
+>>>>>>> main:login_page/cadastro.html
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Confirme a senha</label>
@@ -44,7 +87,11 @@
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">E-mail</label>
+<<<<<<< HEAD:app/templates/user/register/cadastro.html
                             <input class="inputs-login" name="email" type="e-mail" required placeholder="Digite seu e-mail">
+=======
+                            <input class="inputs-login" type="e-mail" required placeholder="Digite seu e-mail">
+>>>>>>> main:login_page/cadastro.html
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Confirme o e-mail</label>
@@ -52,18 +99,29 @@
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Pessoa Física ou Pessoa Jurídica</label>
+<<<<<<< HEAD:app/templates/user/register/cadastro.html
                             <input class="inputs-login" name="cpf_cnpj" type="text" 
                                 required placeholder="Digite seu CPF ou CNPJ"
                                 onfocus="javascript: retirarFormatacao(this);" 
                                 onblur="javascript: formatarCampo(this);" maxlength="14"/>
+=======
+                            <input class="inputs-login" type="password" required placeholder="Digite seu CPF ou CNPJ">
+>>>>>>> main:login_page/cadastro.html
                         </div>
                         <div class="campo_txt">
                             <label class="campo-requerido">Número de telefone</label>
                             <div class="container-select">
+<<<<<<< HEAD:app/templates/user/register/cadastro.html
                                 {% include 'generic/all_contry_code_phones.html' %}
                                 <input class="inputs-login" type="tel" id="phone" name="phone" 
                                     onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"
                                     required placeholder="(11) 91234-5678" style="padding: 0px 15px;" />
+=======
+                                <select name="ddd">
+									<option value="">Brasil +55</option>
+								</select>
+                                <input class="inputs-login" type="text" required placeholder="(11) 91234-5678">
+>>>>>>> main:login_page/cadastro.html
                             </div>
                         </div>
                         <div class="campo_txt">
