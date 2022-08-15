@@ -153,6 +153,17 @@ header {
     background-color: rgba(255, 10, 84, 0.8);
 }
 
+#button-saiba {
+    width: 170px;
+    background-color: rgba(255, 10, 84, 1);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 54px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 60px;
+}
+
 #button-saiba:hover {
     background-color: rgba(255, 10, 84, 0.8);
 }
