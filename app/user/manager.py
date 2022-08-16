@@ -9,23 +9,21 @@ def create_user(dict_user):
     
     return requests.post(parameters.PATH_API_BACKEND + parameters.PATH_SIGNUP, json=dict_user)
 
-def update_username(id_user, value):
-    pass
+def update_username(username, last_name):
+    token = session['token']
+    result = requests.put(parameters.PATH_API_BACKEND + parameters.PATH_UPDATE_USERNAME, headers={'Authorization': f'Bearer {token}'}, json={'name': username, 'last_name' : last_name})
 
-def update_email(id_user, value):
-    pass
+def update_email(value):
+    token = session['token']
+    result = requests.put(parameters.PATH_API_BACKEND + parameters.PATH_UPDATE_EMAIL, headers={'Authorization': f'Bearer {token}'}, json={'email': value})
 
-def update_password(id_user, value):
-    pass
+def update_cpf_cnpj(value):
+    token = session['token']
+    result = requests.put(parameters.PATH_API_BACKEND + parameters.PATH_UPDATE_CPF, headers={'Authorization': f'Bearer {token}'}, json={'cpf': value})
 
-def update_cpf_cnpj(id_user, value):
-    pass
-
-def update_telefone(id_user, value):
-    pass
-
-def update_credit_card(id_user, value):
-    pass
+def update_telefone(value):
+    token = session['token']
+    result = requests.put(parameters.PATH_API_BACKEND + parameters.PATH_UPDATE_CELLPHONE, headers={'Authorization': f'Bearer {token}'}, json={'cellphone': value})
 
 def send_reset_password_request(email):
     response = requests.post(parameters.PATH_API_BACKEND + parameters.PATH_PASSWORD_RESET, json={'email': email})
