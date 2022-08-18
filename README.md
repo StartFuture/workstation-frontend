@@ -25,6 +25,6 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [X] Edit infos user
 - [ ] My profile page box's scheduled infos
 - [ ] CRUD box schedule
-- [ ] Create Flash messages html
+- [ ] Create Flash messages html ? Optional
 - [ ] Tests Frontend
 - [ ] Deploy

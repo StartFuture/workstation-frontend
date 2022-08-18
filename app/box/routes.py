@@ -1,17 +1,17 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 import logging
+
 #from app import authorization
 import functions
-
 import authorization
-from box import bp
+from box import bp, manager
 
 @bp.route('/', methods=['GET', 'POST'])
 @authorization.is_not_auth
 def index_box():
     boxes = [
                 { 
-                    "cep": "06226-170",
+                    "cep": "01452-000",
                     "rua": "Av. Brg. Faria Lima",
                     "numero": "2705",
                     "complemento": "Próximo ao museu",
@@ -32,7 +32,7 @@ def index_box():
                     "cep": "30160-000",
                     "rua": "Praça Rui Barbosa",
                     "numero": "600",
-                    "complemento": "perto d elá",
+                    "complemento": "ao lado do hospital",
                     "bairro": "Centro",
                     "cidade": "Belo Horizonte",
                     "estado": "MG",
@@ -47,10 +47,10 @@ def index_box():
                                 """
                 },
                 {
-                    "cep": "06226-170",
+                    "cep": "05005-001",
                     "rua": "R. Palestra Itália",
-                    "numero": "05005-030",
-                    "complemento": "perto d elá",
+                    "numero": "147",
+                    "complemento": "predio B",
                     "bairro": "Centro",
                     "cidade": "Perdizes",
                     "estado": "SP",
@@ -66,14 +66,14 @@ def index_box():
                 },
                 
                 {
-                    "cep": "06226-170",
+                    "cep": "06093-010",
                     "rua": "Av. Gov Magalhães Barata",
-                    "numero": "376",
-                    "complemento": "perto d elá",
+                    "numero": "260",
+                    "complemento": "2 andar",
                     "bairro": "São Brás",
                     "cidade": "Belém",
                     "estado": "PA",
-                    "nome": "Espaço Parque Belém",
+                    "nome": "Espaço Biblioteca de Osasco",
                     "preco_hora": "100",
                     "descricao": """
                                 Muito mais que uma sala de
@@ -84,14 +84,14 @@ def index_box():
                                 """
                 },
                 {
-                    "cep": "06226-170",
-                    "rua": "itajai",
-                    "numero": "72",
-                    "complemento": "perto d elá",
+                    "cep": "01311-923",
+                    "rua": "av paulista",
+                    "numero": "1313",
+                    "complemento": "proximo a lanchonete x",
                     "bairro": "aqui mesmo",
                     "cidade": "osasco",
                     "estado": "Sao paulo",
-                    "nome": "Biblioteca de Osasco",
+                    "nome": "Espaço Paulista",
                     "preco_hora": "200",
                     "descricao": """
                                 Muito mais que uma sala de
@@ -105,7 +105,9 @@ def index_box():
     
     if request.method == 'GET':
         profile = dict(session).get('profile', [])
-        return render_template('box/box.html', boxes=boxes, profile=profile)
+        boxes_get = manager.get_all_boxes()
+        print(boxes_get)
+        return render_template('box/box.html', boxes=boxes_get, profile=profile)
 
 
 @bp.route('/search', methods=['GET', 'POST'])

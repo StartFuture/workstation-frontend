@@ -29,6 +29,7 @@ PATH_USER_INFO = '/user_info'
 
 PATH_VERIFY_JWT_INFOS = '/verify_jwt_infos'
 
+PATH_GET_ALL_BOX = '/box'
 PATH_CONFIRM_BOX = '/box/confirm_box'
 
 PATH_SHOW_SCHEDULE = '/meu_perfil/agendamentos'
