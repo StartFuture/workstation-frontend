@@ -19,12 +19,13 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [x] Two auth Workflow
 - [X] Reset Password Workflow
 - [x] Redirect user to the right page
-- [x] Change header if user logged or not
+- [x] Change header if user loggedasd or not
 - [x] Get user infos from backend
 - [x] My profile page basic infos
 - [X] Edit infos user
+- [X] CRUD box
+- [ ] CRUD schedule
 - [ ] My profile page box's scheduled infos
-- [ ] CRUD box schedule
 - [ ] Create Flash messages html ? Optional
 - [ ] Tests Frontend
 - [ ] Deploy
