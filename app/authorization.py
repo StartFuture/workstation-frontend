@@ -16,9 +16,13 @@ def verify_token(token):
 def verify_token_infos(token):
     response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_VERIFY_JWT_INFOS, headers={'Authorization': 'Bearer ' + token})
     if response.status_code == 200:
-        return response.json()
+        valid_token = True
+        return response.json(), valid_token
     else:
-        return redirect(url_for('user.login'))
+        valid_token = False
+        remove_auth()
+        return None, valid_token
+
 
 def get_info_users(token):
     response = requests.get(parameters.PATH_API_BACKEND + parameters.PATH_USER_INFO, headers={'Authorization': 'Bearer ' + token})
@@ -37,21 +41,25 @@ def is_login(f):
         # You would add a check here and usethe user id or something to fetch
         # the other data for that user/check if they exist
         
-        if token and verify_token(token):
-            dict_jwt_infos = verify_token_infos(token=token)
+        if token:
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
             
-            if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
-                return f(*args, **kwargs)
-            elif dict_jwt_infos['two_auth'] == True:
-                # flash('Você já realizou o login com sucesso')
-                return redirect(url_for('main.index'))
-            elif dict_jwt_infos['recover_passwd'] == True:
-                return redirect(url_for('user.recover_passwd'))
-            else: # non mapped case
-                logging.error(f'Non mapped case: {dict_jwt_infos}')
-                logout()
+            if valid_token:
+
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return f(*args, **kwargs)
+                elif dict_jwt_infos['two_auth'] == True:
+                    # flash('Você já realizou o login com sucesso')
+                    return redirect(url_for('main.index'))
+                elif dict_jwt_infos['recover_passwd'] == True:
+                    return redirect(url_for('user.recover_passwd'))
+                else: # non mapped case
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
+            else:
+                # flash('Por favor, faça login novamente')
                 return redirect(url_for('user.login'))
-        
         else:
             # flash('Por favor, faça login para acessar essa página')
             return redirect(url_for('user.login'))
@@ -66,18 +74,60 @@ def is_auth(f):
         
         if token:
             
-            dict_jwt_infos = verify_token_infos(token=token)
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
             
-            if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
-                return redirect(url_for('user.code'))
-            elif dict_jwt_infos['two_auth'] == True:
-                return f(*args, **kwargs)
-            elif dict_jwt_infos['recover_passwd'] == True:
-                return redirect(url_for('user.recover_passwd'))
-            else: # non mapped case
-                logging.error(f'Non mapped case: {dict_jwt_infos}')
-                logout()
+            if valid_token:
+            
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return redirect(url_for('user.code'))
+                elif dict_jwt_infos['two_auth'] == True:
+                    return f(*args, **kwargs)
+                elif dict_jwt_infos['recover_passwd'] == True:
+                    return redirect(url_for('user.recover_passwd'))
+                else: # non mapped case
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
+            else:
+                # flash('Por favor, faça login novamente')
                 return redirect(url_for('user.login'))
+
+        else:
+            # flash('Por favor, faça login para acessar essa página')
+            return redirect(url_for('user.login'))
+    return decorated_function
+
+def is_auth_update_infos(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        token = dict(session).get('token', None)
+        # You would add a check here and usethe user id or something to fetch
+        # the other data for that user/check if they exist
+        
+        if token:
+            
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
+
+            
+            
+            if valid_token:
+
+                get_info_users(token)
+            
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return redirect(url_for('user.code'))
+                elif dict_jwt_infos['two_auth'] == True:
+                    return f(*args, **kwargs)
+                elif dict_jwt_infos['recover_passwd'] == True:
+                    return redirect(url_for('user.recover_passwd'))
+                else: # non mapped case
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
+            else:
+                # flash('Por favor, faça login novamente')
+                return redirect(url_for('user.login'))
+
         else:
             # flash('Por favor, faça login para acessar essa página')
             return redirect(url_for('user.login'))
@@ -92,19 +142,25 @@ def is_reset_password(f):
         
         if token:
             
-            dict_jwt_infos = verify_token_infos(token=token)
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
             
-            if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
-                return redirect(url_for('user.code'))
-            elif dict_jwt_infos['two_auth'] == True:
-                # flash('Você já realizou o login com sucesso')
-                return redirect(url_for('main.index'))
-            elif dict_jwt_infos['recover_passwd'] == True:
-                return f(*args, **kwargs)
-            else: # non mapped case
-                logging.error(f'Non mapped case: {dict_jwt_infos}')
-                logout()
+            if valid_token:
+                
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return redirect(url_for('user.code'))
+                elif dict_jwt_infos['two_auth'] == True:
+                    # flash('Você já realizou o login com sucesso')
+                    return redirect(url_for('main.index'))
+                elif dict_jwt_infos['recover_passwd'] == True:
+                    return f(*args, **kwargs)
+                else: # non mapped case
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
+            else:
+                # flash('Por favor, faça login novamente')
                 return redirect(url_for('user.login'))
+
         else:
             # flash('Por favor, faça login para acessar essa página')
             return redirect(url_for('user.login'))
@@ -115,24 +171,31 @@ def is_not_auth(f):
     def decorated_function(*args, **kwargs):
         token = dict(session).get('token', None)
         logging.debug('not auth')
+
         if token:
             logging.debug('has token')
-            dict_jwt_infos = verify_token_infos(token=token)
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
             
-            if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
-                return redirect(url_for('user.code'))
+            if valid_token:
             
-            elif dict_jwt_infos['two_auth'] == True:
-                print('has two auth')
-                return f(*args, **kwargs)
-            
-            elif dict_jwt_infos['recover_passwd'] == True:    
-                return redirect(url_for('user.change_password'))
-            
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return redirect(url_for('user.code'))
+                
+                elif dict_jwt_infos['two_auth'] == True:
+                    print('has two auth')
+                    return f(*args, **kwargs)
+                
+                elif dict_jwt_infos['recover_passwd'] == True:    
+                    return redirect(url_for('user.change_password'))
+                
+                else:
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
+
             else:
-                logging.error(f'Non mapped case: {dict_jwt_infos}')
-                logout()
-                return redirect(url_for('user.login'))
+                # flash('Por favor, faça login novamente')
+                return f(*args, **kwargs)
         else:
             return f(*args, **kwargs)
     return decorated_function
@@ -144,22 +207,29 @@ def is_not_logged(f):
         
         if token:
             
-            dict_jwt_infos = verify_token_infos(token=token)
+            dict_jwt_infos, valid_token = verify_token_infos(token=token)
             
-            if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
-                return redirect(url_for('user.code'))
+            if valid_token:
             
-            elif dict_jwt_infos['two_auth'] == True:
-                # flash('Você já realizou o login com sucesso')
-                return redirect(url_for('main.index'))
-            
-            elif dict_jwt_infos['recover_passwd'] == True:    
-                return redirect(url_for('user.change_password'))
+                if dict_jwt_infos['two_auth'] == False and dict_jwt_infos['recover_passwd'] == False:
+                    return redirect(url_for('user.code'))
+                
+                elif dict_jwt_infos['two_auth'] == True:
+                    # flash('Você já realizou o login com sucesso')
+                    return redirect(url_for('main.index'))
+                
+                elif dict_jwt_infos['recover_passwd'] == True:    
+                    return redirect(url_for('user.change_password'))
+                
+                else:
+                    logging.error(f'Non mapped case: {dict_jwt_infos}')
+                    logout()
+                    return redirect(url_for('user.login'))
             
             else:
-                logging.error(f'Non mapped case: {dict_jwt_infos}')
-                logout()
-                return redirect(url_for('user.login'))
+                # flash('Por favor, faça login novamente')
+                return f(*args, **kwargs)
+
         else:
             return f(*args, **kwargs)
     return decorated_function
@@ -253,3 +323,6 @@ def logout():
     return redirect(url_for('main.index'))
 
 
+def remove_auth():
+    del session['token']
+    del session['profile']

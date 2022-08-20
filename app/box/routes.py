@@ -1,111 +1,19 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 import logging
+
 #from app import authorization
 import functions
-
 import authorization
-from box import bp
+from box import bp, manager
 
 @bp.route('/', methods=['GET', 'POST'])
 @authorization.is_not_auth
 def index_box():
-    boxes = [
-                { 
-                    "cep": "06226-170",
-                    "rua": "Av. Brg. Faria Lima",
-                    "numero": "2705",
-                    "complemento": "Próximo ao museu",
-                    "bairro": "Jardim Paulistano",
-                    "cidade": "São Paulo",
-                    "estado": "SP",
-                    "nome": "Espaço Faria Lima",
-                    "preco_hora": "100",
-                    "descricao": """
-                                Muito mais que uma sala de
-                                reunião, um espaço para fechar 
-                                negócios importantes e ter grandes 
-                                ideias. Capacidade para até 12 
-                                pessoas.
-                                """
-                },
-                {
-                    "cep": "30160-000",
-                    "rua": "Praça Rui Barbosa",
-                    "numero": "600",
-                    "complemento": "perto d elá",
-                    "bairro": "Centro",
-                    "cidade": "Belo Horizonte",
-                    "estado": "MG",
-                    "nome": "Espaço BH",
-                    "preco_hora": "100",
-                    "descricao": """
-                                Muito mais que uma sala de
-                                reunião, um espaço para fechar 
-                                negócios importantes e ter grandes 
-                                ideias. Capacidade para até 12 
-                                pessoas.
-                                """
-                },
-                {
-                    "cep": "06226-170",
-                    "rua": "R. Palestra Itália",
-                    "numero": "05005-030",
-                    "complemento": "perto d elá",
-                    "bairro": "Centro",
-                    "cidade": "Perdizes",
-                    "estado": "SP",
-                    "nome": "Espaço Bourbom",
-                    "preco_hora": "100",
-                    "descricao": """
-                                Muito mais que uma sala de
-                                reunião, um espaço para fechar 
-                                negócios importantes e ter grandes 
-                                ideias. Capacidade para até 12 
-                                pessoas.
-                                """
-                },
-                
-                {
-                    "cep": "06226-170",
-                    "rua": "Av. Gov Magalhães Barata",
-                    "numero": "376",
-                    "complemento": "perto d elá",
-                    "bairro": "São Brás",
-                    "cidade": "Belém",
-                    "estado": "PA",
-                    "nome": "Espaço Parque Belém",
-                    "preco_hora": "100",
-                    "descricao": """
-                                Muito mais que uma sala de
-                                reunião, um espaço para fechar 
-                                negócios importantes e ter grandes 
-                                ideias. Capacidade para até 12 
-                                pessoas.
-                                """
-                },
-                {
-                    "cep": "06226-170",
-                    "rua": "itajai",
-                    "numero": "72",
-                    "complemento": "perto d elá",
-                    "bairro": "aqui mesmo",
-                    "cidade": "osasco",
-                    "estado": "Sao paulo",
-                    "nome": "Biblioteca de Osasco",
-                    "preco_hora": "200",
-                    "descricao": """
-                                Muito mais que uma sala de
-                                reunião, um espaço para fechar 
-                                negócios importantes e ter grandes 
-                                ideias. Capacidade para até 12 
-                                pessoas.
-                                """
-                }
-            ]
     
     if request.method == 'GET':
         profile = dict(session).get('profile', [])
-        return render_template('box/box.html', boxes=boxes, profile=profile)
+        boxes_get = manager.get_boxes()
+        return render_template('box/box.html', boxes=boxes_get, profile=profile)
 
 
 @bp.route('/search', methods=['GET', 'POST'])
@@ -114,38 +22,28 @@ def search_box():
     profile = dict(session).get('profile', [])
     return render_template('box/box-pesquisa.html', profile=profile)
 
-@bp.route('/create', methods=['POST'])
-@authorization.is_not_auth
-def create_box():
-    profile = dict(session).get('profile', [])
-    return {}
 
-@bp.route('/update', methods=['PUT'])
+@bp.route('/details/<id_box>', methods=['GET', 'POST'])
 @authorization.is_not_auth
-def update_box():
-    profile = dict(session).get('profile', [])
-    return {}
-
-@bp.route('/delete', methods=['DELETE'])
-@authorization.is_not_auth
-def delete_box():
-    profile = dict(session).get('profile', [])
-    return {}
-
-@bp.route('/details', methods=['GET', 'POST'])
-@authorization.is_not_auth
-def detalhes_box():
+def box_details(id_box):
+    
     if request.method == 'POST':
         
         infos = request.form.to_dict()
+        print(infos)
+        print('*'*10)
+        manager.create_schedule(id_box=id_box, dict_data=infos)
+
         
-        logging.warning(infos)
-        
-        return redirect(url_for('user.login'))
+        return redirect(url_for('box.box_details', id_box=id_box))
 
     elif request.method == 'GET':
         profile = dict(session).get('profile', [])
-        return render_template('box/box-detalhes.html', profile=profile)
+        boxes_get = manager.get_boxes(id_box=id_box)
+        cep_search = boxes_get['cep'][:-3] + '-' + boxes_get['cep'][-3:]
+        street_search_google_maps = boxes_get['rua'] + str(boxes_get['numero']) +  boxes_get['bairro'] + boxes_get['cidade'] + boxes_get['estado'] + cep_search
+        
+        return render_template('box/box-detalhes.html', boxes=boxes_get, profile=profile, street_search_google_maps=street_search_google_maps.replace(' ', '%20'))
 
 @bp.route('/confirm', methods=['GET', 'POST'])
 @authorization.is_auth

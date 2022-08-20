@@ -5,3 +5,7 @@ import requests
 
 import parameters
 
+def clean_str(value):
+    value = str(value).strip()
+    value = value.replace('.', '').replace(',', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '')
+    return value

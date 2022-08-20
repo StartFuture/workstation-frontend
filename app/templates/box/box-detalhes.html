@@ -18,16 +18,18 @@
 </head>
 
 <body>
-    {% include 'generic/section_header.html' %}
+    {% with profile=profile %}
+    {% include 'generic/section_header.html'%}
+    {% endwith %}
 
     <section id="container-carrosel-box">
         <div class="container-carrosel-box">
             <div class="container-h1-box-and-voltar">
-                <h1 class="h1-nome-box">Espaço Faria Lima</h1>
+                <h1 class="h1-nome-box">{{ boxes['nome'] }}</h1>
                 <a class="a-voltar" href=" {{ url_for('box.index_box') }} ">Voltar a listagem </a>
             </div>
             <div class="container-p-endereco">
-                <p class="p-endereco">Av. Brig. Faria Lima (Zona Sul)</p>
+                <p class="p-endereco">{{ boxes['rua'] }} - {{ boxes['numero'] }} (Zona {{boxes['zone'].title()}})</p>
             </div>
             <div class="container-avaliacao-and-coments">
                 <div class="container-estrelinha">
@@ -85,17 +87,19 @@
 
                 <div class="container-valores">
                     <div class="ctn-val/dia">
-                        <h1 class="h1-val">R$ 180 / Dia</h1>
+                        <h1 class="h1-val">R$ {{ boxes['preco_hora'] * 5 }} / Dia</h1>
                     </div>
                     <div class="ctn-p-val">
-                        <p class="p-val">R$ 70 / Hora</p>
+                        <p class="p-val">R$ {{ boxes['preco_hora'] }} / Hora</p>
                     </div>
                     <div class="ctn-p-desc-val">
-                        <p class="p-val-desc" style="font-weight: bold;">Muito mais que uma sala de reunião, um espaço para fechar negócios importantes e ter grandes ideias. Capacidade para até 12 pessoas.</p>
+                        <p class="p-val-desc" style="font-weight: bold;"> {{ boxes['descricao'] }} </p>
                     </div>
+                    {% if profile is defined and profile%}
                     <div class="button-conhecer-container button-ver-detalhes-container">
                         <a class="button-conhecer button-ver-detalhes a-red" id="myBtn">Reservar</a>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -152,7 +156,7 @@
             <div class="container-imagem-local-farialima">
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="1000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.%20dos%20Autonomistas,%20896%20Torre%201%2012%C2%BA%20andar,%20CJ%201210%20Vila%20Yara,%20Osasco%20-%20SP%2006020-010&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe width="1000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{street_search_google_maps}}&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -260,7 +264,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <form method="post" target="{{url_for('user.login')}}" style="height: 100%;">
+            <form method="post" style="height: 100%;">
                 <span class="close">&times;</span>
                 <h2 class="h2-selecione">Selecionar período da reserva</h2>
                 <p class="p-sel" style="color: #787878;">Escolha uma data e hora disponível para reservar o seu uso na box.</p>

@@ -56,7 +56,7 @@ function populateDates (e) {
 	for (let i = 0; i < amount_days; i++) {		
 		const day_input = document.createElement('input');
 		day_input.type = 'checkbox';
-		day_input.setAttribute('value', selectedYear + '-' + (selectedMonth + 1) + '-' + i + 1);
+		day_input.setAttribute('value', selectedYear + '-' + (selectedMonth + 1) + '-' + (parseInt(i) + 1));
 		day_input.setAttribute('name', 'data');
 
 		const day_span = document.createElement('span');
@@ -72,7 +72,7 @@ function populateDates (e) {
 		}
 
 		day_element.addEventListener('click', function () {
-			selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1));
+			selectedDate = new Date(year + '-' + (month + 1) + '-' + (parseInt(i) + 1));
 			selectedDay = (i + 1);
 			selectedMonth = month;
 			selectedYear = year;

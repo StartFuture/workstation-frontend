@@ -101,10 +101,10 @@ def register():
         "sobrenome": last_name.strip(),
         "data_aniversario": infos["birthday"],
         "sexo": infos["sexo"],
-        "telefone": infos["phone"],
-        "email": infos["email"],
+        "telefone": utils.clean_str(infos["phone"]),
+        "email": str(infos["email"]).strip().lower(),
         "senha": infos["password"],
-        "cpf_cnpj": infos["cpf_cnpj"]
+        "cpf_cnpj": utils.clean_str(infos["cpf_cnpj"])
         }
 
         resp = manager.create_user(dict_front_register)
@@ -117,14 +117,17 @@ def register():
             
             #flash('user alredy exist')
             return render_template('user/register/cadastro.html')
+            # return redirect(url_for('user.register'))
         
         else:
             
             #flash('erro')
             return render_template('user/register/cadastro.html')
+            # return redirect(url_for('user.register'))
     
     elif request.method == 'GET':
         return render_template('user/register/cadastro.html')
+        # return redirect(url_for('user.register'))
     
 
 @bp.route('/reset/password', methods=['GET', 'POST'])
@@ -211,18 +214,8 @@ def change_password():
         return render_template('user/reset_password/redefinicao-senha.html')
 
 @bp.route('/profile', methods=['GET', 'POST'])
-@authorization.is_auth
+@authorization.is_auth_update_infos
 def profile():
-    
-    dict_user_example = {
-            'id_user': 1,
-            'username' : 'Mateus Toni Vieira',
-            'email' : 'mateustoni04@gmail.com',
-            'password' : '12345',
-            'cpf_cnpj' : '338.058.828-82',
-            'telefone' : '(11)94103-0316',
-            'credit_card' : '4723.7623.2130.7436',
-        }
         
     list_reservations = [
         {
@@ -234,30 +227,68 @@ def profile():
     
     if request.method == 'POST':
 
-        valid_inputs = ['username','email','password','cpf_cnpj','telefone','credit_card']
-        
         infos = request.form.to_dict()
+
+        profile = session['profile']
         
-        logging.warning(infos)
+        dict_user = {
+            'id_user': profile['id'],
+            'username' : str(profile['nome'] + ' ' + profile['sobrenome']).title(),
+            'email' : profile['email'],
+            'password' : '******',
+            'cpf_cnpj' : utils.clean_str(profile['cpf']),
+            'telefone' : utils.clean_str(profile['telefone'])    
+        }
         
-        id_user = infos['id_user']
+        key = list(infos.keys())[0]
         
-        key = list(infos.keys())[1]
-        value = list(infos.values())[1]
-        
-        if key in valid_inputs:
+        if key in parameters.VALID_INPUTS_USER_EDIT:
+            
             if key == 'username':
-                manager.update_username(id_user, value)
+                if str(infos[key]).strip().lower() != str(dict_user[key]).strip().lower():
+                    full_name = infos['username']
+                    full_name = full_name.split(' ')
+                    last_name = ''
+                    for pos, names in enumerate(full_name):
+                        if pos == 0:
+                            name = names
+                        else:
+                            last_name += ' ' + names
+                            
+                    manager.update_username(name, last_name)
+                else:
+                    logging.debug('Input igual ao banco')
+                    # Flash("Input igual ao banco")
+            
             elif key == 'email':
-                manager.update_email(id_user, value)
+                if str(infos[key]).strip().lower() != str(dict_user[key].strip().lower()):
+                    manager.update_email(value=str(infos[key]).strip().lower())
+                else:
+                    logging.debug("Input igual ao banco")
+                    # Flash("Input igual ao banco")
+            
             elif key == 'password':
-                manager.update_password(id_user, value)
+                logging.debug("não é possivel resetar a senha por aqui")
+                # Flash("não é possivel resetar a senha por aqui")
+            
             elif key == 'cpf_cnpj':
-                manager.update_cpf_cnpj(id_user, value)
+                print(infos[key])
+                if utils.clean_str(infos[key]) != utils.clean_str(dict_user[key]):
+                    manager.update_cpf_cnpj(value=utils.clean_str(infos[key]))
+                else:
+                    logging.debug("Input igual ao banco")
+                    # Flash("Input igual ao banco")
+            
             elif key == 'telefone':
-                manager.update_telefone(id_user, value)
-            elif key == 'credit_card':
-                manager.update_credit_card(id_user, value)
+                if utils.clean_str(infos[key]) != utils.clean_str(dict_user[key]):
+                    manager.update_telefone(value=utils.clean_str(infos[key]))
+                else:
+                    logging.debug("Input igual ao banco")
+                    # Flash("Input igual ao banco")
+            
+            # elif key == 'credit_card': # not used   
+            #     logging.debug("Cartão alterado")
+                # Flash("Cartão alterado")
         
         return redirect(url_for('user.profile'))
     
@@ -269,8 +300,8 @@ def profile():
             'username' : str(profile['nome'] + ' ' + profile['sobrenome']).title(),
             'email' : profile['email'],
             'password' : '******',
-            'cpf_cnpj' : '123',
-            'telefone' : profile['telefone'],
+            'cpf_cnpj' : utils.clean_str(profile['cpf']),
+            'telefone' : utils.clean_str(profile['telefone']),
             'credit_card' : '1234.5678.9012.3456',
         }
         
