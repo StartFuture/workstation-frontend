@@ -264,7 +264,8 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <form method="post" style="height: 100%;">
+            <form method="post" action="{{url_for('box.box_confirm')}}" style="height: 100%;">
+                <input type="text" name="id_box" value="{{ boxes['id_box'] }}" hidden>
                 <span class="close">&times;</span>
                 <h2 class="h2-selecione">Selecionar período da reserva</h2>
                 <p class="p-sel" style="color: #787878;">Escolha uma data e hora disponível para reservar o seu uso na box.</p>

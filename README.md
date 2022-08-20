@@ -24,6 +24,7 @@ gunicorn -w 2 -b 127.0.0.1:8000 app:app
 - [x] My profile page basic infos
 - [X] Edit infos user
 - [X] CRUD box
+- [ ] Search Box
 - [ ] CRUD schedule
 - [ ] My profile page box's scheduled infos
 - [ ] Create Flash messages html ? Optional

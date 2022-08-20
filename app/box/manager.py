@@ -16,11 +16,17 @@ def get_boxes(id_box : int = None):
     else:
         logging.error(f'Request error app/box/manager.py - get_boxes, returns {result.content}, with status: {result.status_code}')
 
+def process_adress_box(boxes_get, replace_space=' ') -> str:
+    cep_search = boxes_get['cep'][:-3] + '-' + boxes_get['cep'][-3:]
+    adress_box = boxes_get['rua'] + ', ' + str(boxes_get['numero']) + ' - ' + boxes_get['bairro'] + ', ' + boxes_get['cidade'] + ' - ' + boxes_get['estado'] + ', ' + cep_search
+    adress_box = adress_box.replace(' ', replace_space)
+    return adress_box
+
 def create_schedule(id_box, dict_data):
     
     date_selected = dict_data['data']
     list_scheduled_times = [value for key, value in dict_data.items() if key[:4] == 'time']
-
+    print(list_scheduled_times)
     token = dict(session).get('token', None)
     
     result = requests.post(
