@@ -13,7 +13,9 @@
 
 <body>
     
-    {% include 'generic/section_header.html' %}
+    {% with profile=profile %}
+    {% include 'generic/section_header.html'%}
+    {% endwith %}
 
     <section id="section-unica-box"></section>
 </body>

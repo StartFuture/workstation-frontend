@@ -13,7 +13,9 @@
 
 <body>
 
-    {% include 'generic/section_header.html' %}
+    {% with profile=profile %}
+    {% include 'generic/section_header.html'%}
+    {% endwith %}
 
     <section id="section-filtro">
         <div class="container-filtro">
@@ -94,7 +96,7 @@
                             </div>
                             <div class="button-conhecer-container button-ver-detalhes-container">
                                 <button class="button-conhecer button-ver-detalhes">
-                                    <a href="{{ url_for('box.detalhes_box')}}" style="color: white; text-decoration: none;">Ver detalhes</a>
+                                    <a href="/box/details/{{ dict_box['id_box'] }}" style="color: white; text-decoration: none;">Ver detalhes</a>
                                 </button>
                             </div>
                         </div>

@@ -29,15 +29,13 @@ PATH_USER_INFO = '/user_info'
 
 PATH_VERIFY_JWT_INFOS = '/verify_jwt_infos'
 
-PATH_GET_ALL_BOX = '/box'
+PATH_GET_BOX = '/box'
 PATH_CONFIRM_BOX = '/box/confirm_box'
 
 PATH_SHOW_SCHEDULE = '/meu_perfil/agendamentos'
-PATH_DELETE_SCHEDULE= '/meu_perfil/agendamentos'
-PATH_UPDATE_SCHEDULE = '/meu_perfil/agendamentos'
-PATH_CREATE_SCHEDULE = '/meu_perfil/agendamentos'
-PATH_PAYMENT_SCHEDULE = '/meu_perfil/agendamentos'
-PATH_CREATE_ADRESS = '/meu_perfil/agendamentos'
+PATH_DELETE_SCHEDULE= '/meu_perfil/deletar_agendamento'
+PATH_UPDATE_SCHEDULE = '/meu_perfil/atualizar_agendamento'
+PATH_CREATE_SCHEDULE = '/meu_perfil/criar_agendamento'
 
 PATH_API_BACKEND = os.environ["HOST_BACKEND_URL"]
 
