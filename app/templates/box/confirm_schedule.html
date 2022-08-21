@@ -89,8 +89,18 @@
             </div>
         </div>
         <div class="button-conhecer-container button-ler-artigo-container ">
-            <a class="close cancelar" id="close-alterar-cartao-confirmacao-2" href="box-faria-lima.html">Cancelar</a>
-            <button class="button-conhecer button-ler-artigo btn-salvar" id="my-btn-sucesso" type="submit">Confirmar</button>
+            
+            <form method="post">
+                <input type="text" name="id_box" value=" {{ id_box }}" hidden>
+                <input type="text" name="data" value=" {{ date_schedule }} " hidden>
+                {% for schedule in list_scheduled_times %}
+                    <input type="text" name="time_{{schedule}}" value="{{schedule}}" hidden>
+                {% endfor %}
+                <div class="button-conhecer-container button-ler-artigo-container ">
+                    <a class="close cancelar" id="close-alterar-cartao-confirmacao-2" href="box-faria-lima.html">Cancelar</a>
+                    <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Confirmar</button>
+                </div>
+            </form>
         </div>
         <!--MODAL-->
         <div id="my-modal-alterar-cartao-confirmacao" class="modal ">
@@ -125,15 +135,15 @@
                 </div>
             </div>
         </div>
-        <div id="modalSucesso" class="modal">
+        <div id="modalFalha" class="modal">
             <div class="modal-content">
 
                 <div class="container-sucess">
-                    <img class="sucess-img" src=" {{ url_for('static', filename='images/svg/login-page/sucess.svg') }} ">
+                    <img class="sucess-img" src=" {{ url_for('static', filename='images/svg/login-page/error.svg') }} ">
                 </div>
-                <p class="p-sucesso">Periodo atualmente Indiponivel</p>
+                <p class="p-sucesso">{{msg_error}}{{error_dates}}</p>
                 <div class="container-btn-continue">
-                    <a class="btn-continue-cadastro" style="text-align: center" href="{{ url_for('box.index_box') }}">Continuar</a>
+                    <a class="btn-continue-cadastro" style="text-align: center" href="/box/details/{{ id_box }}">Continuar</a>
                 </div>
             </div>
         </div>
@@ -142,27 +152,35 @@
 <script src=" {{ url_for('static', filename='js/modal-alterar-cartao-confirmacao.js') }} "></script>
 <script>
     var modalSucesso = document.getElementById("modalSucesso");
-
-    // Get the button that opens the modal
-    var btnSucesso = document.getElementById("my-btn-sucesso");
+    var modalFalha = document.getElementById("modalFalha");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
-    btnSucesso.onclick = function() {
-        modalSucesso.style.display = "block";
-    }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modalSucesso.style.display = "none";
+    span.onclick = function(event) {
+        if (event.target == modalSucesso) {
+            modalSucesso.style.display = "none";
+            window.location.replace("{{url_for('user.profile')}}");
+        }
+        else if (event.target == modalFalha) {
+            modalFalha.style.display = "none";
+            window.location.replace("{{url_for('box.index_box')}}" + "/details/{{ id_box }}");
+        }
+        
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modalSucesso) {
             modalSucesso.style.display = "none";
+            window.location.replace("{{url_for('user.profile')}}");
+        }
+        else if (event.target == modalFalha) {
+            modalFalha.style.display = "none";
+            window.location.replace("{{url_for('box.index_box')}}" + "/details/{{ id_box }}");
         }
     }
 
@@ -175,15 +193,15 @@
     function loadPage() {
 
         if ('{{status}}' == 'start') {
-            modalSucesso.style.display = "block";
+            console.log('start')
         }
 
         else if ('{{status}}' == 'success') {
             modalSucesso.style.display = "block";
         }
-        
+
         else if ('{{status}}' == 'error') {
-            modalSucesso.style.display = "block";
+            modalFalha.style.display = "block";
         }
         
     }

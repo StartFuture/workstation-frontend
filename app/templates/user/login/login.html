@@ -25,7 +25,7 @@
                     <img class="img-logo-rosa" src="{{url_for('static', filename='images/svg/Logo _workstation_rosa.svg')}}">
                 </div>
                 <div class="container-form">
-                     <form method="post" target="{{url_for('user.login')}}"> 
+                     <form method="post" action="{{url_for('user.login')}}"> 
                         <div class="campo_txt">
                             <label class="campo-requerido">E-mail ou CPF</label>
                             <input class="inputs-login" type="text" placeholder="E-mail ou CPF" required name="login">

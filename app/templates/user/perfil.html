@@ -113,17 +113,26 @@
                         </tr>
 
                     </thead>
-                    {% for reserva in list_reservations %}
+                    {% if not list_reservations %}
+                    <tr class="no-bd-bottom">
+                        <td></td>
+                        <td>Nada por aqui ainda, experimente uma de nossas <a href="{{url_for('box.index_box')}}">boxes</a></td>
+                        <td></td>
+                        
+                    </tr>
+                    {% endif %}
+                    {% for pos, reserva in list_reservations %}
                     <tr class="no-bd-bottom">
                         <td>{{ reserva['box'] }}</td>
                         <td>{{ reserva['details'] }}</td>
                         <td class="lapis">
-                            <input class="editar" id="my-btn-alterar-cartao" type="submit" value="Cancelar reserva">
+                            <input class="editar" id="my-btn-alterar-agendamento-{{pos}}" onclick="document.getElementById('my-modal-alterar-agendamento-{{pos}}').style.display = 'block';" type="submit" value="Cancelar reserva">
                         </td>
                     </tr>
                     {% endfor %}
 
                 </table>
+                
             </div>
     </section>
 </body>
@@ -227,6 +236,62 @@
         </div>
     </div>
 </form>
+{% for pos, reserva in list_reservations %}
+<form method="post">
+    <div id="my-modal-alterar-agendamento-{{pos}}" class="modal">
+        <div class="modal-content">
+            <p class="p-sucesso">Deseja deletar seu agendamento</p>
+            <div class="container-input">
+                <input type="text" name="agendamento" value="{{ reserva['list_times_raw'] }}" hidden>
+                <input type="text" name="id_box" value="{{ reserva['id'] }}" hidden>
+                <input type="text" name="date" value="{{ reserva['data'] }}" hidden>
+                <label class="campo-requerido">{{reserva['box']}} - {{reserva['details']}}</label>
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container ">
+                <a class="close cancelar" id="close-alterar-cartao" onclick="document.getElementById('my-modal-alterar-agendamento-{{pos}}').style.display = 'none';">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form>
+{%endfor%}
+<!-- {% for pos, reserva in list_reservations %} -->
+<!-- <a href="">{{pos}}</a> -->
+<!-- <form method="post">
+    <div id="my-modal-alterar-agendamento" class="modal">
+        <div class="modal-content modal-content-agendamento">
+            <p class="p-sucesso">Deseja Cancelar seu agendamento</p>
+            <div class="container-input">
+                <input class="inputs-login inputs-padding" name="box_id" type="text" hidden>
+            </div>
+            <div class="button-conhecer-container button-ler-artigo-container">
+                <a class="close cancelar" id="close-alterar-agendamento">Cancelar</a>
+                <button class="button-conhecer button-ler-artigo btn-salvar" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+</form> -->
+<!-- {% endfor %} -->
+
 <script type="text/javascript" src="{{url_for('static', filename='js/modal-alterar.js')}}"></script>
 
+<!-- <script>
+    var modalAlterarAgendamento = document.getElementById("my-modal-alterar-agendamento");
+
+    var btnAlterarAgendamento = document.getElementById("my-btn-alterar-agendamento");
+
+    var spanAlterarAgendamento = document.getElementById("close-alterar-agendamento");
+
+    btnAlterarAgendamento.onclick = function() {
+        modalAlterarAgendamento.style.display = "block";
+    }
+
+    document.getElementById('my-modal-alterar-agendamento').style.display = 'block';
+
+    document.getElementById('close-alterar-agendamento').style.display = 'none';
+
+    spanAlterarAgendamento.onclick = function() {
+        modal.style.display = "none";
+    }
+</script> -->
 </html>

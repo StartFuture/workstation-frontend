@@ -6,7 +6,6 @@ var modalAlterarCpf = document.getElementById("my-modal-alterar-cpf");
 var modalAlterarTelefone = document.getElementById("my-modal-alterar-telefone");
 var modalAlterarCartao = document.getElementById("my-modal-alterar-cartao");
 
-
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var btnAlterarEmail = document.getElementById("my-btn-alterar-email");
@@ -23,8 +22,6 @@ var spanAlterarSenha = document.getElementById("close-alterar-senha");
 var spanAlterarCpf = document.getElementById("close-alterar-cpf");
 var spanAlterarTelefone = document.getElementById("close-alterar-telefone");
 var spanAlterarCartao = document.getElementById("close-alterar-cartao");
-
-
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -45,9 +42,6 @@ btnAlterarTelefone.onclick = function() {
 btnAlterarCartao.onclick = function() {
     modalAlterarCartao.style.display = "block";
 }
-
-
-
 
 // When the user clicks on <span> (x), close the modal
 spanAlterarNome.onclick = function() {
@@ -75,16 +69,19 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
-
-var divPagamento = document.getElementById("coontainer-pagamento-confirmar-reserva");
-var titleModalEditCard = document.getElementById("title-modal-confirmar-reserva-cartao");
-if (!true) {
-    divPagamento.style.display = "none";
-    btnAlterarCartao.value = "Adicionar novo cartão";
-    titleModalEditCard.textContent = "Adicionar novo cartão de crédito"
-} else {
-    divPagamento.style.display = "block";
-    btnAlterarCartao.value = "Editar cartão";
-    titleModalEditCard.textContent = "Alterar cartão de crédito";
+    else if (event.target == modalAlterarEmail) {
+        modalAlterarEmail.style.display = "none";
+    }
+    else if (event.target == modalAlterarSenha) {
+        modalAlterarSenha.style.display = "none";
+    }
+    else if (event.target == modalAlterarCpf) {
+        modalAlterarCpf.style.display = "none";
+    }
+    else if (event.target == modalAlterarTelefone) {
+        modalAlterarTelefone.style.display = "none";
+    }
+    else if (event.target == modalAlterarCartao) {
+        modalAlterarCartao.style.display = "none";
+    }
 }

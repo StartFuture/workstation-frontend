@@ -39,5 +39,22 @@ PATH_CREATE_SCHEDULE = '/meu_perfil/criar_agendamento'
 
 PATH_API_BACKEND = os.environ["HOST_BACKEND_URL"]
 
-VALID_INPUTS_USER_EDIT = ['username','email','password','cpf_cnpj','telefone','credit_card']
+VALID_INPUTS_USER_EDIT = ['username','email','password','cpf_cnpj','telefone','credit_card', 'agendamento']
+
+DEFAULT_ERROR_MSG_SCHEDULE = 'Periodo atualmente Indiponivel'
+
+DICT_NUMBERS_TO_MONTH = {
+    '01': 'Janeiro',
+    '02': 'Fevereiro',
+    '03': 'Março',
+    '04': 'Abril',
+    '05': 'Maio',
+    '06': 'Junho',
+    '07': 'Julho',
+    '08': 'Agosto',
+    '09': 'Setembro',
+    '10': 'Outubro',
+    '11': 'Novembro',
+    '12': 'Dezembro'
+}
 

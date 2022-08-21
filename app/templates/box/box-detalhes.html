@@ -87,10 +87,10 @@
 
                 <div class="container-valores">
                     <div class="ctn-val/dia">
-                        <h1 class="h1-val">R$ {{ boxes['preco_hora'] * 5 }} / Dia</h1>
+                        <h1 class="h1-val">R$ {{ box_price_day }} / Dia</h1>
                     </div>
                     <div class="ctn-p-val">
-                        <p class="p-val">R$ {{ boxes['preco_hora'] }} / Hora</p>
+                        <p class="p-val">R$ {{ box_price_hour }} / Hora</p>
                     </div>
                     <div class="ctn-p-desc-val">
                         <p class="p-val-desc" style="font-weight: bold;"> {{ boxes['descricao'] }} </p>
@@ -264,7 +264,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <form method="post" action="{{url_for('box.box_confirm')}}" style="height: 100%;">
+            <form method="get" action="{{url_for('box.box_confirm')}}" style="height: 100%;">
                 <input type="text" name="id_box" value="{{ boxes['id_box'] }}" hidden>
                 <span class="close">&times;</span>
                 <h2 class="h2-selecione">Selecionar período da reserva</h2>
@@ -340,7 +340,7 @@
                     <div class="container-button-login">
                         <input class="button-conhecer button-ver-detalhes"
                             style="width: 20%; color: white"
-                            id="Registrar" type="submit" value="Reservar">
+                            id="Registrar" name="submit" type="submit" value="Reservar">
                     </div>
                 </div>
             </form>
@@ -379,6 +379,25 @@
             modal.style.display = "none";
         }
     }
+
+    function validateGrp() {
+        let things = document.querySelectorAll('.input-horario')
+        let checked = 0;
+        for (let thing of things) {
+            thing.checked && checked++
+        }
+        if (checked) {
+            things[things.length - 1].setCustomValidity("");
+            document.getElementById('checkGroup').submit();
+        } else {
+            things[things.length - 1].setCustomValidity("You must check at least one checkbox");
+            things[things.length - 1].reportValidity();
+        }
+    }
+
+    document.querySelector('[name=submit]').addEventListener('click', () => {
+    validateGrp()
+    });
 </script>
 
 </html>

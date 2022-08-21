@@ -216,14 +216,6 @@ def change_password():
 @bp.route('/profile', methods=['GET', 'POST'])
 @authorization.is_auth_update_infos
 def profile():
-        
-    list_reservations = [
-        {
-            'id' : '1',
-            'box': 'Box Faria Lima',
-            'details': '18 de março de 2022 (4 horas - 13:00 às 17:00)'
-        }
-    ]
     
     if request.method == 'POST':
 
@@ -241,7 +233,7 @@ def profile():
         }
         
         key = list(infos.keys())[0]
-        
+
         if key in parameters.VALID_INPUTS_USER_EDIT:
             
             if key == 'username':
@@ -285,7 +277,10 @@ def profile():
                 else:
                     logging.debug("Input igual ao banco")
                     # Flash("Input igual ao banco")
-            
+            elif key == 'agendamento':
+                manager.delete_schedule(infos)
+
+
             # elif key == 'credit_card': # not used   
             #     logging.debug("Cartão alterado")
                 # Flash("Cartão alterado")
@@ -293,6 +288,17 @@ def profile():
         return redirect(url_for('user.profile'))
     
     elif request.method == 'GET':
+
+        # list_reservations = [
+        #     {
+        #         'id' : '1',
+        #         'box': 'Box Faria Lima',
+        #         'details': '18 de março de 2022 (4 horas - 13:00 às 17:00)'
+        #     }
+        # ]
+
+        schedules_get = manager.get_schedule()
+
         profile = dict(session).get('profile', {})        
         
         dict_user = {
@@ -304,7 +310,17 @@ def profile():
             'telefone' : utils.clean_str(profile['telefone']),
             'credit_card' : '1234.5678.9012.3456',
         }
+
+        if schedules_get:
+
+            list_reservations = manager.process_schedules_user(dict_json=schedules_get)
+            
+            list_reservations = list(enumerate(list_reservations))
         
+        else:
+            
+            list_reservations = []
+
         return render_template('user/perfil.html', dict_user=dict_user, list_reservations=list_reservations, profile=profile)
 
 
